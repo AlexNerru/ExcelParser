@@ -41,16 +41,16 @@ namespace LibraryLib
         };
         public WorkingHours(string workingHours)
         {
-            List<string> stringList = Regex.Split(workingHours, "\r\n\r\n").ToList();
+            List<string> stringList = Regex.Split(workingHours, "\n\n").ToList();
             foreach (var day in stringList)
             {
-                List<string> anotherList = Regex.Split(day, "\r\n").ToList();
+                List<string> anotherList = Regex.Split(day, "\n").ToList();
                 var dayLine =  Regex.Split(anotherList[0], @": ").Last();
                 var hoursLine= Regex.Split(anotherList[1], @": ").Last();
                 var hoursLineSplt = Regex.Split(hoursLine, @"-");
                 try
                 {
-                    if (!hoursLine.Contains("выходной"))
+                    if (!hoursLine.Contains("выходной") && !hoursLine.Contains("закрыто"))
                     {
                         var hourStart = int.Parse(hoursLine.Substring(0, 2));
                         var hourEnd = int.Parse(hoursLine.Substring(6, 2));                       
@@ -61,20 +61,20 @@ namespace LibraryLib
                 }
                 catch (FormatException e)
                 {
-                    throw new WorkingHoursException("Smth with data parse", e);
+                    throw new WorkingHoursParseException("Smth with data parse", e);
                 }
-                
+
             }
         }
     }
 
     [Serializable]
-    public class WorkingHoursException : Exception
+    public class WorkingHoursParseException : Exception
     {
-        public WorkingHoursException() { }
-        public WorkingHoursException(string message) : base(message) { }
-        public WorkingHoursException(string message, Exception inner) : base(message, inner) { }
-        protected WorkingHoursException(
+        public WorkingHoursParseException() { }
+        public WorkingHoursParseException(string message) : base(message) { }
+        public WorkingHoursParseException(string message, Exception inner) : base(message, inner) { }
+        protected WorkingHoursParseException(
           System.Runtime.Serialization.SerializationInfo info,
           System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }

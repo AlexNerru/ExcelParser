@@ -22,7 +22,7 @@ namespace LibraryLib
             }
             catch (IndexOutOfRangeException e)
             {
-                throw new NotFullNameProvidedException("You have not 3 words in your full name", e);
+                throw new PersonParseException("You have not 3 words in your full name", e);
                 }
 
         }
@@ -33,12 +33,12 @@ namespace LibraryLib
     }
 
     [Serializable]
-    public class NotFullNameProvidedException : Exception
+    public class PersonParseException : Exception
     {
-        public NotFullNameProvidedException() { }
-        public NotFullNameProvidedException(string message) : base(message) { }
-        public NotFullNameProvidedException(string message, Exception inner) : base(message, inner) { }
-        protected NotFullNameProvidedException(
+        public PersonParseException() { }
+        public PersonParseException(string message) : base(message) { }
+        public PersonParseException(string message, Exception inner) : base(message, inner) { }
+        protected PersonParseException(
           System.Runtime.Serialization.SerializationInfo info,
           System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }

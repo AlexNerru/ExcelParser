@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:Karpin2"
         x:Class="Karpin2.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525" WindowState="Maximized">
     <Grid>
-        <Menu IsMainMenu="True">
+        <Menu IsMainMenu="True" Margin="0,0,0,278.8">
             <MenuItem Header="_File" >
                 <MenuItem x:Name="OpenFileMenuItem" Header="_Open..." Click="OpenFileMenuItem_Click" />
                 <Separator />
@@ -22,6 +22,7 @@
             <MenuItem Header="_Window" />
             <MenuItem Header="_Help" />
         </Menu>
-        
+        <DataGrid x:Name="DataView" ItemsSource="{Binding}" Margin="0,29,0,-0.2"/>
+
     </Grid>
 </Window>

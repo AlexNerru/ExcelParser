@@ -21,7 +21,7 @@ namespace LibraryLib
             List<string> needToFind = new List<string>() { "ИНН",
                 "Полное наименование учреждения", "Телефон руководителя",
                 "ФИО руководителя учреждения", "КПП", "ОГРН" };
-            List<string> stringList = Regex.Split(FullOrgInfo,"\r\n").ToList();
+            List<string> stringList = Regex.Split(FullOrgInfo,"\n").ToList();
             List<string> toParse = new List<string>();
             foreach (var str in needToFind)
                 toParse.Add(stringList.Where(stringToCheck => stringToCheck.Contains(str)).First());
@@ -30,7 +30,14 @@ namespace LibraryLib
                 this.TaxPayerId = Regex.Split(toParse[0], @": ").Last();
                 this.FullName = Regex.Split(toParse[1], @": ").Last();
                 this.HeadPhoneNumber= Regex.Split(toParse[2], @": ").Last();
-                this.HeadFullName = new Person(Regex.Split(toParse[3], @": ").Last());
+                try
+                {
+                    this.HeadFullName = new Person(Regex.Split(toParse[3], @": ").Last());
+                }
+                catch (PersonParseException e)
+                {
+                    throw new OrgInfoParseException("Data Parse error, not all fields provided", e);
+                }
                 this.TaxId = Regex.Split(toParse[4], @": ").Last();
                 this.GovermentId = Regex.Split(toParse[5], @": ").Last();
             }

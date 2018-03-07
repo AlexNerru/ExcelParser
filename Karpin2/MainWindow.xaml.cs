@@ -18,6 +18,7 @@ using LibraryLib;
 using System.Data;
 
 
+
 namespace Karpin2
 {
     /// <summary>
@@ -38,7 +39,6 @@ namespace Karpin2
             dialogService.OpenDialog = new OpenFileDialog();
             dialogService.OpenDialog.FileOk += new CancelEventHandler(openFileDialog_FileOk);
             dialogService.OpenFileDialog();
-
         }
 
         private void openFileDialog_FileOk(object sender, CancelEventArgs e)
@@ -49,6 +49,11 @@ namespace Karpin2
             {
                 DataSet filePath = fileService.Open(dialogService.FilePath);
                 TableManager tableManager = new TableManager(filePath);
+
+                DataView.DataContext = tableManager.Table.DefaultView;
+
+                Libraries libraries = tableManager.GetLibraries();
+                MessageBox.Show("Ебаать");
             }
             catch (WrongFileException exp)
             {

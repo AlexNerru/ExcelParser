@@ -21,10 +21,17 @@ namespace LibraryLib
             if (filePath.Contains("Библиотека.xlsx"))
             {
                 System.Data.OleDb.OleDbConnection MyConnection = new System.Data.OleDb.OleDbConnection("provider=Microsoft.Jet.OLEDB.4.0;" +
-                    $"Data Source='{filePath}';Extended Properties=Excel 8.0;");
+                $"Data Source='{filePath}';Extended Properties=Excel 8.0;");
                 System.Data.OleDb.OleDbDataAdapter MyCommand = new System.Data.OleDb.OleDbDataAdapter("select * from [Sheet0$]", MyConnection);
                 DataSet DtSet = new DataSet();
-                MyCommand.Fill(DtSet);
+                try
+                {
+                    MyCommand.Fill(DtSet);
+                }
+                catch (System.Data.OleDb.OleDbException e)
+                {
+                    throw new WrongFileException("Something wrong with OleDb");
+                }
                 return DtSet;
             }
             else
