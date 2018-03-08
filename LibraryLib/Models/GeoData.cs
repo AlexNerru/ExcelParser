@@ -28,6 +28,10 @@ namespace LibraryLib
                 {
                     throw new GeoParseException("Problem with coords", e);
                 }
+                catch (Exception e)
+                {
+                    throw new GeoParseException("Something strange", e);
+                }
             }
         }
     }

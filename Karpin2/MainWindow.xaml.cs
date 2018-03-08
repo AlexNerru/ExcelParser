@@ -49,20 +49,12 @@ namespace Karpin2
             {
                 DataSet filePath = fileService.Open(dialogService.FilePath);
                 TableManager tableManager = new TableManager(filePath);
-
-                DataView.DataContext = tableManager.Table.DefaultView;
-
                 Libraries libraries = tableManager.GetLibraries();
-                MessageBox.Show("Ебаать");
+
+                DataView.DataContext = tableManager.CreateTableFromLibs(libraries);
             }
-            catch (WrongFileException exp)
-            {
-                MessageBox.Show(exp.Message);
-            }
-            catch (TableValidationException exc)
-            {
-                MessageBox.Show(exc.Message);
-            }
+            catch (Exception ex) when (ex is WrongFileException || ex is TableValidationException || ex is TableParseException) {MessageBox.Show(ex.Message); }
+            catch (Exception) { MessageBox.Show("Everything gone wrong"); }
         }
     }
 }

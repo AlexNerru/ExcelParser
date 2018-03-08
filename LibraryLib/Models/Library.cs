@@ -15,6 +15,15 @@ namespace LibraryLib
         WorkingHours _workingHours;
         Contact _contact;
 
+        public string FullName { get { return _orgInfo.FullName; } }
+        public string HeadFullName { get { return _orgInfo.HeadFullName.ToString(); } }
+        public string TaxPayerId { get { return _orgInfo.TaxPayerId; } }
+        public string Area { get { return _address.Area; } }
+        public string Street { get { return _address.Street; } }
+        public string Building { get { return _address.Building; } }
+        public string Phone { get { return _contact.PublicPhone; } }
+        public string Site { get { return _contact.Website; } }
+
         public Library(DataRow row)
         {
             _orgInfo = new OrgInfo(row[4].ToString());

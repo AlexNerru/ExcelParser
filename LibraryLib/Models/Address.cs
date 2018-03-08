@@ -77,6 +77,10 @@ namespace LibraryLib
             {
                 throw new AdressParseException("Data Parse error, not all fields provided\n", e);
             }
+            catch (Exception e)
+            {
+                throw new AdressParseException("Something strange", e);
+            }
 
 
         }

@@ -12,7 +12,7 @@ namespace LibraryLib
 {
     public class TableManager
     {
-        public DataTable Table { get; private set; }
+        DataTable Table { get; set; }
 
         public TableManager(DataSet dataSet)
         {
@@ -45,26 +45,41 @@ namespace LibraryLib
                     {
                         libraries.Create(new Library(item));
                     }
-                    catch(OrgInfoParseException e)
+                    catch(Exception e) when (e is OrgInfoParseException || e is AdressParseException 
+                    || e is GeoParseException || e is GeoParseException || e is WorkingHoursParseException)
                     {
                         throw new TableParseException("Smth with table parcing", e);
-                    }
-                    catch (AdressParseException e)
-                    {
-                        throw new TableParseException("Smth with table parcing", e);
-                    }
-                    catch (GeoParseException e)
-                    {
-                        throw new TableParseException("Smth with table parcing", e);
-                    }
-                    catch (WorkingHoursParseException e)
-                    {
-                        throw new TableParseException("Smth with table parcing", e);
-                    }
-
+                    }          
                 return libraries;
             }
             else throw new TableNotProvidedException("Данные какие-то кривые");
+        }
+
+       public DataTable CreateTableFromLibs (Libraries libs)
+        {
+            DataTable table = new DataTable();
+            table.Columns.Add("FullName");
+            table.Columns.Add("HeadFullName");
+            table.Columns.Add("TaxPayerId");
+            table.Columns.Add("Area");
+            table.Columns.Add("Street");
+            table.Columns.Add("Building");
+            table.Columns.Add("Phone");
+            table.Columns.Add("Site");
+            foreach (var lib in libs.GetAll())
+            {
+                DataRow dr = table.NewRow();
+                dr["FullName"] = lib.FullName;
+                dr["HeadFullName"] = lib.HeadFullName;
+                dr["TaxPayerId"] = lib.TaxPayerId;
+                dr["Area"] = lib.Area;
+                dr["Street"] = lib.Street;
+                dr["Building"] = lib.Building;
+                dr["Phone"] = lib.Phone;
+                dr["Site"] = lib.Site;
+                table.Rows.Add(dr);
+            }
+            return table;
         }
     }
 

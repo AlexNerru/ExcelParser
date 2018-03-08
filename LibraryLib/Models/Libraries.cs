@@ -13,5 +13,7 @@ namespace LibraryLib
 
         public void Delete (Library lib) => libraries.Remove(lib);
 
+        public IEnumerable<Library> GetAll() => libraries;
+
     }
 }

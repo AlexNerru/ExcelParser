@@ -30,7 +30,7 @@ namespace LibraryLib
                 }
                 catch (System.Data.OleDb.OleDbException e)
                 {
-                    throw new WrongFileException("Something wrong with OleDb");
+                    throw new WrongFileException("Something wrong with OleDb\nMaybe you need to open Excel\nThis is hardware problem");
                 }
                 return DtSet;
             }
