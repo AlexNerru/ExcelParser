@@ -12,35 +12,26 @@ namespace LibraryLib
 {
     public class TableManager
     {
-        DataTable Table { get; set; }
-
-        public TableManager(DataSet dataSet)
+        public DataTable LoadedTable { get; set; }
+        public DataTable CustomTable { get; set; }
+        List<string> columnNames = new List<string>() { "FullName", "HeadFullName", "TaxPayerId",
+                "TaxId", "HeadPhoneNumber", "GovermentId", "Area", "PostIndex", "City", "Street",
+                "Building", "Housing", "District", "Coords", "Phone", "Fax", "Email", "Site"};
+        public TableManager(DataTable dataTable)
         {
-            if (ValidateTable(dataSet.Tables[0]))
+            if (ValidateTable(dataTable))
             {
-                Table = dataSet.Tables[0];
-                
+                LoadedTable = dataTable;
             }
             else throw new TableValidationException("Table is not legal");
         }
-
-        bool ValidateTable(DataTable table)
-        {
-            bool flag = true;
-            foreach (DataRow row in table.Rows)
-            {
-                if (row[0].ToString() != "Библиотека")
-                    flag = false;                
-            }
-            return flag;
-        }
        
-        public Libraries GetLibraries ()
+        public Libraries GetLibrariesFromLoadedTable ()
         {
-            if (Table != null)
+            if (LoadedTable != null)
             {
                 Libraries libraries = new Libraries();
-                foreach (DataRow item in Table.Rows)
+                foreach (DataRow item in LoadedTable.Rows)
                     try
                     {
                         libraries.Create(new Library(item));
@@ -52,34 +43,71 @@ namespace LibraryLib
                     }          
                 return libraries;
             }
-            else throw new TableNotProvidedException("Данные какие-то кривые");
+            else throw new TableNotProvidedException("You haven't loaded table");
         }
 
+        public void AddLibraryToCustomTable(Library lib)
+        {
+            DataRow dr = CustomTable.NewRow();
+            dr = this.CreateDataRow(dr, lib);
+            this.AddLibraryToLoadedTabel(dr);
+            CustomTable.Rows.Add(dr);
+        }
+
+        void AddLibraryToLoadedTabel(DataRow row)
+        {
+            DataRow dr = LoadedTable.NewRow();
+            dr["Category"] = "Библиотека";
+            dr["FullName"] = row["FullName"];
+            dr["OrgInfo"] = $"Телефон руководителя: {row["HeadPhoneNumber"]}\nПолное наименование учреждения: {row["FullName"]}\nИНН: {row["TaxPayerId"]}\nКПП: {row["TaxId"]}\nОГРН: {row["GovermentId"]}\nФИО руководителя учреждения: {row["HeadFullName"]}";
+            LoadedTable.Rows.Add(dr);
+            dr["ObjectAddress"] = $"Административный округ: {row["District"]}\nРайон: {row["Area"]}\nПочтовый индекс: {row["PostIndex"]}\nАдрес: {row["City"]}, {row["Street"]}, {row["Building"]}, {row["Housing"]}";
+            dr["geoData"] = row["Coords"];
+            dr["PublicPhone"] = row["Phone"];
+            dr["Email"] = row["Email"];
+            dr["Fax"] = row["Fax"];
+            dr["Site"] = row["Site"];
+            //TODO: Working hours
+        }
+
+       /// <summary>
+       /// Creates DataTable в Libraries object
+       /// </summary>
+       /// <param name="libs"></param>
+       /// <returns></returns>
        public DataTable CreateTableFromLibs (Libraries libs)
         {
             DataTable table = new DataTable();
-            table.Columns.Add("FullName");
-            table.Columns.Add("HeadFullName");
-            table.Columns.Add("TaxPayerId");
-            table.Columns.Add("Area");
-            table.Columns.Add("Street");
-            table.Columns.Add("Building");
-            table.Columns.Add("Phone");
-            table.Columns.Add("Site");
+            foreach (var item in columnNames)
+            {
+                table.Columns.Add(item);
+            }
             foreach (var lib in libs.GetAll())
             {
                 DataRow dr = table.NewRow();
-                dr["FullName"] = lib.FullName;
-                dr["HeadFullName"] = lib.HeadFullName;
-                dr["TaxPayerId"] = lib.TaxPayerId;
-                dr["Area"] = lib.Area;
-                dr["Street"] = lib.Street;
-                dr["Building"] = lib.Building;
-                dr["Phone"] = lib.Phone;
-                dr["Site"] = lib.Site;
+                dr = this.CreateDataRow(dr, lib);
                 table.Rows.Add(dr);
             }
-            return table;
+            this.CustomTable = table;
+            return CustomTable;
+        }
+
+        DataRow CreateDataRow (DataRow dr, Library lib)
+        {
+            foreach (var item in columnNames)
+                dr[item] = lib[item];
+            return dr;
+        }
+
+        bool ValidateTable(DataTable table)
+        {
+            bool flag = true;
+            foreach (DataRow row in table.Rows)
+            {
+                if (row[0].ToString() != "Библиотека")
+                    flag = false;
+            }
+            return flag;
         }
     }
 

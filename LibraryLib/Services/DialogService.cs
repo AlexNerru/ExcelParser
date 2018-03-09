@@ -31,7 +31,5 @@ namespace LibraryLib
                 FilePath = saveFileDialog.FileName;
         }
 
-
-
     }
 }

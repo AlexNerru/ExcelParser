@@ -18,25 +18,28 @@ namespace LibraryLib
 
         public OrgInfo(string FullOrgInfo)
         {
-            List<string> needToFind = new List<string>() { "ИНН: ",
-                "Полное наименование учреждения: ", "Телефон руководителя: ",
-                "ФИО руководителя учреждения: ", "КПП: ", "ОГРН: " };
+            List<string> needToFind = new List<string>() { "ИНН",
+                "Полное наименование учреждения", "Телефон руководителя",
+                "ФИО руководителя учреждения", "КПП", "ОГРН" };
             List<string> stringList = Regex.Split(FullOrgInfo,"\n").ToList();
+            List<string> toParse = new List<string>();
+            foreach (var str in needToFind)
+                toParse.Add(stringList.Where(stringToCheck => stringToCheck.Contains(str)).First());
             try
             {
-                this.TaxPayerId = Regex.Split(stringList.Where(str=>str.Contains(needToFind[0])).First(), @": ").Last();
-                this.FullName = Regex.Split(stringList.Where(str => str.Contains(needToFind[1])).First(), @": ").Last();
-                this.HeadPhoneNumber= Regex.Split(stringList.Where(str => str.Contains(needToFind[2])).First(), @": ").Last();
+                this.TaxPayerId = Regex.Split(toParse[0], @": ").Last();
+                this.FullName = Regex.Split(toParse[1], @": ").Last();
+                this.HeadPhoneNumber= Regex.Split(toParse[2], @": ").Last();
                 try
                 {
-                    this.HeadFullName = new Person(Regex.Split(stringList.Where(str => str.Contains(needToFind[3])).First(), @": ").Last());
+                    this.HeadFullName = new Person(Regex.Split(toParse[3], @": ").Last());
                 }
                 catch (PersonParseException e)
                 {
                     throw new OrgInfoParseException("Data Parse error, not all fields provided", e);
                 }
-                this.TaxId = Regex.Split(stringList.Where(str => str.Contains(needToFind[4])).First(), @": ").Last();
-                this.GovermentId = Regex.Split(stringList.Where(str => str.Contains(needToFind[5])).First(), @": ").Last();
+                this.TaxId = Regex.Split(toParse[4], @": ").Last();
+                this.GovermentId = Regex.Split(toParse[5], @": ").Last();
             }
             catch (IndexOutOfRangeException e)
             {
@@ -50,13 +53,6 @@ namespace LibraryLib
             {
                 throw new OrgInfoParseException("Data Parse error", e);
             }
-        }
-
-        public OrgInfo(string fullName, string taxPayerId, Person person)
-        {
-            this.FullName = fullName;
-            this.TaxPayerId = taxPayerId;
-            this.HeadFullName = person;
         }
 
         public override string ToString()

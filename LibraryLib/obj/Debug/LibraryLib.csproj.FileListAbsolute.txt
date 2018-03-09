@@ -5,3 +5,5 @@ C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\LibraryLib\obj\Debug\Li
 C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\LibraryLib\obj\Debug\LibraryLib.dll
 C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\LibraryLib\obj\Debug\LibraryLib.pdb
 C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\LibraryLib\obj\Debug\LibraryLib.csproj.ResolveComReference.cache
+C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\LibraryLib\bin\Debug\EPPlus.dll
+C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\LibraryLib\bin\Debug\EPPlus.xml

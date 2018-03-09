@@ -6,23 +6,43 @@
         xmlns:local="clr-namespace:Karpin2"
         x:Class="Karpin2.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525" WindowState="Maximized">
-    <Grid>
-        <Menu IsMainMenu="True" Margin="0,0,0,278.8">
-            <MenuItem Header="_File" >
+        Title="MainWindow" Height="1080" Width="1920" WindowState="Maximized">
+    <Grid Margin="0,0,5,-2.2">
+
+        <Menu IsMainMenu="True" Height="64" VerticalAlignment="Top" HorizontalAlignment="Left" Width="1910">
+            <MenuItem Header="_File" Height="64" Width="82.95" >
                 <MenuItem x:Name="OpenFileMenuItem" Header="_Open..." Click="OpenFileMenuItem_Click" />
                 <Separator />
-                <MenuItem Header="_Save" />
+                <MenuItem x:Name="SaveMenuItem" Header="_Save" Click="SaveMenuItem_Click" />
                 <MenuItem Header="_Save As..." />
                 <Separator />
-                <MenuItem Header="_Exit" />
+                <MenuItem x:Name="ExitMenuItem" Header="_Exit" Click="ExitMenuItem_Click" />
             </MenuItem>
-            <MenuItem Header="_Edit" />
-            <MenuItem Header="_View" />
-            <MenuItem Header="_Window" />
-            <MenuItem Header="_Help" />
+            <MenuItem x:Name="EditMenuItem" Header="_Edit" Width="83.91" Visibility="Hidden">
+                <MenuItem x:Name="AddLibraryMenuItem" Header="_Add..." Click="AddLibraryMenuItem_Click"/>
+                <Separator />
+            </MenuItem>
         </Menu>
-        <DataGrid x:Name="DataView" ItemsSource="{Binding}" Margin="0,29,0,-0.2"/>
+
+        <Grid x:Name="ContentGrid" Margin="0,64,0.2,0">
+            <Label Content="Имя главы&#xD;&#xA;&#xD;&#xA;" VerticalAlignment="Top" Margin="54,142,359.2,0" Height="25"/>
+
+            <Label Content="Введите информацию о новой бибилотеке:&#xA;" Margin="91.2,10,70.136,0" Height="41.92" VerticalAlignment="Top"/>
+            <TextBox x:Name="FullNameTextBox" Margin="54,93,0,0" TextWrapping="Wrap" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="82"/>
+            <TextBox x:Name="TaxPayerIdTextBox" Margin="217,93,0,0" TextWrapping="Wrap" Text="&#xA;" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="85"/>
+            <Button x:Name="BackToTableButton" Content="Button" Margin="0,0,52.4,36.8" Click="BackToTableButton_Click" HorizontalAlignment="Right" Width="219" Height="20" VerticalAlignment="Bottom"/>
+            <Button x:Name="NextButton" Content="Next" Margin="0,0,426.4,36.8" Click="NextButton_Click" HorizontalAlignment="Right" Width="240" Height="20" VerticalAlignment="Bottom"/>
+            <Label Content="Полное название&#xA;" Margin="54,57,0,0" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108"/>
+            <Label Content="ИНН&#xA;" Margin="217,62,1588.2,0" Height="31" VerticalAlignment="Top"/>
+            <Label Content="Отчество&#xD;&#xA;" HorizontalAlignment="Left" Height="24.88" Margin="188.8,142.45,0,0" VerticalAlignment="Top" Width="73.6"/>
+            <Label Content="Фамилия&#xD;&#xA;" HorizontalAlignment="Left" Margin="307,142,0,0" VerticalAlignment="Top" Height="25" Width="114"/>
+            <TextBox x:Name="NameTextBox" Height="23" Margin="53.6,172.33,0,0" TextWrapping="Wrap" Text="&#xD;&#xA;" VerticalAlignment="Top" HorizontalAlignment="Left" Width="96.05"/>
+            <TextBox x:Name="SurnameTextBox" HorizontalAlignment="Left" Margin="307,172,0,0" TextWrapping="Wrap" Text="&#xA;" Width="97.8" Height="23.33" VerticalAlignment="Top"/>
+            <TextBox x:Name="SecondNameTextBox" Margin="168.4,172.33,0,0" TextWrapping="Wrap" Text="&#xA;" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="116.8"/>
+        </Grid>
+        <Grid x:Name="DataGrid" Margin="0,69,0,-0.2" Visibility="Visible" d:IsHidden="True">
+            <DataGrid x:Name="DataView" ItemsSource="{Binding}" Margin="10,0,10,10"/>
+        </Grid>
 
     </Grid>
 </Window>

@@ -28,6 +28,7 @@ namespace Karpin2
     {
         IDialogService dialogService;
         IFileService fileService;
+        TableManager tableManager;
         public MainWindow()
         {
             InitializeComponent();
@@ -47,14 +48,47 @@ namespace Karpin2
             dialogService.FilePath = dialogService.OpenDialog.FileName;
             try
             {
-                DataSet filePath = fileService.Open(dialogService.FilePath);
-                TableManager tableManager = new TableManager(filePath);
-                Libraries libraries = tableManager.GetLibraries();
-
+                DataTable table = fileService.Open(dialogService.FilePath);
+                tableManager = new TableManager(table);
+                Libraries libraries = tableManager.GetLibrariesFromLoadedTable();
                 DataView.DataContext = tableManager.CreateTableFromLibs(libraries);
-            }
-            catch (Exception ex) when (ex is WrongFileException || ex is TableValidationException || ex is TableParseException) {MessageBox.Show(ex.Message); }
+                EditMenuItem.Visibility = Visibility.Visible;
+        }
+            catch (Exception ex) when(ex is FileServiceException || ex is TableValidationException || ex is TableParseException) { MessageBox.Show(ex.Message); }
             catch (Exception) { MessageBox.Show("Everything gone wrong"); }
+}
+
+        private void ExitMenuItem_Click(object sender, RoutedEventArgs e) => this.Close();
+
+        private void AddLibraryMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            DataView.Visibility = Visibility.Hidden;
+            ContentGrid.Visibility = Visibility.Visible;
+        }
+
+        private void NextButton_Click(object sender, RoutedEventArgs e)
+        {
+            Libraries libraries = tableManager.GetLibrariesFromLoadedTable();
+            OrgInfo orgInfo = new OrgInfo(FullNameTextBox.Text,
+                TaxPayerIdTextBox.Text, new Person(NameTextBox.Text, SecondNameTextBox.Text, SurnameTextBox.Text));
+            Library lib = new Library(orgInfo);
+            libraries.Create(lib);
+            tableManager.AddLibraryToCustomTable(lib);
+            DataView.DataContext = tableManager.CustomTable;
+            DataView.Visibility = Visibility.Visible;
+            ContentGrid.Visibility = Visibility.Hidden;
+        }
+
+        private void BackToTableButton_Click(object sender, RoutedEventArgs e)
+        {
+            DataView.Visibility = Visibility.Visible;
+            ContentGrid.Visibility = Visibility.Hidden;
+        }
+
+        private void SaveMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            fileService.Save(tableManager.LoadedTable);
+            MessageBox.Show("Успешно");
         }
     }
 }

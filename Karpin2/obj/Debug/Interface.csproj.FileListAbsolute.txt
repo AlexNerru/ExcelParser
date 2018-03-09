@@ -16,3 +16,5 @@ C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\obj\Debug\Karpi
 C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\obj\Debug\Interface.csproj.ResolveComReference.cache
 C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\bin\Debug\LibraryLib.dll
 C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\bin\Debug\LibraryLib.pdb
+C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\bin\Debug\EPPlus.dll
+C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\bin\Debug\EPPlus.xml

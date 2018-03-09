@@ -32,16 +32,21 @@ namespace LibraryLib
                               Доступность объекта(инвалиды - опорники): частично
                                Доступность объекта(инвалиды по зрению): частично";
             #endregion
-            List<string> needToFind = new List<string>() { "Район: ", "Почтовый индекс: ", "Адрес: ", "Административный округ: " };
+            List<string> needToFind = new List<string>() { "Район", "Почтовый индекс", "Адрес", "Административный округ" };
             if (FullAdress.Contains("размер ячейки")|| FullAdress.Contains("Зеленоград"))
                 FullAdress = testString;
             List<string> stringList = FullAdress.Split('\n').ToList();
+            List<string> toParse = new List<string>();
+            
             try
             {
-                this.Area = Regex.Split(stringList.Where(str => str.Contains(needToFind[0])).First(), @": ").Last();
-                this.PostIndex = Regex.Split(stringList.Where(str => str.Contains(needToFind[1])).First(), @": ").Last();
-                this.District = Regex.Split(stringList.Where(str => str.Contains(needToFind[3])).First(), @": ").Last();
-                var address = Regex.Split(stringList.Where(str => str.Contains(needToFind[2])).First(), @": ").Last();
+                foreach (var str in needToFind)
+                    toParse.Add(stringList.Where(stringToCheck => stringToCheck.Contains(str)).First());
+
+                this.Area = Regex.Split(toParse[0], @": ").Last();
+                this.PostIndex = Regex.Split(toParse[1], @": ").Last();
+                this.District = Regex.Split(toParse[3], @": ").Last();
+                var address = toParse[2].Split(':')[1];
                 var all = Regex.Split(address, @", ");
                 if (all[0].Contains("город"))
                 {
@@ -71,10 +76,6 @@ namespace LibraryLib
             catch (InvalidOperationException e)
             {
                 throw new AdressParseException("Data Parse error, not all fields provided\n", e);
-            }
-            catch (Exception e)
-            {
-                throw new AdressParseException("Something strange", e);
             }
 
 

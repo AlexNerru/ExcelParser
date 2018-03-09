@@ -26,6 +26,12 @@ namespace LibraryLib
                 }
 
         }
+        public Person(string name, string secondName, string surname)
+        {
+            this.Name = name;
+            this.SecondName = secondName;
+            this.Surname = surname;
+        }
         public override string ToString()
         {
             return $"{Name} {SecondName} {Surname}";
