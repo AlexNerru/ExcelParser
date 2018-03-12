@@ -16,6 +16,8 @@ namespace LibraryLib
                 "TaxId", "HeadPhoneNumber", "GovermentId", "Area", "PostIndex", "City", "Street",
                 "Building", "Housing", "District", "Coords", "Phone", "Fax", "Email", "Site"};
 
+        public List<string> ColumnNames { get => columnNames; }
+
         public TableManager(DataTable dataTable)
         {
             if (ValidateTable(dataTable))
@@ -76,21 +78,21 @@ namespace LibraryLib
         }
 
 
-        List<Library> GetLibraries(DataTable LoadedTable)
+        public List<Library> GetLibraries(DataTable LoadedTable)
         {
             if (LoadedTable != null)
             {
                 List<Library> libs = new List<Library>();
                 foreach (DataRow item in LoadedTable.Rows)
-                    //try
-                    //{
+                    try
+                    {
                         libs.Add(new Library(item));
-                    //}
-                    //catch (Exception e) when (e is OrgInfoParseException || e is AdressParseException
-                    //|| e is GeoParseException || e is GeoParseException || e is WorkingHoursParseException)
-                    //{
-                    //    throw new TableParseException("Smth with table parcing", e);
-                    //}
+                    }
+                    catch (Exception e) when (e is OrgInfoParseException || e is AdressParseException
+                    || e is GeoParseException || e is GeoParseException || e is WorkingHoursParseException)
+                    {
+                        throw new TableParseException("Smth with table parcing", e);
+                    }
                 return libs;
             }
             else throw new TableNotProvidedException("You haven't loaded table");

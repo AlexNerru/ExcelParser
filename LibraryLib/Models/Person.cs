@@ -21,7 +21,7 @@ namespace LibraryLib
                 this.SecondName = names[1];
                 this.Surname = names[2];
             }
-            catch (IndexOutOfRangeException e)
+            catch (IndexOutOfRangeException)
             {
                 this.Name = "Иван";
                 this.SecondName = "Иванович";

@@ -24,7 +24,9 @@
                 <MenuItem x:Name="DeleteLibraryMenuItem" Header="_Delete Selected..." Click="DeleteLibraryMenuItem_Click"/>
                 <MenuItem x:Name="EditLibraryMenuItem" Header="_Edit Selected..." Click="EditLibraryMenuItem_Click_1"/>
                 <Separator />
-                <MenuItem x:Name="FilterLibraryMenuItem" Header="_Filter..." />
+                <MenuItem x:Name="FilterLibraryMenuItem" Header="_Filter..." Click="FilterLibraryMenuItem_Click" />
+                <MenuItem x:Name="SelectRowsNumber" Header="_Select Rows Number..." Height="22.6" Click="OpenRowNumberWindow" Margin="-0.255,0,2.745,0"/>
+                <MenuItem x:Name="ResetFilterItemMenu" Header="_ResetFilter..." Click="ResetFilterItemMenu_Click"  />
             </MenuItem>
         </Menu>
 

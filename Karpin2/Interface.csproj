@@ -58,9 +58,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="FilterWindow.xaml.cs">
+      <DependentUpon>FilterWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RowsNumberWindow.xaml.cs">
       <DependentUpon>RowsNumberWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="FilterWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -138,6 +145,12 @@
       <Project>{a9a22b5f-8486-4349-bb8b-a40ba61ae86a}</Project>
       <Name>LibraryLib</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ogMPSNWGmnI.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <SplashScreen Include="z0Gg20k_Sxk.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -39,6 +39,7 @@ namespace Karpin2
         Validator validator;
 
         RowsNumberWindow numberWindow;
+        FilterWindow filterWindow;
 
         public MainWindow()
         {
@@ -153,19 +154,49 @@ namespace Karpin2
 
         private void FilterLibraryMenuItem_Click(object sender, RoutedEventArgs e)
         {
+            DataTable table = tableManager.CreateCustomTable(tableManager.Libraries.Take(rowNumber).ToList());
+            filterWindow = new FilterWindow();
+            foreach (var item in tableManager.ColumnNames)
+                filterWindow.ColumnComboBox.Items.Add(item);
+            filterWindow.GoButton.Click += GoFilter;
+            filterWindow.Show();
+            filterWindow.BringIntoView();
+        }
 
+        private void GoFilter(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                List<Library> libs = new List<Library>();
+                foreach (var lib in tableManager.Libraries)
+                {
+                    if ((bool)filterWindow.AccurateCheckBox.IsChecked)
+                    {
+                        if (lib[filterWindow.ColumnComboBox.Text].ToString() == filterWindow.FilterTextBox.Text)
+                            libs.Add(lib);
+                    }
+                    else
+                    {
+                        if (lib[filterWindow.ColumnComboBox.Text].ToString().Contains(filterWindow.FilterTextBox.Text))
+                            libs.Add(lib);
+                    }
+                }
+                UpdateDataGridContext(libs);
+                filterWindow.Close();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void EditLibraryMenuItem_Click_1(object sender, RoutedEventArgs e)
         {
             //Think how to do it right
             textBoxList.ForEach(box => box.Clear());
-            HideDataGrid();
-            AddLibraryGrid.Visibility = Visibility.Hidden;
-            UpdateLibraryGrid.Visibility = Visibility.Visible;
             int index = DataView.SelectedIndex;
             if (index >= 0)
             {
+                HideDataGrid();
+                AddLibraryGrid.Visibility = Visibility.Hidden;
+                UpdateLibraryGrid.Visibility = Visibility.Visible;
                 Library lib = tableManager.Libraries[index];
                 FullNameTextBox.Text = lib.FullName;
                 TaxPayerIdTextBox.Text = lib.TaxPayerId;
@@ -202,6 +233,7 @@ namespace Karpin2
         }
 
         private void UpdateDataGridContext() => DataView.DataContext = tableManager.CreateCustomTable(tableManager.Libraries.Take(rowNumber).ToList());
+        private void UpdateDataGridContext(List<Library> libs) => DataView.DataContext = tableManager.CreateCustomTable(libs);
 
         private Library CreateLibFromTextBoxes()
         {
@@ -233,8 +265,17 @@ namespace Karpin2
 
 
 
+
         #endregion
 
+        private void OpenRowNumberWindow(object sender, RoutedEventArgs e)
+        {
+            numberWindow = new RowsNumberWindow();
+            numberWindow.Show();
+            numberWindow.BringIntoView();
+            numberWindow.SelectRowsButton.Click += SelectRowsButton_Click;
+        }
 
+        private void ResetFilterItemMenu_Click(object sender, RoutedEventArgs e) => UpdateDataGridContext();
     }
 }

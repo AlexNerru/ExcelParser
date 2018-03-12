@@ -61,6 +61,8 @@ namespace Karpin2 {
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.0.0.0")]
         public static void Main() {
+            SplashScreen splashScreen = new SplashScreen("z0gg20k_sxk.jpg");
+            splashScreen.Show(true);
             Karpin2.App app = new Karpin2.App();
             app.InitializeComponent();
             app.Run();
