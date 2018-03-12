@@ -10,11 +10,18 @@ namespace LibraryLib
 {
     public class GeoData
     {
+        /// <summary>
+        /// All coordinates of library
+        /// </summary>
         List<GeoCoordinate> coords = new List<GeoCoordinate>();
+        /// <summary>
+        /// Returns coors
+        /// </summary>
         public List<GeoCoordinate> Coordinates { get => coords; }
-
-
-
+        /// <summary>
+        /// Ctor
+        /// </summary>
+        /// <param name="geoData"></param>
         public GeoData(string geoData)
         {
             if (geoData == string.Empty)
@@ -41,7 +48,11 @@ namespace LibraryLib
                 }
             }
         }
-
+        /// <summary>
+        /// Ctor
+        /// </summary>
+        /// <param name="latitude"></param>
+        /// <param name="longitude"></param>
         public GeoData(double latitude, double longitude)
         {
             try
@@ -53,7 +64,10 @@ namespace LibraryLib
                 throw new CoordsException("Coords are not between -90 and 90", e);
             }
         }
-
+        /// <summary>
+        /// To string
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             string newStr = @"{type=MultiPoint,coordinates=";
@@ -70,6 +84,9 @@ namespace LibraryLib
         }
     }
 
+    /// <summary>
+    /// Thrown when string is not in right format
+    /// </summary>
     [Serializable]
     public class GeoParseException : Exception
     {
@@ -81,7 +98,9 @@ namespace LibraryLib
           System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }
 
-
+    /// <summary>
+    /// Thrown when coordinates values are incorrect
+    /// </summary>
     [Serializable]
     public class CoordsException : Exception
     {

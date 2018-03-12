@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
+using System.Reflection;
 
 namespace LibraryLib
 {
@@ -108,6 +109,22 @@ namespace LibraryLib
         /// <returns></returns>
         public override string ToString() => $"Административный округ: {this.District}\nРайон: {this.Area}" +
                 $"\nПочтовый индекс: {this.PostIndex}\nАдрес: {this.Street}, дом {this.Building}, {this.Housing}";
+
+        public object this[string propertyName]
+        {
+            get
+            {
+                Type myType = typeof(Library);
+                PropertyInfo myPropInfo = myType.GetProperty(propertyName);
+                return myPropInfo.GetValue(this, null);
+            }
+            set
+            {
+                Type myType = typeof(Library);
+                PropertyInfo myPropInfo = myType.GetProperty(propertyName);
+                myPropInfo.SetValue(this, value, null);
+            }
+        }
     }
 
     [Serializable]

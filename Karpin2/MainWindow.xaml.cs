@@ -55,6 +55,8 @@ namespace Karpin2
             validator = new Validator();
         }
 
+        #region Handlers
+        
         private void OpenFileMenuItem_Click(object sender, RoutedEventArgs e)
         {
             dialogService = new DialogService();
@@ -71,7 +73,7 @@ namespace Karpin2
             {
                 DataTable table = fileService.OpenExcelAsDataTable(dialogService.FilePath);
                 tableManager = new TableManager(table);
-
+                
                 numberWindow = new RowsNumberWindow();
                 numberWindow.SelectRowsButton.Click += SelectRowsButton_Click;
                 numberWindow.Show();
@@ -232,9 +234,44 @@ namespace Karpin2
             ShowDataGrid();
         }
 
+        /// <summary>
+        /// Opens window to enter number of rows
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void OpenRowNumberWindow(object sender, RoutedEventArgs e)
+        {
+            numberWindow = new RowsNumberWindow();
+            numberWindow.Show();
+            numberWindow.BringIntoView();
+            numberWindow.SelectRowsButton.Click += SelectRowsButton_Click;
+        }
+
+        /// <summary>
+        /// Reset DataView regenerating it
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ResetFilterItemMenu_Click(object sender, RoutedEventArgs e) => UpdateDataGridContext();
+
+        #endregion
+
+        #region HelpFunctions
+        /// <summary>
+        /// Updating datagrid from tableManager libraries
+        /// </summary>
         private void UpdateDataGridContext() => DataView.DataContext = tableManager.CreateCustomTable(tableManager.Libraries.Take(rowNumber).ToList());
+
+        /// <summary>
+        /// Updating datagrid from libraries
+        /// </summary>
+        /// <param name="libs">Libraries to form datagrid</param>
         private void UpdateDataGridContext(List<Library> libs) => DataView.DataContext = tableManager.CreateCustomTable(libs);
 
+        /// <summary>
+        /// Gets all textboxes values and creating library
+        /// </summary>
+        /// <returns>Created library</returns>
         private Library CreateLibFromTextBoxes()
         {
             OrgInfo orgInfo = new OrgInfo(TaxPayerIdTextBox.Text, FullNameTextBox.Text,
@@ -249,14 +286,21 @@ namespace Karpin2
             Library lib = new Library(orgInfo, address, geoData, workingHours, contact);
             return lib;
         }
+        #endregion
 
         #region VisibilitySwitchers
+        /// <summary>
+        /// Showing DataView and hiding contentGrid
+        /// </summary>
         private void ShowDataGrid()
         {
             DataView.Visibility = Visibility.Visible;
             ContentGrid.Visibility = Visibility.Hidden;
         }
-
+        
+        /// <summary>
+        /// Showing ContentGrid and hidding DataView
+        /// </summary>
         private void HideDataGrid()
         {
             DataView.Visibility = Visibility.Hidden;
@@ -268,14 +312,6 @@ namespace Karpin2
 
         #endregion
 
-        private void OpenRowNumberWindow(object sender, RoutedEventArgs e)
-        {
-            numberWindow = new RowsNumberWindow();
-            numberWindow.Show();
-            numberWindow.BringIntoView();
-            numberWindow.SelectRowsButton.Click += SelectRowsButton_Click;
-        }
-
-        private void ResetFilterItemMenu_Click(object sender, RoutedEventArgs e) => UpdateDataGridContext();
+        
     }
 }

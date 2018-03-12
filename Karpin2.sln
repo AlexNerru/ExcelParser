@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interface", "Karpin2\Interf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryLib", "LibraryLib\LibraryLib.csproj", "{A9A22B5F-8486-4349-BB8B-A40BA61AE86A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{5D94D66F-7066-47F7-8D83-C1F1BF20EC60}"
+EndProject
+Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "Documentation", "Documentation\Documentation.shfbproj", "{9E05D8AA-A79B-48DC-B249-20DBB9ABBEE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{A9A22B5F-8486-4349-BB8B-A40BA61AE86A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9A22B5F-8486-4349-BB8B-A40BA61AE86A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9A22B5F-8486-4349-BB8B-A40BA61AE86A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D94D66F-7066-47F7-8D83-C1F1BF20EC60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D94D66F-7066-47F7-8D83-C1F1BF20EC60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D94D66F-7066-47F7-8D83-C1F1BF20EC60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D94D66F-7066-47F7-8D83-C1F1BF20EC60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E05D8AA-A79B-48DC-B249-20DBB9ABBEE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E05D8AA-A79B-48DC-B249-20DBB9ABBEE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E05D8AA-A79B-48DC-B249-20DBB9ABBEE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E05D8AA-A79B-48DC-B249-20DBB9ABBEE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

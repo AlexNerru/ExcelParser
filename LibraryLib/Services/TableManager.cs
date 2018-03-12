@@ -7,7 +7,10 @@ using System.Data;
 
 namespace LibraryLib
 {
-    public class TableManager
+    /// <summary>
+    /// Class using to operate with Libraries and table
+    /// </summary>
+    public class TableManager : ITableManager
     {
         public DataTable LoadedTable { get; set; }
         public List<Library> Libraries { get; set; }

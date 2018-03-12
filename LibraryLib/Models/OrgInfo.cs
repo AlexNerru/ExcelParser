@@ -30,36 +30,24 @@ namespace LibraryLib
             List<string> needToFind = new List<string>() { "ИНН: ",
                 "Полное наименование учреждения: ", "Телефон руководителя: ",
                 "ФИО руководителя учреждения: ", "КПП: ", "ОГРН: " };
-            List<string> stringList = Regex.Split(FullOrgInfo,"\n").ToList();
+            List<string> stringList = Regex.Split(FullOrgInfo, "\n").ToList();
             try
             {
                 this.TaxPayerId
-                    = Regex.Split(stringList.Where(str=>str.Contains(needToFind[0])).First(), @": ").Last();
+                    = Regex.Split(stringList.Where(str => str.Contains(needToFind[0])).First(), @": ").Last();
                 this.FullName = Regex.Split(stringList.Where(str => str.Contains(needToFind[1])).First(), @": ").Last();
-                this.HeadPhoneNumber= Regex.Split(stringList.Where(str => str.Contains(needToFind[2])).First(), @": ").Last();
-                try
-                {
-                    this.HeadFullName = new Person(Regex.Replace(Regex.Split(stringList.Where(str => str.Contains(needToFind[3])).First(), @": ").Last(), @"\t|\n|\r", ""));
-            }
-            catch (PersonParseException e)
-            {
-                throw new OrgInfoParseException("Data Parse error, not all fields provided", e);
-            }
-            this.TaxId = Regex.Split(stringList.Where(str => str.Contains(needToFind[4])).First(), @": ").Last();
+                this.HeadPhoneNumber = Regex.Split(stringList.Where(str => str.Contains(needToFind[2])).First(), @": ").Last();
+                this.HeadFullName = new Person(Regex.Replace(Regex.Split(stringList.Where(str => str.Contains(needToFind[3])).First(), @": ").Last(), @"\t|\n|\r", ""));
+                this.TaxId = Regex.Split(stringList.Where(str => str.Contains(needToFind[4])).First(), @": ").Last();
                 this.GovermentId = Regex.Split(stringList.Where(str => str.Contains(needToFind[5])).First(), @": ").Last();
             }
-            catch (IndexOutOfRangeException e)
+            catch (Exception e) when (e is PersonParseException || e is IndexOutOfRangeException || e is ArgumentOutOfRangeException || e is ArgumentException)
             {
                 throw new OrgInfoParseException("Data Parse error, not all fields provided", e);
             }
-            catch (ArgumentOutOfRangeException e)
-            {
-                throw new OrgInfoParseException("Data Parse error, not all fields provided\n", e);
-            }
-            catch (ArgumentException e)
-            {
-                throw new OrgInfoParseException("Data Parse error", e);
-            }
+            catch (Exception e) { throw new OrgInfoParseException(e.Message); }
+
+
         }
 
 

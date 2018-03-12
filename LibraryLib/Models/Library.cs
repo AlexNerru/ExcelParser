@@ -10,15 +10,32 @@ namespace LibraryLib
 {
     public class Library
     {
+        /// <summary>
+        /// OrgInfo field
+        /// </summary>
         OrgInfo _orgInfo;
+        /// <summary>
+        /// Address
+        /// </summary>
         Address _address;
+        /// <summary>
+        /// GeoData
+        /// </summary>
         GeoData _geoData;
+        /// <summary>
+        /// Working Hours
+        /// </summary>
         WorkingHours _workingHours;
+        /// <summary>
+        /// ContactInfo
+        /// </summary>
         Contact _contact;
 
         //TODO: Think how to use objects
         #region Properties
-        
+        /// <summary>
+        /// Full name of library
+        /// </summary>
         public string FullName
         {
             get
@@ -27,6 +44,10 @@ namespace LibraryLib
                 else return string.Empty;
             }
         }
+
+        /// <summary>
+        /// Full name of chief of library
+        /// </summary>
         public string HeadFullName
         {
             get
@@ -35,6 +56,10 @@ namespace LibraryLib
                 else return string.Empty;
             }
         }
+
+        /// <summary>
+        /// Tax Payer Id of library
+        /// </summary>
         public string TaxPayerId
         {
             get
@@ -43,6 +68,10 @@ namespace LibraryLib
                 else return string.Empty;
             }
         }
+
+        /// <summary>
+        /// Phone of chief of library
+        /// </summary>
         public string HeadPhoneNumber
         {
             get
@@ -51,6 +80,10 @@ namespace LibraryLib
                 else return string.Empty;
             }
         }
+
+        /// <summary>
+        /// Tax Id of library
+        /// </summary>
         public string TaxId
         {
             get
@@ -59,6 +92,10 @@ namespace LibraryLib
                 else return string.Empty;
             }
         }
+
+        /// <summary>
+        /// Goverment Id of library
+        /// </summary>
         public string GovermentId
         {
             get
@@ -68,6 +105,9 @@ namespace LibraryLib
             }
         }
 
+        /// <summary>
+        /// Area of library
+        /// </summary>
         public string Area
         {
             get
@@ -76,6 +116,10 @@ namespace LibraryLib
                 else return string.Empty;
             }
         }
+
+        /// <summary>
+        /// Street of library
+        /// </summary>
         public string Street
         {
             get
@@ -84,6 +128,10 @@ namespace LibraryLib
                 else return string.Empty;
             }
         }
+
+        /// <summary>
+        /// Building of library
+        /// </summary>
         public string Building
         {
             get
@@ -92,6 +140,10 @@ namespace LibraryLib
                 else return string.Empty;
             }
         }
+
+        /// <summary>
+        /// Housing of library
+        /// </summary>
         public string Housing
         {
             get
@@ -100,6 +152,10 @@ namespace LibraryLib
                 else return string.Empty;
             }
         }
+
+        /// <summary>
+        /// City of library
+        /// </summary>
         public string City
         {
             get
@@ -108,6 +164,10 @@ namespace LibraryLib
                 else return string.Empty;
             }
         }
+
+        /// <summary>
+        /// PostIndex of library
+        /// </summary>
         public string PostIndex
         {
             get
@@ -116,6 +176,10 @@ namespace LibraryLib
                 else return string.Empty;
             }
         }
+
+        /// <summary>
+        /// District of library
+        /// </summary>
         public string District
         {
             get
@@ -125,6 +189,9 @@ namespace LibraryLib
             }
         }
 
+        /// <summary>
+        /// Public phone of library
+        /// </summary>
         public string Phone
         {
             get
@@ -133,6 +200,10 @@ namespace LibraryLib
                 else return string.Empty;
             }
         }
+
+        /// <summary>
+        /// Website of library
+        /// </summary>
         public string Site
         {
             get
@@ -141,6 +212,10 @@ namespace LibraryLib
                 else return string.Empty;
             }
         }
+
+        /// <summary>
+        /// Fax of library
+        /// </summary>
         public string Fax
         {
             get
@@ -149,6 +224,10 @@ namespace LibraryLib
                 else return string.Empty;
             }
         }
+
+        /// <summary>
+        /// Email of library
+        /// </summary>
         public string Email
         {
             get
@@ -158,25 +237,42 @@ namespace LibraryLib
             }
         }
 
-        public string Coords
-        {
-            get
-            {
-                if (_geoData != null) return _geoData.ToString();
-                else return string.Empty;
-            }
-        }
+        /// <summary>
+        /// String represent of geoData
+        /// </summary>
+        public string Coords { get => _geoData != null ? _geoData.ToString() : string.Empty; }
 
+        /// <summary>
+        /// String represent of working hours
+        /// </summary>
         public string Hours { get => _workingHours != null ? _workingHours.ToString() : string.Empty; }
 
+        /// <summary>
+        /// Contact member
+        /// </summary>
         public Contact Contact { get => _contact; set => _contact = value; }
+        /// <summary>
+        /// OrgInfo member
+        /// </summary>
         public OrgInfo OrgInfo { get => _orgInfo; set => _orgInfo = value; }
+        /// <summary>
+        /// Address member
+        /// </summary>
         public Address Address { get => _address; set => _address = value; }
+        /// <summary>
+        /// GeoData member
+        /// </summary>
         public GeoData GeoData { get => _geoData; set => _geoData = value; }
+        /// <summary>
+        /// Working Hours member
+        /// </summary>
         public WorkingHours WorkingHours { get => _workingHours; set => _workingHours = value; }
         #endregion
 
-
+        /// <summary>
+        /// Initializes a new instance of the Library class to the value indicated by datarow
+        /// </summary>
+        /// <param name="row">DataRow</param>
         public Library(DataRow row)
         {
             _orgInfo = new OrgInfo(row[row.Table.Columns["OrgInfo"].Ordinal].ToString());
@@ -189,16 +285,50 @@ namespace LibraryLib
                 row[row.Table.Columns["WebSite"].Ordinal].ToString());
         }
 
+        /// <summary>
+        /// Ctor
+        /// </summary>
+        /// <param name="org"></param>
         public Library(OrgInfo org) => _orgInfo = org;
+        /// <summary>
+        /// Ctor
+        /// </summary>
+        /// <param name="org"></param>
+        /// <param name="address"></param>
         public Library(OrgInfo org, Address address) : this(org) => _address = address;
+        /// <summary>
+        /// Ctor
+        /// </summary>
+        /// <param name="org"></param>
+        /// <param name="address"></param>
+        /// <param name="geo"></param>
         public Library(OrgInfo org, Address address, GeoData geo) : this(org, address) => _geoData = geo;
+        /// <summary>
+        /// Ctor
+        /// </summary>
+        /// <param name="org"></param>
+        /// <param name="address"></param>
+        /// <param name="geo"></param>
+        /// <param name="hours"></param>
         public Library(OrgInfo org, Address address, GeoData geo, WorkingHours hours)
             : this(org, address, geo) => _workingHours = hours;
+        /// <summary>
+        /// Ctor
+        /// </summary>
+        /// <param name="org"></param>
+        /// <param name="address"></param>
+        /// <param name="geo"></param>
+        /// <param name="hours"></param>
+        /// <param name="contact"></param>
         public Library(OrgInfo org, Address address, GeoData geo, WorkingHours hours, Contact contact)
             : this(org, address, geo, hours) => _contact = contact;
 
         
-
+        /// <summary>
+        /// Indexator to acces property by it's string name
+        /// </summary>
+        /// <param name="propertyName"></param>
+        /// <returns></returns>
         public object this[string propertyName]
         {
             get
