@@ -83,7 +83,7 @@ namespace Karpin2
                                    || ex is TableValidationException
                                    || ex is TableParseException)
             { MessageBox.Show($"{ex.Message}\n{ex.InnerException.Message}"); }
-            catch (Exception) { MessageBox.Show("Everything gone wrong"); }
+            //catch (Exception) { MessageBox.Show("Everything gone wrong"); }
         }
 
         private void SelectRowsButton_Click(object sender, RoutedEventArgs e)

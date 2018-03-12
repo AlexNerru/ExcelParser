@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topics>
+  <topic id="N:Karpin2" project="_Namespaces" file="9492b2d9-9ebd-6b14-a4c9-0d3ffad9b2b7" sortOrder="2">
+    <topic id="T:Karpin2.App" project="Karpin2" file="470655fb-1cc5-1dee-4d53-e6068ee4a18b">
+      <topic id="M:Karpin2.App.#ctor" project="Karpin2" file="cfe3fca6-c35c-a9f7-e31f-28c06f7143e3" />
+      <topic id="Properties.T:Karpin2.App" project="Karpin2" file="7591e1bf-feeb-f030-54cf-83e34478cb65" />
+      <topic id="Methods.T:Karpin2.App" project="Karpin2" file="e8328bf4-a180-e7c2-2567-8fbd6b0640bd">
+        <topic id="M:Karpin2.App.InitializeComponent" project="Karpin2" file="0dab9630-2658-ca6d-da66-39c47320e392" />
+        <topic id="M:Karpin2.App.Main" project="Karpin2" file="9bd74eee-afe9-9945-8258-591e6df5d193" />
+        <topic id="M:Karpin2.App.OnStartup(System.Windows.StartupEventArgs)" project="Karpin2" file="278b4ec4-6ba3-0290-e973-e6da80e818b1" />
+      </topic>
+      <topic id="Events.T:Karpin2.App" project="Karpin2" file="11fe4403-f443-cb8c-18a4-85c7a1dd6a6f" />
+    </topic>
+    <topic id="T:Karpin2.FilterWindow" project="Karpin2" file="cd5b8e5e-a184-8d32-1a9f-630a875596f4">
+      <topic id="M:Karpin2.FilterWindow.#ctor" project="Karpin2" file="f3d5580d-c5f4-3198-8e44-60076cc2f45f" />
+      <topic id="Properties.T:Karpin2.FilterWindow" project="Karpin2" file="1c147455-36af-a59d-7aef-ad9b72c89e9a" />
+      <topic id="Methods.T:Karpin2.FilterWindow" project="Karpin2" file="ed6376c1-968a-426a-9564-26ab384c3dd1">
+        <topic id="M:Karpin2.FilterWindow.InitializeComponent" project="Karpin2" file="c36b6503-7043-45b0-7aba-2a2f715d1ccf" />
+      </topic>
+      <topic id="Events.T:Karpin2.FilterWindow" project="Karpin2" file="f32cfe72-8396-0a66-517f-6e32044310c9" />
+    </topic>
+    <topic id="T:Karpin2.MainWindow" project="Karpin2" file="147bda62-6b67-0388-7179-4f082b0fe6de">
+      <topic id="M:Karpin2.MainWindow.#ctor" project="Karpin2" file="e46ad8d5-e6fc-de5d-2d9f-437437a484b1" />
+      <topic id="Properties.T:Karpin2.MainWindow" project="Karpin2" file="678692d8-08fc-dd72-46ba-7f2b1e100435" />
+      <topic id="Methods.T:Karpin2.MainWindow" project="Karpin2" file="7ea5c9f5-01ea-92de-4500-e8d380cae454">
+        <topic id="M:Karpin2.MainWindow.InitializeComponent" project="Karpin2" file="a80d6e60-c4d4-ae3c-e226-e7b6e21271f4" />
+      </topic>
+      <topic id="Events.T:Karpin2.MainWindow" project="Karpin2" file="e89e2a31-4095-4241-8aa9-0989f568972b" />
+    </topic>
+    <topic id="T:Karpin2.RowsNumberWindow" project="Karpin2" file="f11458d6-c7e9-42b7-bab5-5fbde065303a">
+      <topic id="M:Karpin2.RowsNumberWindow.#ctor" project="Karpin2" file="d677e001-08fd-84dc-3fa4-4b2278b380f4" />
+      <topic id="Properties.T:Karpin2.RowsNumberWindow" project="Karpin2" file="5fbc3956-65ef-692a-7fc4-7da32f522e4e" />
+      <topic id="Methods.T:Karpin2.RowsNumberWindow" project="Karpin2" file="3baa8897-66ef-16f6-07e8-9de5007fa6ca">
+        <topic id="M:Karpin2.RowsNumberWindow.InitializeComponent" project="Karpin2" file="a241a1b9-04ca-dda4-522e-ae0596b1a889" />
+      </topic>
+      <topic id="Events.T:Karpin2.RowsNumberWindow" project="Karpin2" file="715a625b-defb-9165-a1e5-eba3c8ea4a5c" />
+    </topic>
+  </topic>
+  <topic id="N:LibraryLib" project="_Namespaces" file="9f4701e1-7f41-6208-22a9-ef421fc81e8d">
+    <topic id="T:LibraryLib.Address" project="LibraryLib" file="5056c1d4-d191-d5d7-c045-bcb909f781cd">
+      <topic id="Overload:LibraryLib.Address.#ctor" project="LibraryLib" file="945a03ef-b891-0010-2c98-0ffa0b24db24">
+        <topic id="M:LibraryLib.Address.#ctor(System.String)" project="LibraryLib" file="aac591ac-832a-1498-ad14-21a7ffa7b820" />
+        <topic id="M:LibraryLib.Address.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String)" project="LibraryLib" file="7d898f85-48c6-898e-1c04-405d386c34cd" />
+      </topic>
+      <topic id="Properties.T:LibraryLib.Address" project="LibraryLib" file="e69ed6a3-d63e-4302-edc5-8e6ba4693da0">
+        <topic id="P:LibraryLib.Address.Area" project="LibraryLib" file="934d83e9-c741-13ff-1766-b8cba23fd899" />
+        <topic id="P:LibraryLib.Address.Building" project="LibraryLib" file="75d4e7a5-9ce7-f7ac-4dab-af0ddecfae96" />
+        <topic id="P:LibraryLib.Address.City" project="LibraryLib" file="e50ca37e-e225-db7b-9912-d94ff1d1989f" />
+        <topic id="P:LibraryLib.Address.District" project="LibraryLib" file="1c78c360-46a1-d92c-4126-a1377df9f027" />
+        <topic id="P:LibraryLib.Address.Housing" project="LibraryLib" file="d14ff677-bb8f-bb70-92f7-ec99eb4a1ada" />
+        <topic id="P:LibraryLib.Address.PostIndex" project="LibraryLib" file="3d6bd5cd-0593-7977-02d3-829e964adddd" />
+        <topic id="P:LibraryLib.Address.Street" project="LibraryLib" file="dd2e44c8-5e21-3e6d-d9c4-5203ba79d0bf" />
+      </topic>
+      <topic id="Methods.T:LibraryLib.Address" project="LibraryLib" file="c3caf55a-c46b-42b6-ef47-06f3524dbbd1">
+        <topic id="M:LibraryLib.Address.ToString" project="LibraryLib" file="89d7516b-9c94-b43c-a830-d33f7c92b3f5" />
+      </topic>
+    </topic>
+    <topic id="T:LibraryLib.AdressParseException" project="LibraryLib" file="81ec7b42-c7ee-b3c3-fb48-cdb670d48102">
+      <topic id="Overload:LibraryLib.AdressParseException.#ctor" project="LibraryLib" file="4b16c351-a214-5911-54ad-b506499a1561">
+        <topic id="M:LibraryLib.AdressParseException.#ctor" project="LibraryLib" file="cb33561e-354a-5362-f1ab-9f0d390dfd62" />
+        <topic id="M:LibraryLib.AdressParseException.#ctor(System.String)" project="LibraryLib" file="4b333736-ce12-88c1-b392-52cc58e56339" />
+        <topic id="M:LibraryLib.AdressParseException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" project="LibraryLib" file="c6e4b8d6-ac86-d64a-2987-de86e39d8232" />
+        <topic id="M:LibraryLib.AdressParseException.#ctor(System.String,System.Exception)" project="LibraryLib" file="3a2af4c8-04de-6e2a-c76f-745967bde502" />
+      </topic>
+      <topic id="Properties.T:LibraryLib.AdressParseException" project="LibraryLib" file="f15698d5-cefa-f7ee-d424-325a2fa8daa1" />
+      <topic id="Methods.T:LibraryLib.AdressParseException" project="LibraryLib" file="ddc3b221-6f10-88bc-238f-f81842415c17" />
+      <topic id="Events.T:LibraryLib.AdressParseException" project="LibraryLib" file="478b974c-3d63-c289-dcf6-722962871d65" />
+    </topic>
+    <topic id="T:LibraryLib.Contact" project="LibraryLib" file="103cf071-0df7-db2c-2414-3b5135e051f8">
+      <topic id="M:LibraryLib.Contact.#ctor(System.String,System.String,System.String,System.String)" project="LibraryLib" file="e4422e1c-0637-553b-003b-158d25693053" />
+      <topic id="Properties.T:LibraryLib.Contact" project="LibraryLib" file="1b1befb1-2ecf-52f6-606e-ea81c23485ac">
+        <topic id="P:LibraryLib.Contact.Email" project="LibraryLib" file="fcf30061-139f-f48e-08ef-c844857e1bf2" />
+        <topic id="P:LibraryLib.Contact.Fax" project="LibraryLib" file="944d0db9-fd26-96cc-e310-dfe03873ed1a" />
+        <topic id="P:LibraryLib.Contact.PublicPhone" project="LibraryLib" file="3bcec6d7-fde6-fec9-954a-c3c6c32c3d93" />
+        <topic id="P:LibraryLib.Contact.Website" project="LibraryLib" file="41fabbdc-965f-a8b4-0574-712641c78a3a" />
+      </topic>
+      <topic id="Methods.T:LibraryLib.Contact" project="LibraryLib" file="73d83b76-e228-f653-9ee8-fc90662327da" />
+    </topic>
+    <topic id="T:LibraryLib.CoordsException" project="LibraryLib" file="4bd3cc44-62eb-f4ad-ef21-1f7a820589fa">
+      <topic id="Overload:LibraryLib.CoordsException.#ctor" project="LibraryLib" file="1703c499-dee7-c6ff-be49-1458b645bf0d">
+        <topic id="M:LibraryLib.CoordsException.#ctor" project="LibraryLib" file="7db925d9-d1b4-73db-846b-a3853516ac5b" />
+        <topic id="M:LibraryLib.CoordsException.#ctor(System.String)" project="LibraryLib" file="647f5fad-fb1e-44f8-d24c-c0fdd4056402" />
+        <topic id="M:LibraryLib.CoordsException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" project="LibraryLib" file="adb76c3b-1fb2-a2ef-98d5-4ef692c0914e" />
+        <topic id="M:LibraryLib.CoordsException.#ctor(System.String,System.Exception)" project="LibraryLib" file="072caa47-971e-485c-b78f-39737498f145" />
+      </topic>
+      <topic id="Properties.T:LibraryLib.CoordsException" project="LibraryLib" file="27ded82f-75cd-54ec-ba2a-fe8441ea2971" />
+      <topic id="Methods.T:LibraryLib.CoordsException" project="LibraryLib" file="715a0a61-4458-528f-6bba-b479d6f3e562" />
+      <topic id="Events.T:LibraryLib.CoordsException" project="LibraryLib" file="a6b9b835-6ccd-2b6a-8166-26229d8e83bf" />
+    </topic>
+    <topic id="T:LibraryLib.Day" project="LibraryLib" file="1e7e6fdd-b24c-352e-3dcd-0216003b0276" />
+    <topic id="T:LibraryLib.DialogService" project="LibraryLib" file="ee17ffd6-bace-5753-85f5-6de9e72be9d4">
+      <topic id="M:LibraryLib.DialogService.#ctor" project="LibraryLib" file="f5452b6d-a467-e58b-2394-42c184dc216b" />
+      <topic id="Properties.T:LibraryLib.DialogService" project="LibraryLib" file="562a784c-12fa-39df-1027-d268d6edc44b">
+        <topic id="P:LibraryLib.DialogService.FilePath" project="LibraryLib" file="f117eccc-72b8-39f6-f532-508bcf53102a" />
+        <topic id="P:LibraryLib.DialogService.OpenDialog" project="LibraryLib" file="bf52bad0-de66-41f4-8686-9eb3ad376be0" />
+        <topic id="P:LibraryLib.DialogService.SaveDialog" project="LibraryLib" file="e0d00b25-92cc-04df-1e00-76b0d7730e11" />
+      </topic>
+      <topic id="Methods.T:LibraryLib.DialogService" project="LibraryLib" file="2da8019e-36a4-faa4-d757-e392fd309ab2">
+        <topic id="M:LibraryLib.DialogService.OpenFileDialog" project="LibraryLib" file="82b692c9-7fd8-319d-529e-9d3e6d4a629d" />
+        <topic id="M:LibraryLib.DialogService.SaveFileDialog" project="LibraryLib" file="902147d5-305e-bee1-8587-275f9699b0cb" />
+      </topic>
+    </topic>
+    <topic id="T:LibraryLib.FileService" project="LibraryLib" file="b56033ab-287e-91fa-7826-12216d1febea">
+      <topic id="M:LibraryLib.FileService.#ctor" project="LibraryLib" file="60d67704-7705-2692-e05c-e93efcb53033" />
+      <topic id="Methods.T:LibraryLib.FileService" project="LibraryLib" file="870351a0-780b-5f42-fd2e-702017d464e5">
+        <topic id="M:LibraryLib.FileService.OpenExcelAsDataTable(System.String,System.Boolean)" project="LibraryLib" file="ef91da31-58d5-c847-b045-30044fd721cf" />
+        <topic id="M:LibraryLib.FileService.SaveDataTableToExcel(System.Data.DataTable,System.String)" project="LibraryLib" file="ddc0b0dc-7eb2-2b04-e214-83f9cb807af6" />
+      </topic>
+    </topic>
+    <topic id="T:LibraryLib.FileServiceException" project="LibraryLib" file="8b0b93de-217c-272f-ad67-249bed48599b">
+      <topic id="Overload:LibraryLib.FileServiceException.#ctor" project="LibraryLib" file="1b049446-76e5-77d2-6923-ce778b64d8a9">
+        <topic id="M:LibraryLib.FileServiceException.#ctor" project="LibraryLib" file="4d1a42e7-0c0b-4c8b-09f5-99343c1ffd4e" />
+        <topic id="M:LibraryLib.FileServiceException.#ctor(System.String)" project="LibraryLib" file="b7a2cacb-bf5a-085d-0d0f-a74a7514d8a3" />
+        <topic id="M:LibraryLib.FileServiceException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" project="LibraryLib" file="d5f4d8f0-fd55-457c-6d82-28cfb4ac7736" />
+        <topic id="M:LibraryLib.FileServiceException.#ctor(System.String,System.Exception)" project="LibraryLib" file="cae86fc8-5139-0bee-9f4b-376a0e4603fd" />
+      </topic>
+      <topic id="Properties.T:LibraryLib.FileServiceException" project="LibraryLib" file="75131d72-97dc-00c3-568a-bc9e7bd4b43e" />
+      <topic id="Methods.T:LibraryLib.FileServiceException" project="LibraryLib" file="2fd84ae3-2fe9-497c-716e-023165d9cac6" />
+      <topic id="Events.T:LibraryLib.FileServiceException" project="LibraryLib" file="85e58d0f-3f94-7c12-335a-69a34d2de478" />
+    </topic>
+    <topic id="T:LibraryLib.GeoData" project="LibraryLib" file="2a271317-9243-4e81-a718-781b62ff6693">
+      <topic id="Overload:LibraryLib.GeoData.#ctor" project="LibraryLib" file="20aba497-6cb3-7756-249b-8ec340b09f4e">
+        <topic id="M:LibraryLib.GeoData.#ctor(System.String)" project="LibraryLib" file="0fbef83a-21e2-a39f-ecbd-0aab2544ec18" />
+        <topic id="M:LibraryLib.GeoData.#ctor(System.Double,System.Double)" project="LibraryLib" file="80341e48-0bc8-fbdb-1995-9dce90cacebc" />
+      </topic>
+      <topic id="Properties.T:LibraryLib.GeoData" project="LibraryLib" file="e6f0dba0-787f-d40e-5ed6-2c6a347be663">
+        <topic id="P:LibraryLib.GeoData.Coordinates" project="LibraryLib" file="880a3eb9-0bdf-daac-b0a5-ad0df7750097" />
+      </topic>
+      <topic id="Methods.T:LibraryLib.GeoData" project="LibraryLib" file="4a6b8832-6e40-bbb2-a079-cea09383f153">
+        <topic id="M:LibraryLib.GeoData.ToString" project="LibraryLib" file="bad312da-b6ed-80e5-3d1e-54155f6d6748" />
+      </topic>
+    </topic>
+    <topic id="T:LibraryLib.GeoParseException" project="LibraryLib" file="dea088d8-eab6-d9c2-12b5-abed238c2ffe">
+      <topic id="Overload:LibraryLib.GeoParseException.#ctor" project="LibraryLib" file="a0f2fe6a-4b36-5aed-cb5d-e71bf81213fd">
+        <topic id="M:LibraryLib.GeoParseException.#ctor" project="LibraryLib" file="388591ae-6c97-3f83-23cf-768d11c07540" />
+        <topic id="M:LibraryLib.GeoParseException.#ctor(System.String)" project="LibraryLib" file="478a5d29-6cdb-5fb6-3c81-c376e224bf03" />
+        <topic id="M:LibraryLib.GeoParseException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" project="LibraryLib" file="ae3770a7-11a7-8967-3d06-039d0df21d59" />
+        <topic id="M:LibraryLib.GeoParseException.#ctor(System.String,System.Exception)" project="LibraryLib" file="2209aa0e-f12f-77c0-7f97-e1df79d553ea" />
+      </topic>
+      <topic id="Properties.T:LibraryLib.GeoParseException" project="LibraryLib" file="9c45587a-714f-c37d-b704-e31cdbc84546" />
+      <topic id="Methods.T:LibraryLib.GeoParseException" project="LibraryLib" file="bc1dd8b9-6535-82ec-fe81-bd98e6b3ffd0" />
+      <topic id="Events.T:LibraryLib.GeoParseException" project="LibraryLib" file="4f3dc538-5f74-9059-fc3e-5a90afd8c03c" />
+    </topic>
+    <topic id="T:LibraryLib.IDialogService" project="LibraryLib" file="3d3bd489-f609-d213-833e-8b8ac16ca404">
+      <topic id="Properties.T:LibraryLib.IDialogService" project="LibraryLib" file="26db9f60-b455-3f12-5aa5-82807b385cba">
+        <topic id="P:LibraryLib.IDialogService.FilePath" project="LibraryLib" file="ca9d666a-f2e1-6b05-12f7-9842fa320068" />
+        <topic id="P:LibraryLib.IDialogService.OpenDialog" project="LibraryLib" file="82895f9b-deb7-30fc-9b73-8ec845c35dd1" />
+        <topic id="P:LibraryLib.IDialogService.SaveDialog" project="LibraryLib" file="53e7013a-4dd2-3030-d92e-a42935fb855a" />
+      </topic>
+      <topic id="Methods.T:LibraryLib.IDialogService" project="LibraryLib" file="ba59be3d-ace4-035a-127e-93300cbd0ca5">
+        <topic id="M:LibraryLib.IDialogService.OpenFileDialog" project="LibraryLib" file="f894ac10-7b1c-7351-a034-97e9fcb1afa7" />
+        <topic id="M:LibraryLib.IDialogService.SaveFileDialog" project="LibraryLib" file="6264c83b-46c1-4f5a-d2d6-41745f11ec22" />
+      </topic>
+    </topic>
+    <topic id="T:LibraryLib.IFileService" project="LibraryLib" file="159158b5-1d2a-6640-fe0d-863fe3d1158d">
+      <topic id="Methods.T:LibraryLib.IFileService" project="LibraryLib" file="a2859695-7ac3-b9f8-a320-98f119a61cd5">
+        <topic id="M:LibraryLib.IFileService.OpenExcelAsDataTable(System.String,System.Boolean)" project="LibraryLib" file="b1874877-4fa6-9660-7641-fe640159c135" />
+        <topic id="M:LibraryLib.IFileService.Save(System.Data.DataTable)" project="LibraryLib" file="e043e4b4-b4b5-7cf9-0422-7897e46f0800" />
+        <topic id="M:LibraryLib.IFileService.SaveAs(System.Data.DataTable,System.String)" project="LibraryLib" file="bc27a7b3-a0b8-ed7b-1a22-e2f561a1bc64" />
+      </topic>
+    </topic>
+    <topic id="T:LibraryLib.Library" project="LibraryLib" file="b8434dc1-ed3f-c2b5-7027-e3ce11ef68dc">
+      <topic id="Overload:LibraryLib.Library.#ctor" project="LibraryLib" file="fb242cbb-9a31-b1c0-3fb8-e9272ca3df0a">
+        <topic id="M:LibraryLib.Library.#ctor(System.Data.DataRow)" project="LibraryLib" file="bfc4ba1f-cf6f-5baf-c3b8-96adb3a7d801" />
+        <topic id="M:LibraryLib.Library.#ctor(LibraryLib.OrgInfo)" project="LibraryLib" file="2f86aa60-e377-8dba-0141-1203cc5138d9" />
+        <topic id="M:LibraryLib.Library.#ctor(LibraryLib.OrgInfo,LibraryLib.Address)" project="LibraryLib" file="661320d9-8552-3258-64a1-af8b50db770f" />
+        <topic id="M:LibraryLib.Library.#ctor(LibraryLib.OrgInfo,LibraryLib.Address,LibraryLib.GeoData)" project="LibraryLib" file="30271e24-270f-0270-1481-b11111fcedc5" />
+        <topic id="M:LibraryLib.Library.#ctor(LibraryLib.OrgInfo,LibraryLib.Address,LibraryLib.GeoData,LibraryLib.WorkingHours)" project="LibraryLib" file="2a96e2f1-2c76-4fc6-cfe1-01d5f6125d26" />
+        <topic id="M:LibraryLib.Library.#ctor(LibraryLib.OrgInfo,LibraryLib.Address,LibraryLib.GeoData,LibraryLib.WorkingHours,LibraryLib.Contact)" project="LibraryLib" file="a94a8727-448f-9a68-fbe5-bde4985d6634" />
+      </topic>
+      <topic id="Properties.T:LibraryLib.Library" project="LibraryLib" file="3b7e4151-3f17-ad3c-26a9-bf002737d7fa">
+        <topic id="P:LibraryLib.Library.Address" project="LibraryLib" file="fbf6c6d0-07a6-5e46-dec1-e863f5d3a0d9" />
+        <topic id="P:LibraryLib.Library.Area" project="LibraryLib" file="84dd9cbe-ade2-f332-b9cd-6a97a2de4457" />
+        <topic id="P:LibraryLib.Library.Building" project="LibraryLib" file="b257eea6-6ffc-6d0b-9945-c9b7b7b6589e" />
+        <topic id="P:LibraryLib.Library.City" project="LibraryLib" file="393ddb88-d044-9333-3cdb-beb6095666b0" />
+        <topic id="P:LibraryLib.Library.Contact" project="LibraryLib" file="9295f0d1-c880-332d-0058-b4fbba5e53e9" />
+        <topic id="P:LibraryLib.Library.Coords" project="LibraryLib" file="6161b9d4-0f3b-7dfb-bb0a-a53c77ebe379" />
+        <topic id="P:LibraryLib.Library.District" project="LibraryLib" file="384c0b77-3488-e834-e816-bc958bf397db" />
+        <topic id="P:LibraryLib.Library.Email" project="LibraryLib" file="e95c03e2-aa13-a605-9118-fc8923240c06" />
+        <topic id="P:LibraryLib.Library.Fax" project="LibraryLib" file="61879d89-5297-2989-2111-b28feadf055b" />
+        <topic id="P:LibraryLib.Library.FullName" project="LibraryLib" file="3e2b97e0-aad3-21c9-ecea-46e2290e357b" />
+        <topic id="P:LibraryLib.Library.GeoData" project="LibraryLib" file="cfb56381-c0b2-e416-5561-6c0a8dd659e8" />
+        <topic id="P:LibraryLib.Library.GovermentId" project="LibraryLib" file="1caa14ef-6802-684f-7776-44eb713ae8cb" />
+        <topic id="P:LibraryLib.Library.HeadFullName" project="LibraryLib" file="6b5617f6-d4f2-ccf7-bb8d-67d3a12645ab" />
+        <topic id="P:LibraryLib.Library.HeadPhoneNumber" project="LibraryLib" file="a181d2e5-5fc6-3dc7-97b5-78d366101694" />
+        <topic id="P:LibraryLib.Library.Hours" project="LibraryLib" file="d9d6bbaf-1095-f5df-76ff-4422f40ed6b4" />
+        <topic id="P:LibraryLib.Library.Housing" project="LibraryLib" file="7773751e-748e-e9ff-f0de-3e5b68a062e4" />
+        <topic id="P:LibraryLib.Library.Item(System.String)" project="LibraryLib" file="67cc8aa8-f60a-e192-fe8b-54084f19742a" />
+        <topic id="P:LibraryLib.Library.OrgInfo" project="LibraryLib" file="b264ec0f-e58f-4267-e4ba-0bd4f626239f" />
+        <topic id="P:LibraryLib.Library.Phone" project="LibraryLib" file="0e27fb54-598c-d013-e900-f8cd853fdfd4" />
+        <topic id="P:LibraryLib.Library.PostIndex" project="LibraryLib" file="8146cc88-bef5-4b8e-a47b-8de7285f7505" />
+        <topic id="P:LibraryLib.Library.Site" project="LibraryLib" file="733e25ae-643f-726c-cbca-9a4498736ad3" />
+        <topic id="P:LibraryLib.Library.Street" project="LibraryLib" file="bdba93ab-acc9-01c1-faca-c08ee8ea3f81" />
+        <topic id="P:LibraryLib.Library.TaxId" project="LibraryLib" file="4d252338-0291-1c8b-7163-54f568b2bda3" />
+        <topic id="P:LibraryLib.Library.TaxPayerId" project="LibraryLib" file="2ec45449-4063-bc0c-43f7-4481e2627d1d" />
+        <topic id="P:LibraryLib.Library.WorkingHours" project="LibraryLib" file="58500efa-52f9-30ca-f9da-18dbfb63dfcb" />
+      </topic>
+      <topic id="Methods.T:LibraryLib.Library" project="LibraryLib" file="86be71cd-4879-52e6-7fac-090b8cda33e7" />
+    </topic>
+    <topic id="T:LibraryLib.OrgInfo" project="LibraryLib" file="5d8f8723-bcc4-23a5-69d1-f93171731f7c">
+      <topic id="Overload:LibraryLib.OrgInfo.#ctor" project="LibraryLib" file="7441e97a-84ce-d1e0-64e1-b082910c733a">
+        <topic id="M:LibraryLib.OrgInfo.#ctor(System.String)" project="LibraryLib" file="f7b37085-8908-9e00-c3ce-42fd546dce56" />
+        <topic id="M:LibraryLib.OrgInfo.#ctor(System.String,System.String,System.String,LibraryLib.Person,System.String,System.String)" project="LibraryLib" file="2383c0ed-2ca2-d308-6037-98c6216c44cf" />
+      </topic>
+      <topic id="Properties.T:LibraryLib.OrgInfo" project="LibraryLib" file="0d86b98e-af44-60c4-4935-97867b652ad9">
+        <topic id="P:LibraryLib.OrgInfo.FullName" project="LibraryLib" file="b2e76a86-076d-1cdf-d6b2-d15b1c1a6bd4" />
+        <topic id="P:LibraryLib.OrgInfo.GovermentId" project="LibraryLib" file="84fef828-5e87-66ba-2f5e-158dec954c31" />
+        <topic id="P:LibraryLib.OrgInfo.HeadFullName" project="LibraryLib" file="ad75dfd5-56e1-477e-c8b1-e0478c88b466" />
+        <topic id="P:LibraryLib.OrgInfo.HeadPhoneNumber" project="LibraryLib" file="76c6af4f-9032-e146-c121-5b268a7490f2" />
+        <topic id="P:LibraryLib.OrgInfo.TaxId" project="LibraryLib" file="f64bbad1-517b-8829-5de3-2ee331102f37" />
+        <topic id="P:LibraryLib.OrgInfo.TaxPayerId" project="LibraryLib" file="c9e02179-af2b-bd44-644d-3ed2ad586eea" />
+      </topic>
+      <topic id="Methods.T:LibraryLib.OrgInfo" project="LibraryLib" file="6a3dbec8-e627-6750-797e-6ed799ab7091">
+        <topic id="M:LibraryLib.OrgInfo.ToString" project="LibraryLib" file="821b3f70-4390-4b1d-2a4d-3ea47753aace" />
+      </topic>
+    </topic>
+    <topic id="T:LibraryLib.OrgInfoParseException" project="LibraryLib" file="af774004-f173-cfad-13ee-e7989e20b3e4">
+      <topic id="Overload:LibraryLib.OrgInfoParseException.#ctor" project="LibraryLib" file="1d4b5b04-96f2-46f8-7c93-2517b623c9b2">
+        <topic id="M:LibraryLib.OrgInfoParseException.#ctor" project="LibraryLib" file="db2c827c-f184-fccf-6a2e-8c292bfa25bd" />
+        <topic id="M:LibraryLib.OrgInfoParseException.#ctor(System.String)" project="LibraryLib" file="f308f30c-39d4-7ea6-ec63-5b2991e6c3ea" />
+        <topic id="M:LibraryLib.OrgInfoParseException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" project="LibraryLib" file="3867fbf7-982b-971d-83b0-59bbc09b7c11" />
+        <topic id="M:LibraryLib.OrgInfoParseException.#ctor(System.String,System.Exception)" project="LibraryLib" file="99034cc4-8f07-340c-cd03-8af49d7224b9" />
+      </topic>
+      <topic id="Properties.T:LibraryLib.OrgInfoParseException" project="LibraryLib" file="3181bf4f-8466-3998-b233-af7167396c89" />
+      <topic id="Methods.T:LibraryLib.OrgInfoParseException" project="LibraryLib" file="7a1ba043-9de1-cd42-f075-570e022ddebc" />
+      <topic id="Events.T:LibraryLib.OrgInfoParseException" project="LibraryLib" file="ff4e777d-e67b-39bd-ff7f-619582079fb0" />
+    </topic>
+    <topic id="T:LibraryLib.Person" project="LibraryLib" file="cab2186b-133b-c7a8-e9e9-f3f10adf22fc">
+      <topic id="Overload:LibraryLib.Person.#ctor" project="LibraryLib" file="057aaeed-5d22-5331-5162-c00c3d7323ec">
+        <topic id="M:LibraryLib.Person.#ctor(System.String)" project="LibraryLib" file="d224a6de-f505-a054-6b48-2d3be352952d" />
+        <topic id="M:LibraryLib.Person.#ctor(System.String,System.String,System.String)" project="LibraryLib" file="15398326-a247-5020-c007-332ec3ee9530" />
+      </topic>
+      <topic id="Properties.T:LibraryLib.Person" project="LibraryLib" file="7332ce3b-4a99-3b4f-f2cf-3f6e6491c46e">
+        <topic id="P:LibraryLib.Person.Name" project="LibraryLib" file="75e7cb08-efe4-7c10-513c-a3a3e8adbfff" />
+        <topic id="P:LibraryLib.Person.SecondName" project="LibraryLib" file="f7fafc36-20f6-9ada-89bc-6cd4995341d2" />
+        <topic id="P:LibraryLib.Person.Surname" project="LibraryLib" file="e103ac06-44fe-d63b-bdad-136d2c4c2478" />
+      </topic>
+      <topic id="Methods.T:LibraryLib.Person" project="LibraryLib" file="38355cf2-d52f-a448-02a8-c2661982a0f7">
+        <topic id="M:LibraryLib.Person.ToString" project="LibraryLib" file="22daae07-3117-f8e2-f0d6-d1ed64eb59ae" />
+      </topic>
+    </topic>
+    <topic id="T:LibraryLib.PersonParseException" project="LibraryLib" file="ff29e673-1464-0c3a-d5cc-578fa6207666">
+      <topic id="Overload:LibraryLib.PersonParseException.#ctor" project="LibraryLib" file="241e8d4f-2171-1ea7-e0fa-4e536fc775a4">
+        <topic id="M:LibraryLib.PersonParseException.#ctor" project="LibraryLib" file="5279e0c5-b81c-2277-0988-3d94b269201c" />
+        <topic id="M:LibraryLib.PersonParseException.#ctor(System.String)" project="LibraryLib" file="e617456d-3058-7e29-fee3-aed0da466097" />
+        <topic id="M:LibraryLib.PersonParseException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" project="LibraryLib" file="8c475e43-4f4c-0b07-70fc-cff41017db6f" />
+        <topic id="M:LibraryLib.PersonParseException.#ctor(System.String,System.Exception)" project="LibraryLib" file="48cfd05b-b157-f921-ac6f-100495acc673" />
+      </topic>
+      <topic id="Properties.T:LibraryLib.PersonParseException" project="LibraryLib" file="3109211d-ef1e-7f9c-6984-66507a6789d6" />
+      <topic id="Methods.T:LibraryLib.PersonParseException" project="LibraryLib" file="7aa3f707-851f-3e70-9e91-82903f2a58c1" />
+      <topic id="Events.T:LibraryLib.PersonParseException" project="LibraryLib" file="0bed9cd0-16e8-772d-5a1b-c6fcee61a7d0" />
+    </topic>
+    <topic id="T:LibraryLib.TableManager" project="LibraryLib" file="70465a3d-df82-da68-d080-7ee6500ada3c">
+      <topic id="M:LibraryLib.TableManager.#ctor(System.Data.DataTable)" project="LibraryLib" file="8de946c2-582b-8460-7f96-2971e80c8e9a" />
+      <topic id="Properties.T:LibraryLib.TableManager" project="LibraryLib" file="c9f3fdde-56b2-22b6-e466-2d7954d5e47c">
+        <topic id="P:LibraryLib.TableManager.ColumnNames" project="LibraryLib" file="9e1ffa06-e6ac-5860-45d2-ae9e89f67234" />
+        <topic id="P:LibraryLib.TableManager.Libraries" project="LibraryLib" file="5b83240f-3d53-583a-f245-0236abaae88c" />
+        <topic id="P:LibraryLib.TableManager.LoadedTable" project="LibraryLib" file="2e0e08c0-c7ae-f863-582d-c853684ac59e" />
+      </topic>
+      <topic id="Methods.T:LibraryLib.TableManager" project="LibraryLib" file="86d177ad-ed4a-4514-3dc6-401ca944de2d">
+        <topic id="M:LibraryLib.TableManager.AddLibrary(LibraryLib.Library)" project="LibraryLib" file="280d36f4-fec0-bc3e-3e1c-4b0894db30e4" />
+        <topic id="M:LibraryLib.TableManager.CreateCustomTable(System.Collections.Generic.List{LibraryLib.Library})" project="LibraryLib" file="29d27a69-5c3e-d96f-a496-0e552a774c3f" />
+        <topic id="M:LibraryLib.TableManager.CreateLoadedTableFromLibs" project="LibraryLib" file="bbd1611e-293f-d88e-d46c-08dc0d7a3ca3" />
+        <topic id="M:LibraryLib.TableManager.DeleteLibrary(System.Int32)" project="LibraryLib" file="ba73cea5-04d8-f6c0-e69d-f08bc30d5077" />
+        <topic id="M:LibraryLib.TableManager.GetLibraries(System.Data.DataTable)" project="LibraryLib" file="bbe3d4a3-46ed-9a1a-ddde-c8cb00717358" />
+      </topic>
+    </topic>
+    <topic id="T:LibraryLib.TableNotProvidedException" project="LibraryLib" file="793e53b9-0730-11c7-3d89-edbea43e6aef">
+      <topic id="Overload:LibraryLib.TableNotProvidedException.#ctor" project="LibraryLib" file="89c8cea9-8cf6-41b7-e384-011f385ae34a">
+        <topic id="M:LibraryLib.TableNotProvidedException.#ctor" project="LibraryLib" file="3ce4deec-7592-fa1f-efe4-7e99e23af723" />
+        <topic id="M:LibraryLib.TableNotProvidedException.#ctor(System.String)" project="LibraryLib" file="d70c79e8-8962-582c-55dc-ca3d6873f02e" />
+        <topic id="M:LibraryLib.TableNotProvidedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" project="LibraryLib" file="1f208f5c-2890-2b68-5330-e2a35f8db4e5" />
+        <topic id="M:LibraryLib.TableNotProvidedException.#ctor(System.String,System.Exception)" project="LibraryLib" file="6068d107-67a0-6a1e-ec8e-28f3e6c857ba" />
+      </topic>
+      <topic id="Properties.T:LibraryLib.TableNotProvidedException" project="LibraryLib" file="f17aa317-1664-1ddb-4566-162c41c0954c" />
+      <topic id="Methods.T:LibraryLib.TableNotProvidedException" project="LibraryLib" file="73d7159c-1874-b8fb-ff5e-2cacf897f407" />
+      <topic id="Events.T:LibraryLib.TableNotProvidedException" project="LibraryLib" file="af681248-4fa9-2186-3654-43f57ab1338b" />
+    </topic>
+    <topic id="T:LibraryLib.TableParseException" project="LibraryLib" file="151b2b78-5d49-6b6a-c372-9a208d35a76b">
+      <topic id="Overload:LibraryLib.TableParseException.#ctor" project="LibraryLib" file="4533d1c8-39c6-6420-1057-d7567b067d38">
+        <topic id="M:LibraryLib.TableParseException.#ctor" project="LibraryLib" file="074e486e-5fa0-2d40-ee8b-913fb3bb0804" />
+        <topic id="M:LibraryLib.TableParseException.#ctor(System.String)" project="LibraryLib" file="d535d475-93ea-46e4-8c85-099a91a3a323" />
+        <topic id="M:LibraryLib.TableParseException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" project="LibraryLib" file="6d60ba6c-f00a-fd3a-9353-4d4688336aef" />
+        <topic id="M:LibraryLib.TableParseException.#ctor(System.String,System.Exception)" project="LibraryLib" file="ad354fb4-5b8d-c4fa-1f3f-229f3129ec2b" />
+      </topic>
+      <topic id="Properties.T:LibraryLib.TableParseException" project="LibraryLib" file="b8b143b6-e162-4fde-6800-2a22d94a96d0" />
+      <topic id="Methods.T:LibraryLib.TableParseException" project="LibraryLib" file="0982ef12-b41a-c8b6-54f3-3ee20e4dc8df" />
+      <topic id="Events.T:LibraryLib.TableParseException" project="LibraryLib" file="e7347f59-8053-9893-1a15-cece4f3caa0f" />
+    </topic>
+    <topic id="T:LibraryLib.TableValidationException" project="LibraryLib" file="04d3721f-43fc-10be-fd29-9c66e194d8fa">
+      <topic id="Overload:LibraryLib.TableValidationException.#ctor" project="LibraryLib" file="0ea458ac-efd8-efae-7695-ed025b43e6c0">
+        <topic id="M:LibraryLib.TableValidationException.#ctor" project="LibraryLib" file="6f6fd1c9-7c1c-2cc9-e986-d290f6335cd9" />
+        <topic id="M:LibraryLib.TableValidationException.#ctor(System.String)" project="LibraryLib" file="008c4162-d605-9677-b4c2-330dfc285eb1" />
+        <topic id="M:LibraryLib.TableValidationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" project="LibraryLib" file="c6dfa19c-3db4-2479-13bd-daffc862f36c" />
+        <topic id="M:LibraryLib.TableValidationException.#ctor(System.String,System.Exception)" project="LibraryLib" file="523e1b6d-6171-439a-fc93-cabbf4a9a005" />
+      </topic>
+      <topic id="Properties.T:LibraryLib.TableValidationException" project="LibraryLib" file="5502d791-f9d0-99d6-2943-98fe5d8ba08d" />
+      <topic id="Methods.T:LibraryLib.TableValidationException" project="LibraryLib" file="ce3a0d28-e652-872d-dee4-95e2903f8e09" />
+      <topic id="Events.T:LibraryLib.TableValidationException" project="LibraryLib" file="116d2e0d-2770-adde-13d2-ab42e7dfb3ff" />
+    </topic>
+    <topic id="T:LibraryLib.TimePeriod" project="LibraryLib" file="bdb7ef74-ce68-5da3-3878-2a854f06c46c">
+      <topic id="M:LibraryLib.TimePeriod.#ctor(System.Int32,System.Int32,System.Boolean)" project="LibraryLib" file="ca79b0bd-5c19-476c-b913-e561b594a4d2" />
+      <topic id="Properties.T:LibraryLib.TimePeriod" project="LibraryLib" file="b26293bf-1eb5-0688-be76-95c4b8139173">
+        <topic id="P:LibraryLib.TimePeriod.CloseHour" project="LibraryLib" file="ed7b25d1-760e-d03b-7be5-1f7d91e5fdb3" />
+        <topic id="P:LibraryLib.TimePeriod.OpenHour" project="LibraryLib" file="30982c3d-62dc-d588-d3f7-ce309eaaddd3" />
+      </topic>
+      <topic id="Methods.T:LibraryLib.TimePeriod" project="LibraryLib" file="2089ac80-f670-2dc6-57f9-66d37a5df623">
+        <topic id="M:LibraryLib.TimePeriod.ToString" project="LibraryLib" file="2c4b7017-6f00-c831-381a-5362b0af0a0c" />
+      </topic>
+    </topic>
+    <topic id="T:LibraryLib.Validator" project="LibraryLib" file="e26528d2-c26c-a99c-5e80-155c86530c02">
+      <topic id="M:LibraryLib.Validator.#ctor" project="LibraryLib" file="790cf2fe-16e4-03a1-55ab-647ad003f052" />
+      <topic id="Methods.T:LibraryLib.Validator" project="LibraryLib" file="da4aae32-fc73-90ca-f876-4683d200f8bb">
+        <topic id="M:LibraryLib.Validator.AreBoxesNotEmpty(System.Collections.Generic.List{System.Windows.Controls.TextBox})" project="LibraryLib" file="a61d0627-3046-58e8-05cc-bfae583fdbdc" />
+        <topic id="M:LibraryLib.Validator.AreBoxesTextIsDouble(System.Collections.Generic.List{System.Windows.Controls.TextBox})" project="LibraryLib" file="bd802f7c-dda7-66ca-7914-e8e7ef3dffbe" />
+        <topic id="M:LibraryLib.Validator.AreBoxesTextIsInt(System.Collections.Generic.List{System.Windows.Controls.TextBox})" project="LibraryLib" file="ef75257f-4e6f-312a-59d9-8eea53328881" />
+      </topic>
+    </topic>
+    <topic id="T:LibraryLib.WorkingHours" project="LibraryLib" file="29986503-157e-6174-d726-ed9b9eec0b9b">
+      <topic id="Overload:LibraryLib.WorkingHours.#ctor" project="LibraryLib" file="dd602e45-7bec-01e5-9c57-d8f9ae9d200b">
+        <topic id="M:LibraryLib.WorkingHours.#ctor(System.String)" project="LibraryLib" file="2c5d73fe-2185-41de-5b7f-8a3744803337" />
+        <topic id="M:LibraryLib.WorkingHours.#ctor(System.Int32,System.Int32)" project="LibraryLib" file="66e3a96f-a89c-9e8d-c038-f01f640ce490" />
+      </topic>
+      <topic id="Methods.T:LibraryLib.WorkingHours" project="LibraryLib" file="358d5886-1317-fc74-ef58-c2a8e49f34b7">
+        <topic id="M:LibraryLib.WorkingHours.ToString" project="LibraryLib" file="3190b6a8-392a-fc9d-2476-5d41cae59cf1" />
+      </topic>
+      <topic id="Fields.T:LibraryLib.WorkingHours" project="LibraryLib" file="aca550ec-383c-122e-08df-bf596e735d7d">
+        <topic id="F:LibraryLib.WorkingHours.hours" project="LibraryLib" file="f1232772-aa19-1e7f-f336-82a957c3572a" />
+      </topic>
+    </topic>
+    <topic id="T:LibraryLib.WorkingHoursParseException" project="LibraryLib" file="0b0ab153-ad35-9671-e478-c980a93c5fcb">
+      <topic id="Overload:LibraryLib.WorkingHoursParseException.#ctor" project="LibraryLib" file="14a258cb-9e08-5ab0-2861-778aa2f39856">
+        <topic id="M:LibraryLib.WorkingHoursParseException.#ctor" project="LibraryLib" file="83bf222e-6c73-46be-7a24-dee60cb4edea" />
+        <topic id="M:LibraryLib.WorkingHoursParseException.#ctor(System.String)" project="LibraryLib" file="0b649290-3653-4638-82e5-0f6e67a33f93" />
+        <topic id="M:LibraryLib.WorkingHoursParseException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)" project="LibraryLib" file="5407381e-34b1-acb7-1820-7af98b9462f2" />
+        <topic id="M:LibraryLib.WorkingHoursParseException.#ctor(System.String,System.Exception)" project="LibraryLib" file="5d668f78-df66-3fe3-1b8c-cb25ae839041" />
+      </topic>
+      <topic id="Properties.T:LibraryLib.WorkingHoursParseException" project="LibraryLib" file="00fc95cc-fb73-831b-dbb0-3e7e25368ce4" />
+      <topic id="Methods.T:LibraryLib.WorkingHoursParseException" project="LibraryLib" file="047b8b4b-a78d-bb0e-3a21-6a247a3cd449" />
+      <topic id="Events.T:LibraryLib.WorkingHoursParseException" project="LibraryLib" file="3cfedad9-2c4f-2381-dc21-8d35ed45b560" />
+    </topic>
+  </topic>
+</topics>

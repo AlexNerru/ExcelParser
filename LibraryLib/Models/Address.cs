@@ -10,13 +10,24 @@ namespace LibraryLib
 {
     public class Address
     {
-        public string Area { get; set; }
+        public string Area { get => _area; set => _area = value; }
         public string PostIndex { get; set; }
         public string City { get; set; }
         public string Street { get; set; }
         public string Building { get; set; }
         public string Housing { get; set; }
         public string District { get; set; }
+        public string FullAddress { get; set; }
+
+        Dictionary<string, string> rusToEng = new Dictionary<string, string>()
+        {
+            ["Район: "] = "Area",
+            ["Почтовый индекс: "] = "PostIndex",
+            ["Адрес: "] = "FullAddress",
+            ["Административный округ: "] = "District"
+        };
+
+        private string _area;
 
         /// <summary>
         /// Standart ctor to create object from table
@@ -33,7 +44,14 @@ namespace LibraryLib
                               Доступность объекта(инвалиды - опорники): частично
                                Доступность объекта(инвалиды по зрению): частично";
             #endregion
+            StringeHelper helper = new StringeHelper();
+            Dictionary<string, string> dict = helper.GetValues(FullAdress.Split('\n').ToList(), rusToEng.Keys.ToList(), rusToEng);
             List<string> needToFind = new List<string>() { "Район: ", "Почтовый индекс: ", "Адрес: ", "Административный округ: " };
+            //TODO: think why set method is not found
+            foreach (var item in dict.Keys)
+            {
+                this[item] = dict[item];
+            }
             if (FullAdress.Contains("размер ячейки") || FullAdress.Contains("Зеленоград"))
                 FullAdress = testString;
             List<string> stringList = FullAdress.Split('\n').ToList();

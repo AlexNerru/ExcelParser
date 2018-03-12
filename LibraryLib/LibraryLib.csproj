@@ -62,7 +62,7 @@
     <Compile Include="Services\FileService.cs" />
     <Compile Include="Interfaces\IFileService.cs" />
     <Compile Include="Interfaces\ITableManager.cs" />
-    <Compile Include="Services\ServiceHelper.cs" />
+    <Compile Include="Services\StringHelper.cs" />
     <Compile Include="Services\TableManager.cs" />
     <Compile Include="Models\WorkingHours.cs" />
     <Compile Include="Services\Validator.cs" />
