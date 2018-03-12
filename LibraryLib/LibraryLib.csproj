@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EPPlus, Version=4.1.1.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.1.1\lib\net40\EPPlus.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -48,7 +51,7 @@
   <ItemGroup>
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Contact.cs" />
-    <Compile Include="Models\Libraries.cs" />
+    <Compile Include="Models\TimePeriod.cs" />
     <Compile Include="Services\DialogService.cs" />
     <Compile Include="Models\GeoData.cs" />
     <Compile Include="Interfaces\IDialogService.cs" />
@@ -60,6 +63,7 @@
     <Compile Include="Interfaces\IFileService.cs" />
     <Compile Include="Services\TableManager.cs" />
     <Compile Include="Models\WorkingHours.cs" />
+    <Compile Include="Services\Validator.cs" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">
@@ -90,6 +94,8 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

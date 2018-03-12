@@ -4,6 +4,8 @@ namespace LibraryLib
 {
     public interface IFileService
     {
-        DataSet Open(string filePath);
+        DataTable OpenExcelAsDataTable(string filePath, bool hasHeader= true);
+        void Save(DataTable table);
+        void SaveAs(DataTable table, string filePath);
     }
 }
