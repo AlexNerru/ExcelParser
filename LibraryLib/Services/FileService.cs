@@ -10,39 +10,35 @@ using System.IO;
 
 namespace LibraryLib
 {
-    public class FileService : IFileService
+    public class FileService
     {
-        string _filePath;
+        /// <summary>
+        /// Stores file path ща opened file
+        /// </summary>
+        string _openedFilePath;
+
         /// <summary>
         /// Opens xlsx file
         /// </summary>
         /// <param name="filePath"></param>
         /// <exception cref="FileServiceException">Throwing if wrong file selected</exception>
         /// <returns></returns>
-        public DataTable Open(string filePath, bool hasHeader = true)
+        public DataTable OpenExcelAsDataTable(string filePath, bool hasHeader = true)
         {
-            _filePath = filePath;
+            _openedFilePath = filePath;
             using (var pck = new ExcelPackage())
             {
                 try
                 {
-                    using (var stream = File.OpenRead(filePath))
-                    {
-                        pck.Load(stream);
-                    }
+                    using (var stream = File.OpenRead(filePath)) { pck.Load(stream); }
                 }
-                catch (IOException e)
-                {
-                    throw new FileServiceException("Problem occured while opening stream", e);
-                }
+                catch (IOException e) { throw new FileServiceException("Problem occured while opening stream", e); }
+
                 var ws = pck.Workbook.Worksheets.First();
                 DataTable tbl = new DataTable();
                 foreach (var firstRowCell in ws.Cells[1, 1, 1, ws.Dimension.End.Column])
-                {
                     tbl.Columns.Add(hasHeader ? firstRowCell.Text : string.Format("Column {0}", firstRowCell.Start.Column));
-                }
-                var startRow = hasHeader ? 2 : 1;
-                for (int rowNum = startRow; rowNum <= ws.Dimension.End.Row; rowNum++)
+                for (int rowNum = hasHeader ? 2 : 1; rowNum <= ws.Dimension.End.Row; rowNum++)
                 {
                     var wsRow = ws.Cells[rowNum, 1, rowNum, ws.Dimension.End.Column];
                     DataRow row = tbl.Rows.Add();
@@ -51,24 +47,34 @@ namespace LibraryLib
                 }
                 return tbl;
             }
-
         }
 
-        public void Save(DataTable table)
+        /// <summary>
+        /// Saves provided DataTable to it's opened path or to new path
+        /// </summary>
+        /// <param name="table">DataTable</param>
+        /// <param name="filePath">Custom file path</param>
+        public void SaveDataTableToExcel(DataTable table, string filePath = "")
         {
             using (ExcelPackage objExcelPackage = new ExcelPackage())
             {
+                if (filePath == "")
+                    filePath = _openedFilePath;
                 ExcelWorksheet objWorksheet = objExcelPackage.Workbook.Worksheets.Add("Libraries");
                 objWorksheet.Cells["A1"].LoadFromDataTable(table, true);
                 objWorksheet.Cells.AutoFitColumns();
-                if (File.Exists(_filePath))
-                    File.Delete(_filePath);
-                FileStream objFileStrm = File.Create(_filePath);
-                objFileStrm.Close();
-                File.WriteAllBytes(_filePath, objExcelPackage.GetAsByteArray());
+                try
+                {
+                    if (File.Exists(filePath))
+                        File.Delete(filePath);
+                    FileStream objFileStrm = File.Create(filePath);
+                    objFileStrm.Close();
+                }
+                catch (IOException e) { throw new FileServiceException("Problem occured while opening stream\nClose excel", e); }
+                catch(UnauthorizedAccessException e) { throw new FileServiceException("Something with access", e); }
+                File.WriteAllBytes(filePath, objExcelPackage.GetAsByteArray());
             }
         }
-
     }
 
     [Serializable]

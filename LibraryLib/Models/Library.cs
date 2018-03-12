@@ -16,6 +16,9 @@ namespace LibraryLib
         WorkingHours _workingHours;
         Contact _contact;
 
+        //TODO: Think how to use objects
+        #region Properties
+        
         public string FullName
         {
             get
@@ -164,17 +167,26 @@ namespace LibraryLib
             }
         }
 
+        public string Hours { get => _workingHours != null ? _workingHours.ToString() : string.Empty; }
+
+        public Contact Contact { get => _contact; set => _contact = value; }
+        public OrgInfo OrgInfo { get => _orgInfo; set => _orgInfo = value; }
+        public Address Address { get => _address; set => _address = value; }
+        public GeoData GeoData { get => _geoData; set => _geoData = value; }
+        public WorkingHours WorkingHours { get => _workingHours; set => _workingHours = value; }
+        #endregion
 
 
         public Library(DataRow row)
         {
-            //TODO: Update with column name search
-            //row.Table.Columns["ColumnName"].Ordinal + 1
-            _orgInfo = new OrgInfo(row[4].ToString());
-            _address = new Address(row[5].ToString());
-            _geoData = new GeoData(row[19].ToString());
-            _workingHours = new WorkingHours(row[12].ToString());
-            _contact = new Contact(row[9].ToString(), row[10].ToString(), row[11].ToString(), row[14].ToString());
+            _orgInfo = new OrgInfo(row[row.Table.Columns["OrgInfo"].Ordinal].ToString());
+            _address = new Address(row[row.Table.Columns["ObjectAddress"].Ordinal].ToString());
+            _geoData = new GeoData(row[row.Table.Columns["geoData"].Ordinal].ToString());
+            _workingHours = new WorkingHours(row[row.Table.Columns["WorkingHours"].Ordinal].ToString());
+            _contact = new Contact(row[row.Table.Columns["PublicPhone"].Ordinal].ToString(),
+                row[row.Table.Columns["Fax"].Ordinal].ToString(), 
+                row[row.Table.Columns["Email"].Ordinal].ToString(),
+                row[row.Table.Columns["WebSite"].Ordinal].ToString());
         }
 
         public Library(OrgInfo org) => _orgInfo = org;
@@ -184,6 +196,8 @@ namespace LibraryLib
             : this(org, address, geo) => _workingHours = hours;
         public Library(OrgInfo org, Address address, GeoData geo, WorkingHours hours, Contact contact)
             : this(org, address, geo, hours) => _contact = contact;
+
+        
 
         public object this[string propertyName]
         {
@@ -199,7 +213,6 @@ namespace LibraryLib
                 PropertyInfo myPropInfo = myType.GetProperty(propertyName);
                 myPropInfo.SetValue(this, value, null);
             }
-
         }
 
     }

@@ -51,7 +51,7 @@
   <ItemGroup>
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Contact.cs" />
-    <Compile Include="Models\Libraries.cs" />
+    <Compile Include="Models\TimePeriod.cs" />
     <Compile Include="Services\DialogService.cs" />
     <Compile Include="Models\GeoData.cs" />
     <Compile Include="Interfaces\IDialogService.cs" />
@@ -63,6 +63,7 @@
     <Compile Include="Interfaces\IFileService.cs" />
     <Compile Include="Services\TableManager.cs" />
     <Compile Include="Models\WorkingHours.cs" />
+    <Compile Include="Services\Validator.cs" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">

@@ -7,24 +7,7 @@ using System.Text.RegularExpressions;
 
 namespace LibraryLib
 {
-    public struct TimePeriod
-    {
-        int hourStart;
-        int hourEnd;
-        bool holiday;
-        public TimePeriod(int hourStart, int hourEnd, bool holiday=false)
-        {
-            this.hourStart = hourStart;
-            this.hourEnd = hourEnd;
-            this.holiday = holiday;
-        }
-        public override string ToString()
-        {
-            return $"{hourStart} {hourEnd}";
-        }
-    }
-
-    public enum Day { Monday, Tuesday, Wednesday, Thusday, Friday, Saturday, Sunday, };
+    public enum Day { Monday, Tuesday, Wednesday, Thusday, Friday, Saturday, Sunday };
 
     public class WorkingHours
     {
@@ -52,8 +35,10 @@ namespace LibraryLib
                 {
                     if (!hoursLine.Contains("выходной") && !hoursLine.Contains("закрыто"))
                     {
-                        var hourStart = int.Parse(hoursLine.Substring(0, 2));
-                        var hourEnd = int.Parse(hoursLine.Substring(6, 2));                       
+
+                        var hourStart = int.Parse(Regex.Split(hoursLineSplt[0], @":").First());
+
+                        var hourEnd = int.Parse(Regex.Split(hoursLineSplt[0], @":").First());                       
                         hours.Add(dayToDay[dayLine], new TimePeriod(hourStart, hourEnd, false));
                     }
                     else
@@ -65,6 +50,32 @@ namespace LibraryLib
                 }
 
             }
+        }
+        public WorkingHours(int hourOpen, int hourClose)
+        {
+            foreach (Day item in dayToDay.Values)
+            {
+                hours.Add(item, new TimePeriod(hourOpen, hourClose, false));
+            }
+        }
+
+        public override string ToString()
+        {
+            string str = string.Empty;
+            foreach (string day in dayToDay.Keys)
+            {
+                if (day != "воскресенье")
+                {
+                    str += $"День недели: {day}\n";
+                    str += $"Часы работы: {hours[dayToDay[day]].ToString()}\n\n";
+                }
+                else
+                {
+                    str += $"День недели: {day}\n";
+                    str += $"Часы работы: {hours[dayToDay[day]].ToString()}";
+                }
+            }
+            return str;
         }
     }
 

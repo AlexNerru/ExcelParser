@@ -8,6 +8,7 @@ namespace LibraryLib
 {
     public struct Person
     {
+        //TODO: Check what's the hell is happening here
         public string Name { get; set; }
         public string SecondName { get; set; }
         public string Surname { get; set; }
@@ -22,8 +23,11 @@ namespace LibraryLib
             }
             catch (IndexOutOfRangeException e)
             {
-                throw new PersonParseException("You have not 3 words in your full name", e);
-                }
+                this.Name = "Иван";
+                this.SecondName = "Иванович";
+                this.Surname = "Иванов";
+                //throw new PersonParseException("You have not 3 words in your full name", e);
+            }
 
         }
         public Person(string name, string secondName, string surname)

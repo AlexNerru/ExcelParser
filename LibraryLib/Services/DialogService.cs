@@ -23,12 +23,13 @@ namespace LibraryLib
             OpenDialog.ShowDialog();
         }
 
-        public void SaveFileDialog()
+        public string SaveFileDialog()
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Excel Files| *.xls; *.xlsx";
             if (saveFileDialog.ShowDialog() == true)
                 FilePath = saveFileDialog.FileName;
+            return FilePath;
         }
 
     }

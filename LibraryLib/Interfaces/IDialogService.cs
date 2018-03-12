@@ -6,7 +6,7 @@ namespace LibraryLib
         string FilePath { get; set; }
 
         void OpenFileDialog();
-        void SaveFileDialog();
+        string SaveFileDialog();
         OpenFileDialog OpenDialog { get; set; }
         SaveFileDialog SaveDialog { get; set; }
     }

@@ -6,42 +6,91 @@
         xmlns:local="clr-namespace:Karpin2"
         x:Class="Karpin2.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1080" Width="1920" WindowState="Maximized">
-    <Grid Margin="0,0,5,-2.2">
+        Title="MainWindow" Height="1080" Width="1994.4" WindowState="Maximized">
+    <Grid x:Name="MainGrid" Margin="0,0,5.6,-2.2">
 
-        <Menu IsMainMenu="True" Height="64" VerticalAlignment="Top" HorizontalAlignment="Left" Width="1910">
-            <MenuItem Header="_File" Height="64" Width="82.95" >
+        <Menu IsMainMenu="True" Height="36" VerticalAlignment="Top" HorizontalAlignment="Left" Width="1910">
+            <MenuItem Header="_File" Height="36" Width="83" >
                 <MenuItem x:Name="OpenFileMenuItem" Header="_Open..." Click="OpenFileMenuItem_Click" />
                 <Separator />
                 <MenuItem x:Name="SaveMenuItem" Header="_Save" Click="SaveMenuItem_Click" />
-                <MenuItem Header="_Save As..." />
+                <MenuItem x:Name="SaveAsMenuItem" Header="_Save As..." Click="SaveAsMenuItem_Click" />
                 <Separator />
                 <MenuItem x:Name="ExitMenuItem" Header="_Exit" Click="ExitMenuItem_Click" />
             </MenuItem>
             <MenuItem x:Name="EditMenuItem" Header="_Edit" Width="83.91" Visibility="Hidden">
                 <MenuItem x:Name="AddLibraryMenuItem" Header="_Add..." Click="AddLibraryMenuItem_Click"/>
                 <Separator />
+                <MenuItem x:Name="DeleteLibraryMenuItem" Header="_Delete Selected..." Click="DeleteLibraryMenuItem_Click"/>
+                <MenuItem x:Name="EditLibraryMenuItem" Header="_Edit Selected..." Click="EditLibraryMenuItem_Click_1"/>
+                <Separator />
+                <MenuItem x:Name="FilterLibraryMenuItem" Header="_Filter..." />
             </MenuItem>
         </Menu>
 
-        <Grid x:Name="ContentGrid" Margin="0,64,0.2,0">
-            <Label Content="Имя главы&#xD;&#xA;&#xD;&#xA;" VerticalAlignment="Top" Margin="54,142,359.2,0" Height="25"/>
+        <Grid x:Name="ContentGrid" Margin="10,69,10,0" Height="976" VerticalAlignment="Top">
+            <Label Content="Имя&#xD;&#xA;" VerticalAlignment="Top" Margin="39.95,200.33,0,0" Height="25" HorizontalAlignment="Left" Width="96.05"/>
 
-            <Label Content="Введите информацию о новой бибилотеке:&#xA;" Margin="91.2,10,70.136,0" Height="41.92" VerticalAlignment="Top"/>
-            <TextBox x:Name="FullNameTextBox" Margin="54,93,0,0" TextWrapping="Wrap" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="82"/>
-            <TextBox x:Name="TaxPayerIdTextBox" Margin="217,93,0,0" TextWrapping="Wrap" Text="&#xA;" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="85"/>
-            <Button x:Name="BackToTableButton" Content="Button" Margin="0,0,52.4,36.8" Click="BackToTableButton_Click" HorizontalAlignment="Right" Width="219" Height="20" VerticalAlignment="Bottom"/>
-            <Button x:Name="NextButton" Content="Next" Margin="0,0,426.4,36.8" Click="NextButton_Click" HorizontalAlignment="Right" Width="240" Height="20" VerticalAlignment="Bottom"/>
-            <Label Content="Полное название&#xA;" Margin="54,57,0,0" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108"/>
-            <Label Content="ИНН&#xA;" Margin="217,62,1588.2,0" Height="31" VerticalAlignment="Top"/>
-            <Label Content="Отчество&#xD;&#xA;" HorizontalAlignment="Left" Height="24.88" Margin="188.8,142.45,0,0" VerticalAlignment="Top" Width="73.6"/>
-            <Label Content="Фамилия&#xD;&#xA;" HorizontalAlignment="Left" Margin="307,142,0,0" VerticalAlignment="Top" Height="25" Width="114"/>
-            <TextBox x:Name="NameTextBox" Height="23" Margin="53.6,172.33,0,0" TextWrapping="Wrap" Text="&#xD;&#xA;" VerticalAlignment="Top" HorizontalAlignment="Left" Width="96.05"/>
-            <TextBox x:Name="SurnameTextBox" HorizontalAlignment="Left" Margin="307,172,0,0" TextWrapping="Wrap" Text="&#xA;" Width="97.8" Height="23.33" VerticalAlignment="Top"/>
-            <TextBox x:Name="SecondNameTextBox" Margin="168.4,172.33,0,0" TextWrapping="Wrap" Text="&#xA;" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="116.8"/>
+            <Label Content="Введите информацию о новой библотеке:&#xA;" Margin="556,10,0,906" FontSize="18" HorizontalAlignment="Left" Width="809"/>
+            <TextBox x:Name="FullNameTextBox" Margin="39.95,116,0,0" TextWrapping="Wrap" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108"/>
+            <TextBox x:Name="TaxPayerIdTextBox" Margin="185.2,116,0,0" TextWrapping="Wrap" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="116.8"/>
+            <Button x:Name="BackToTableButton" Content="К таблице" Margin="1229.4,618.4,0,0" Click="BackToTableButton_Click" HorizontalAlignment="Left" Width="219" Height="20" VerticalAlignment="Top" RenderTransformOrigin="-0.11,0.44"/>
+            <Label Content="Полное название&#xA;" Margin="28,75.05,0,0" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108"/>
+            <Label Content="ИНН&#xA;" Margin="197.2,75.05,0,0" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104.8"/>
+            <Label Content="Отчество&#xD;&#xA;" HorizontalAlignment="Left" Height="24.88" Margin="184.8,200.45,0,0" VerticalAlignment="Top" Width="73.6"/>
+            <Label Content="Фамилия&#xD;&#xA;" HorizontalAlignment="Left" Margin="323.2,200.45,0,0" VerticalAlignment="Top" Height="25" Width="114"/>
+            <TextBox x:Name="NameTextBox" Height="23" Margin="39.95,230.33,0,0" TextWrapping="Wrap" Text="&#xD;&#xA;" VerticalAlignment="Top" HorizontalAlignment="Left" Width="96.05" RenderTransformOrigin="0.355,-0.18"/>
+            <TextBox x:Name="SurnameTextBox" HorizontalAlignment="Left" Margin="323.2,230,0,0" TextWrapping="Wrap" Text="&#xA;" Width="97.8" Height="23.33" VerticalAlignment="Top"/>
+            <TextBox x:Name="SecondNameTextBox" Margin="185.2,230.33,0,0" TextWrapping="Wrap" Text="&#xA;" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="116.8"/>
+            <Label Content="Информация о руководителе учреждения:" HorizontalAlignment="Left" Height="31.53" Margin="39.95,168.92,0,0" VerticalAlignment="Top" Width="262.05" FontWeight="Bold"/>
+            <Label Content="ОГРН" Margin="323.2,75.05,0,0" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104.8"/>
+            <TextBox x:Name="GovermentIdTextBox" Margin="323.2,116,0,0" TextWrapping="Wrap" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="85"/>
+            <Label Content="КПП" Margin="451.2,75.05,0,0" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104.8"/>
+            <TextBox x:Name="TaxIdTextBox" Margin="451.2,116,0,0" TextWrapping="Wrap" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="85"/>
+            <TextBox x:Name="HeadPhoneTextBox" HorizontalAlignment="Left" Margin="458.2,230,0,0" TextWrapping="Wrap" Text="&#xA;" Width="97.8" Height="23.33" VerticalAlignment="Top"/>
+            <Label Content="Телефон&#xD;&#xA;&#xA;" HorizontalAlignment="Left" Margin="458.2,200.45,0,0" VerticalAlignment="Top" Height="25" Width="114"/>
+            <Label Content="Информация об учреждении:" HorizontalAlignment="Left" Height="31.53" Margin="39.95,38.52,0,0" VerticalAlignment="Top" Width="251.2" FontWeight="Bold"/>
+            <Label Content="Адрес&#xD;&#xA;" HorizontalAlignment="Left" Height="31.53" Margin="1113.6,38.52,0,0" VerticalAlignment="Top" Width="251.2" FontWeight="Bold"/>
+            <Label Content="Город:&#xD;&#xA;&#xA;" Margin="942.8,80.1,0,0" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108"/>
+            <TextBox x:Name="AreaTextBox" Margin="1087.15,116,0,0" TextWrapping="Wrap" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108"/>
+            <TextBox x:Name="PostIndexTextBox" Margin="942.8,251.33,0,0" TextWrapping="Wrap" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108" RenderTransformOrigin="0.13,6.417"/>
+            <TextBox x:Name="DistrictTextBox" Margin="1243.6,177.45,0,0" TextWrapping="Wrap" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108"/>
+            <TextBox x:Name="StreetTextBox" Margin="1087.15,177.45,0,0" TextWrapping="Wrap" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108"/>
+            <TextBox x:Name="HousingTextBox" Margin="942.8,177.45,0,0" TextWrapping="Wrap" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108"/>
+            <TextBox x:Name="BuildingTextBox" Margin="1243.6,116,0,0" TextWrapping="Wrap" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108"/>
+            <TextBox x:Name="CityTextBox" Margin="942.8,116,0,0" TextWrapping="Wrap" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108"/>
+            <Label Content="Округ&#xD;&#xA;&#xA;" Margin="1243.6,150.97,0,0" Height="33.45" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108"/>
+            <Label Content="Улица&#xD;&#xA;&#xA;" Margin="1087.15,150.97,0,0" Height="33.45" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108"/>
+            <Label Content="Строение&#xD;&#xA;&#xA;" Margin="942.8,150.97,0,0" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108"/>
+            <Label Content="Здание&#xD;&#xA;&#xA;" Margin="1243.6,88.1,0,0" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108"/>
+            <Label x:Name="Район" Content="Район" Margin="1087.15,83.05,0,0" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108"/>
+            <Label Content="Почтовый индекс&#xD;&#xA;&#xA;" Margin="942.8,212.38,0,0" Height="25.12" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108" RenderTransformOrigin="0.361,0.664"/>
+            <Label Content="Контактные данные&#xD;&#xA;" HorizontalAlignment="Left" Height="31.53" Margin="1100.4,283.92,0,0" VerticalAlignment="Top" Width="251.2" FontWeight="Bold"/>
+            <Label Margin="942.8,321.3,0,0" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108" RenderTransformOrigin="0.525,3.435" Content="Телефон"/>
+            <Label Content="Email&#xA;" Margin="1087.15,321.3,0,0" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108"/>
+            <Label Content="Факс" Margin="1243.6,320.45,0,0" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108"/>
+            <Label Margin="942.8,401.7,0,0" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108" RenderTransformOrigin="0.525,3.435" Content="Сайт"/>
+            <TextBox x:Name="PhoneTextBpx" Margin="942.8,349.3,0,0" TextWrapping="Wrap" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108"/>
+            <TextBox x:Name="EmailTextBox" Margin="1087.15,349.3,0,0" TextWrapping="Wrap" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108"/>
+            <TextBox x:Name="FaxTextBox" Margin="1243.6,349.3,0,0" TextWrapping="Wrap" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108"/>
+            <TextBox x:Name="SiteTextBox" Margin="942.8,429.7,0,0" TextWrapping="Wrap" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="108"/>
+            <Label Content="Информация о часах работы:" HorizontalAlignment="Left" Height="31.53" Margin="39.95,297.5,0,0" VerticalAlignment="Top" Width="262.05" FontWeight="Bold"/>
+            <Label Content="Час открытия" VerticalAlignment="Top" Margin="39.95,334.03,0,0" Height="25" HorizontalAlignment="Left" Width="96.05"/>
+            <Label Content="Час закрытия" VerticalAlignment="Top" Margin="195.1,334.03,0,0" Height="25" HorizontalAlignment="Left" Width="96.05"/>
+            <TextBox x:Name="OpenHourTextBox" Height="23" Margin="39.95,364.03,0,0" TextWrapping="Wrap" Text="&#xA;" VerticalAlignment="Top" HorizontalAlignment="Left" Width="96.05" RenderTransformOrigin="0.355,-0.18"/>
+            <TextBox x:Name="CloseHourTextBox" Height="23" Margin="195.1,364.03,0,0" TextWrapping="Wrap" Text="&#xA;" VerticalAlignment="Top" HorizontalAlignment="Left" Width="96.05" RenderTransformOrigin="0.355,-0.18"/>
+            <TextBox x:Name="LatitudeTextBox" Height="23" Margin="39.95,464.23,0,0" TextWrapping="Wrap" Text="&#xA;" VerticalAlignment="Top" HorizontalAlignment="Left" Width="96.05" RenderTransformOrigin="0.355,-0.18"/>
+            <TextBox x:Name="LongitudeTextBox" Height="23" Margin="195.1,464.23,0,0" TextWrapping="Wrap" Text="&#xA;" VerticalAlignment="Top" HorizontalAlignment="Left" Width="96.05" RenderTransformOrigin="0.355,-0.18"/>
+            <Label Content="Координаты:&#xA;" HorizontalAlignment="Left" Height="31.53" Margin="39.95,421.17,0,0" VerticalAlignment="Top" Width="262.05" FontWeight="Bold"/>
+            <Grid x:Name="AddLibraryGrid" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="433" Margin="762.15,583.63,0,0" Visibility="Hidden">
+                <Button x:Name="NextButton" Content="Далее" Margin="105.6,42.63,0,0" Click="NextButton_Click" HorizontalAlignment="Left" Width="240" Height="20" VerticalAlignment="Top" RenderTransformOrigin="0.266,-8.653"/>
+            </Grid>
+            <Grid x:Name="UpdateLibraryGrid" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="340.6" Margin="819,583.63,0,0" Visibility="Hidden">
+                <Button x:Name="UpdateButton" Content="Далее" Margin="49.6,42.63,0,0" Click="UpdateButton_Click" HorizontalAlignment="Left" Width="240" Height="20" VerticalAlignment="Top" RenderTransformOrigin="0.266,-8.653"/>
+            </Grid>
         </Grid>
         <Grid x:Name="DataGrid" Margin="0,69,0,-0.2" Visibility="Visible" d:IsHidden="True">
-            <DataGrid x:Name="DataView" ItemsSource="{Binding}" Margin="10,0,10,10"/>
+            <DataGrid x:Name="DataView" ItemsSource="{Binding}" Margin="10,0,10,10" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeColumns="False" CanUserReorderColumns="False" SelectionMode="Single"/>
         </Grid>
 
     </Grid>
