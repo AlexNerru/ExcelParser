@@ -1,11 +1,3 @@
-C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\obj\Debug\Interface.csprojResolveAssemblyReference.cache
-C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\obj\Debug\Interface.csproj.ResolveComReference.cache
-C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\obj\Debug\FilterWindow.g.cs
-C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\obj\Debug\MainWindow.g.cs
-C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\obj\Debug\RowsNumberWindow.g.cs
-C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\obj\Debug\App.g.cs
-C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\obj\Debug\Karpin2_MarkupCompile.cache
-C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\obj\Debug\Karpin2_MarkupCompile.lref
 C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\bin\Debug\Karpin2.exe.config
 C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\bin\Debug\Karpin2.exe
 C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\bin\Debug\Karpin2.pdb
@@ -13,6 +5,15 @@ C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\bin\Debug\Libra
 C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\bin\Debug\EPPlus.dll
 C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\bin\Debug\LibraryLib.pdb
 C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\bin\Debug\EPPlus.xml
+C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\obj\Debug\Interface.csprojResolveAssemblyReference.cache
+C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\obj\Debug\Interface.csproj.ResolveComReference.cache
+C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\obj\Debug\ChartWindow.baml
+C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\obj\Debug\FilterWindow.g.cs
+C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\obj\Debug\MainWindow.g.cs
+C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\obj\Debug\RowsNumberWindow.g.cs
+C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\obj\Debug\App.g.cs
+C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\obj\Debug\Karpin2_MarkupCompile.cache
+C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\obj\Debug\Karpin2_MarkupCompile.lref
 C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\obj\Debug\FilterWindow.baml
 C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\obj\Debug\MainWindow.baml
 C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\obj\Debug\RowsNumberWindow.baml
@@ -22,3 +23,4 @@ C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\obj\Debug\Inter
 C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\obj\Debug\Interface.csproj.CoreCompileInputs.cache
 C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\obj\Debug\Karpin2.exe
 C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\obj\Debug\Karpin2.pdb
+C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\obj\Debug\ChartWindow.g.cs

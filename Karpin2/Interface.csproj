@@ -40,6 +40,8 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -52,18 +54,26 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ChartWindow.xaml.cs">
+      <DependentUpon>ChartWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FilterWindow.xaml.cs">
       <DependentUpon>FilterWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="RowsNumberWindow.xaml.cs">
       <DependentUpon>RowsNumberWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="ChartWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="FilterWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -141,16 +151,16 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LibraryLib\LibraryLib.csproj">
-      <Project>{a9a22b5f-8486-4349-bb8b-a40ba61ae86a}</Project>
-      <Name>LibraryLib</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="ogMPSNWGmnI.jpg" />
   </ItemGroup>
   <ItemGroup>
     <SplashScreen Include="z0Gg20k_Sxk.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibraryLib\LibraryLib.csproj">
+      <Project>{a9a22b5f-8486-4349-bb8b-a40ba61ae86a}</Project>
+      <Name>LibraryLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -12,15 +12,32 @@ namespace LibraryLib
     /// </summary>
     public class TableManager : ITableManager
     {
+        /// <summary>
+        /// Loaded table
+        /// </summary>
         public DataTable LoadedTable { get; set; }
+
+        /// <summary>
+        /// Add libs
+        /// </summary>
         public List<Library> Libraries { get; set; }
 
+        /// <summary>
+        /// Columns than we need to create in table
+        /// </summary>
         List<string> columnNames = new List<string>() { "FullName", "HeadFullName", "TaxPayerId",
                 "TaxId", "HeadPhoneNumber", "GovermentId", "Area", "PostIndex", "City", "Street",
                 "Building", "Housing", "District", "Coords", "Phone", "Fax", "Email", "Site"};
 
+        /// <summary>
+        /// Get all column names
+        /// </summary>
         public List<string> ColumnNames { get => columnNames; }
 
+        /// <summary>
+        /// Ctor
+        /// </summary>
+        /// <param name="dataTable"></param>
         public TableManager(DataTable dataTable)
         {
             if (ValidateTable(dataTable))
@@ -31,15 +48,26 @@ namespace LibraryLib
             else throw new TableValidationException("Table is not legal");
         }
 
+        /// <summary>
+        /// Delete lib
+        /// </summary>
+        /// <param name="index"></param>
         public void DeleteLibrary(int index)
         {
             if (index >= 0)
                 Libraries.RemoveAt(index);
         }
 
+        /// <summary>
+        /// Add lib
+        /// </summary>
+        /// <param name="lib"></param>
         public void AddLibrary(Library lib)=> Libraries.Add(lib);
 
-        
+        /// <summary>
+        /// Create table in loaded format
+        /// </summary>
+        /// <returns></returns>
         public DataTable CreateLoadedTableFromLibs()
         {
             LoadedTable.Rows.Clear();
@@ -80,7 +108,11 @@ namespace LibraryLib
             return table;
         }
 
-
+        /// <summary>
+        /// Get all libs from loaded table
+        /// </summary>
+        /// <param name="LoadedTable"></param>
+        /// <returns></returns>
         public List<Library> GetLibraries(DataTable LoadedTable)
         {
             if (LoadedTable != null)
@@ -101,6 +133,12 @@ namespace LibraryLib
             else throw new TableNotProvidedException("You haven't loaded table");
         }
 
+        /// <summary>
+        /// Create data row
+        /// </summary>
+        /// <param name="dr"></param>
+        /// <param name="lib"></param>
+        /// <returns></returns>
         DataRow CreateDataRow(DataRow dr, Library lib)
         {
             foreach (var item in columnNames)
@@ -108,6 +146,11 @@ namespace LibraryLib
             return dr;
         }
 
+        /// <summary>
+        /// If table is valid
+        /// </summary>
+        /// <param name="table"></param>
+        /// <returns></returns>
         bool ValidateTable(DataTable table)
         {
             bool flag = true;
@@ -118,6 +161,9 @@ namespace LibraryLib
         }
     }
 
+    /// <summary>
+    /// Thrown if there is no table
+    /// </summary>
     [Serializable]
     public class TableNotProvidedException : Exception
     {
@@ -129,6 +175,9 @@ namespace LibraryLib
           System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }
 
+    /// <summary>
+    /// Thrown if smth happened while parsing
+    /// </summary>
     [Serializable]
     public class TableParseException : Exception
     {
@@ -140,6 +189,9 @@ namespace LibraryLib
           System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }
 
+    /// <summary>
+    /// If table is not valid
+    /// </summary>
     [Serializable]
     public class TableValidationException : Exception
     {

@@ -24,13 +24,12 @@ namespace Karpin2
             Stopwatch timer = new Stopwatch();
             timer.Start();
             base.OnStartup(e);
-            MainWindow main = new MainWindow();
+            //MainWindow main = new MainWindow();
             timer.Stop();
             int remainingTimeToShowSplash = MINIMUM_SPLASH_TIME - (int)timer.ElapsedMilliseconds;
             if (remainingTimeToShowSplash > 0)
                 Thread.Sleep(remainingTimeToShowSplash);
             splash.Close(TimeSpan.FromMilliseconds(SPLASH_FADE_TIME));
-            main.Show();
         }
     }
 }

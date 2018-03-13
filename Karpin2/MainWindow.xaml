@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Karpin2"
         x:Class="Karpin2.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1080" Width="1994.4" WindowState="Maximized">
+        Title="Контрольное домашнее задание" Height="1080" Width="1994.4" WindowState="Maximized">
     <Grid x:Name="MainGrid" Margin="0,0,5.6,-2.2">
 
         <Menu IsMainMenu="True" Height="36" VerticalAlignment="Top" HorizontalAlignment="Left" Width="1910">
@@ -25,9 +25,14 @@
                 <MenuItem x:Name="EditLibraryMenuItem" Header="_Edit Selected..." Click="EditLibraryMenuItem_Click_1"/>
                 <Separator />
                 <MenuItem x:Name="FilterLibraryMenuItem" Header="_Filter..." Click="FilterLibraryMenuItem_Click" />
-                <MenuItem x:Name="SelectRowsNumber" Header="_Select Rows Number..." Height="22.6" Click="OpenRowNumberWindow" Margin="-0.255,0,2.745,0"/>
                 <MenuItem x:Name="ResetFilterItemMenu" Header="_ResetFilter..." Click="ResetFilterItemMenu_Click"  />
+                <Separator />
+                <MenuItem x:Name="SelectRowsNumber" Header="_Select Rows Number..." Height="22.6" Click="OpenRowNumberWindow" Margin="-0.255,0,2.745,0"/>
+                <Separator/>
+                <MenuItem x:Name="DiagramsMenuItem" Header="Diagrams" Height="100" Width="100" Click="DiagramsMenuItem_Click"/>
+
             </MenuItem>
+
         </Menu>
 
         <Grid x:Name="ContentGrid" Margin="10,69,10,0" Height="976" VerticalAlignment="Top">

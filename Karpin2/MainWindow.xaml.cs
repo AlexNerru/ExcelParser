@@ -14,9 +14,10 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
 using System.ComponentModel;
-using LibraryLib;
 using System.Data;
 using System.Device.Location;
+using LibraryLib;
+
 
 
 namespace Karpin2
@@ -40,6 +41,7 @@ namespace Karpin2
 
         RowsNumberWindow numberWindow;
         FilterWindow filterWindow;
+        ChartWindow chartWindow;
 
         public MainWindow()
         {
@@ -82,7 +84,7 @@ namespace Karpin2
             catch (Exception ex) when (ex is FileServiceException
                                    || ex is TableValidationException
                                    || ex is TableParseException)
-            { MessageBox.Show($"{ex.Message}\n{ex.InnerException.Message}"); }
+            { MessageBox.Show($"{ex.Message}\n"); }
             catch (Exception) { MessageBox.Show("Everything gone wrong"); }
         }
 
@@ -310,8 +312,13 @@ namespace Karpin2
 
 
 
+
         #endregion
 
-        
+        private void DiagramsMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            chartWindow = new ChartWindow(tableManager.Libraries);
+            chartWindow.Show();
+        }
     }
 }

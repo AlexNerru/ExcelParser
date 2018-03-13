@@ -2,8 +2,8 @@ C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\LibraryLib\bin\Debug\Li
 C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\LibraryLib\bin\Debug\LibraryLib.pdb
 C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\LibraryLib\bin\Debug\EPPlus.dll
 C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\LibraryLib\bin\Debug\EPPlus.xml
-C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\LibraryLib\obj\Debug\LibraryLib.csprojResolveAssemblyReference.cache
 C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\LibraryLib\obj\Debug\LibraryLib.csproj.ResolveComReference.cache
 C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\LibraryLib\obj\Debug\LibraryLib.csproj.CoreCompileInputs.cache
 C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\LibraryLib\obj\Debug\LibraryLib.dll
 C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\LibraryLib\obj\Debug\LibraryLib.pdb
+C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\LibraryLib\obj\Debug\LibraryLib.csprojResolveAssemblyReference.cache

@@ -10,6 +10,9 @@ using System.IO;
 
 namespace LibraryLib
 {
+    /// <summary>
+    /// Incapsulates file logic
+    /// </summary>
     public class FileService
     {
         /// <summary>
@@ -77,6 +80,9 @@ namespace LibraryLib
         }
     }
 
+    /// <summary>
+    /// Thrown if smth happened while working with files
+    /// </summary>
     [Serializable]
     public class FileServiceException : Exception
     {
