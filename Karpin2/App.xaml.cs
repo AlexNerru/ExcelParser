@@ -30,7 +30,7 @@ namespace Karpin2
             if (remainingTimeToShowSplash > 0)
                 Thread.Sleep(remainingTimeToShowSplash);
             splash.Close(TimeSpan.FromMilliseconds(SPLASH_FADE_TIME));
-            //main.Show();
+            main.Show();
         }
     }
 }

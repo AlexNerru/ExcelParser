@@ -8,6 +8,9 @@ using System.Reflection;
 
 namespace LibraryLib
 {
+    /// <summary>
+    /// Class represents library
+    /// </summary>
     public class Library
     {
         /// <summary>

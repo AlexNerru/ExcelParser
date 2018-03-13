@@ -7,11 +7,25 @@ using System.Text.RegularExpressions;
 
 namespace LibraryLib
 {
+    //TODO: Change for DaysOfWeek enum
+    /// <summary>
+    /// Days of week
+    /// </summary>
     public enum Day { Monday, Tuesday, Wednesday, Thusday, Friday, Saturday, Sunday };
 
+    /// <summary>
+    /// Represents working hours
+    /// </summary>
     public class WorkingHours
     {
+        /// <summary>
+        /// Day to Timeperiod
+        /// </summary>
         public Dictionary<Day, TimePeriod> hours  = new Dictionary<Day,TimePeriod>();
+
+        /// <summary>
+        /// Russian day to enum
+        /// </summary>
         Dictionary<string, Day> dayToDay = new Dictionary<string, Day>()
         {
             {"понедельник", Day.Monday },
@@ -22,6 +36,11 @@ namespace LibraryLib
             {"суббота", Day.Saturday },
             {"воскресенье", Day.Sunday },
         };
+
+        /// <summary>
+        /// Parse ctor
+        /// </summary>
+        /// <param name="workingHours"></param>
         public WorkingHours(string workingHours)
         {
             List<string> stringList = Regex.Split(workingHours, "\n\n").ToList();
@@ -51,6 +70,12 @@ namespace LibraryLib
 
             }
         }
+
+        /// <summary>
+        /// ctor
+        /// </summary>
+        /// <param name="hourOpen"></param>
+        /// <param name="hourClose"></param>
         public WorkingHours(int hourOpen, int hourClose)
         {
             foreach (Day item in dayToDay.Values)
@@ -59,6 +84,10 @@ namespace LibraryLib
             }
         }
 
+        /// <summary>
+        /// to string
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             string str = string.Empty;
@@ -79,6 +108,9 @@ namespace LibraryLib
         }
     }
 
+    /// <summary>
+    /// Thrown if problem with whours parsing
+    /// </summary>
     [Serializable]
     public class WorkingHoursParseException : Exception
     {

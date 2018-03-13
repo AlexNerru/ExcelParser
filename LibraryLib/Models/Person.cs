@@ -11,9 +11,19 @@ namespace LibraryLib
     /// </summary>
     public struct Person
     {
-        //TODO: Check what's the hell is happening here
+        /// <summary>
+        /// Name
+        /// </summary>
         public string Name { get; set; }
+
+        /// <summary>
+        /// Second name
+        /// </summary>
         public string SecondName { get; set; }
+
+        /// <summary>
+        /// Surname
+        /// </summary>
         public string Surname { get; set; }
 
         /// <summary>
@@ -34,7 +44,6 @@ namespace LibraryLib
                 this.Name = "Иван";
                 this.SecondName = "Иванович";
                 this.Surname = "Иванов";
-                //throw new PersonParseException("You have not 3 words in your full name", e);
             }
 
         }

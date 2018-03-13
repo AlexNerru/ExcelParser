@@ -6,15 +6,42 @@ using System.Threading.Tasks;
 
 namespace LibraryLib
 {
+    /// <summary>
+    /// Represent period of time
+    /// </summary>
     public struct TimePeriod
     {
+        /// <summary>
+        /// start
+        /// </summary>
         int hourStart;
+
+        /// <summary>
+        /// end
+        /// </summary>
         int hourEnd;
+
+        /// <summary>
+        /// if holiday
+        /// </summary>
         bool holiday;
 
+        /// <summary>
+        /// Open hour
+        /// </summary>
         public int OpenHour { get => hourStart; }
+
+        /// <summary>
+        /// closehour
+        /// </summary>
         public int CloseHour { get => hourEnd; }
 
+        /// <summary>
+        /// Ctor
+        /// </summary>
+        /// <param name="hourStart"></param>
+        /// <param name="hourEnd"></param>
+        /// <param name="holiday"></param>
         public TimePeriod(int hourStart, int hourEnd, bool holiday = false)
         {
             this.hourStart = hourStart;
@@ -22,6 +49,10 @@ namespace LibraryLib
             this.holiday = holiday;
         }
         
+        /// <summary>
+        /// ToString
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             if (!holiday)

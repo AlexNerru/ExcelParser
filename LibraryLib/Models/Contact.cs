@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace LibraryLib
 {
+    /// <summary>
+    /// Class for contact info
+    /// </summary>
     public class Contact
     {
         /// <summary>

@@ -8,8 +8,16 @@ using System.Text.RegularExpressions;
 
 namespace LibraryLib
 {
+    /// <summary>
+    /// Class for geo information
+    /// </summary>
     public class GeoData
     {
+        /// <summary>
+        /// String that need to be removed
+        /// </summary>
+        string[] toRemove = new string[5] { "{type=MultiPoint, coordinates=" , "{type=MultiPoint,coordinates=" , "]}","[","]"};
+
         /// <summary>
         /// All coordinates of library
         /// </summary>
@@ -26,11 +34,8 @@ namespace LibraryLib
         {
             if (geoData == string.Empty)
                 geoData = "{type = MultiPoint, coordinates =[[37.512935741337, 55.792942379791]]}";
-            geoData = geoData.Replace("{type=MultiPoint, coordinates=", "");
-            geoData = geoData.Replace("{type=MultiPoint,coordinates=", "");
-            geoData = geoData.Replace("]}", "");
-            geoData = geoData.Replace("[", "");
-            geoData = geoData.Replace("]", "");
+            foreach (var item in toRemove)
+                geoData = geoData.Replace(item, "");
             var allGeo = Regex.Split(geoData, ", ");
             for (int i = 0; i < allGeo.Length; i++)
             {

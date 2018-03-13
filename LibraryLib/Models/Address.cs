@@ -8,17 +8,12 @@ using System.Reflection;
 
 namespace LibraryLib
 {
+    /// <summary>
+    /// Class for address information
+    /// </summary>
     public class Address
     {
-        public string Area { get; set; }
-        public string PostIndex { get; set; }
-        public string City { get; set; }
-        public string Street { get; set; }
-        public string Building { get; set; }
-        public string Housing { get; set; }
-        public string District { get; set; }
-        public string FullAddress { get; set; }
-        
+        #region private
         #region String
         string testString = @"Административный округ: Южный административный округ
                             Район: район Бирюлёво Восточное
@@ -39,7 +34,42 @@ namespace LibraryLib
             ["Адрес: "] = "FullAddress",
             ["Административный округ: "] = "District"
         };
+        #endregion
 
+        #region Props
+        /// <summary>
+        /// Area
+        /// </summary>
+        public string Area { get; set; }
+        /// <summary>
+        /// PostIndex
+        /// </summary>
+        public string PostIndex { get; set; }
+        /// <summary>
+        /// City
+        /// </summary>
+        public string City { get; set; }
+        /// <summary>
+        /// Street
+        /// </summary>
+        public string Street { get; set; }
+        /// <summary>
+        /// Building
+        /// </summary>
+        public string Building { get; set; }
+        /// <summary>
+        /// Housing
+        /// </summary>
+        public string Housing { get; set; }
+        /// <summary>
+        /// District
+        /// </summary>
+        public string District { get; set; }
+        /// <summary>
+        /// FullAdress
+        /// </summary>
+        public string FullAddress { get; set; }
+        #endregion
 
         /// <summary>
         /// Standart ctor to create object from table
@@ -47,8 +77,8 @@ namespace LibraryLib
         /// <param name="addressStr"></param>
         public Address(string addressStr)
         {
-            StringeHelper helper = new StringeHelper();
-            
+            StringHelper helper = new StringHelper();
+
             if (addressStr.Contains("размер ячейки") || addressStr.Contains("Зеленоград"))
                 addressStr = testString;
             try
@@ -131,6 +161,7 @@ namespace LibraryLib
         }
     }
 
+
     /// <summary>
     /// Thrown if something happened while parsing
     /// </summary>
@@ -145,3 +176,4 @@ namespace LibraryLib
           System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }
 }
+s

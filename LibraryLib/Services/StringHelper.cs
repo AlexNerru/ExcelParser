@@ -5,11 +5,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
+
 namespace LibraryLib
 {
-    public class StringeHelper
+    /// <summary>
+    /// Class provides help functions for parsing
+    /// </summary>
+    public class StringHelper
     {
-        public Dictionary<string, string> GetValues(List<string> allString, Dictionary<string,string> rusToProp)
+        /// <summary>
+        /// Returns prop name and value
+        /// </summary>
+        /// <param name="allString"></param>
+        /// <param name="rusToProp"></param>
+        /// <returns></returns>
+        public Dictionary<string, string> GetValues(List<string> allString, Dictionary<string, string> rusToProp)
         {
             List<string> needToFind = rusToProp.Keys.ToList();
             Dictionary<string, string> dict = new Dictionary<string, string>();

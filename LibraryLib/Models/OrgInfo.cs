@@ -7,15 +7,50 @@ using System.Text.RegularExpressions;
 
 namespace LibraryLib
 {
+    /// <summary>
+    /// Class represents org info
+    /// </summary>
     public class OrgInfo
     {
+        /// <summary>
+        /// TaxPayerId
+        /// </summary>
         public string TaxPayerId { get; set; }
+
+        /// <summary>
+        /// Full name
+        /// </summary>
         public string FullName { get; set; }
+
+        /// <summary>
+        /// Chief phone number
+        /// </summary>
         public string HeadPhoneNumber { get; set; }
+
+        /// <summary>
+        /// Chief full name
+        /// </summary>
         public Person HeadFullName { get; set; }
+
+        /// <summary>
+        /// Tax Id
+        /// </summary>
         public string TaxId { get; set; }
+
+        /// <summary>
+        /// Govermant Id
+        /// </summary>
         public string GovermentId { get; set; }
 
+        /// <summary>
+        /// Ctor
+        /// </summary>
+        /// <param name="taxPayerId"></param>
+        /// <param name="fullName"></param>
+        /// <param name="headPhoneNumber"></param>
+        /// <param name="headFullName"></param>
+        /// <param name="taxId"></param>
+        /// <param name="govermentId"></param>
         public OrgInfo(string taxPayerId, string fullName, string headPhoneNumber, Person headFullName, string taxId, string govermentId)
         {
             FullName = fullName;
@@ -25,6 +60,10 @@ namespace LibraryLib
             GovermentId = govermentId;
         }
 
+        /// <summary>
+        /// Ctor for parsing
+        /// </summary>
+        /// <param name="FullOrgInfo"></param>
         public OrgInfo(string FullOrgInfo)
         {
             List<string> needToFind = new List<string>() { "ИНН: ",
@@ -46,11 +85,12 @@ namespace LibraryLib
                 throw new OrgInfoParseException("Data Parse error, not all fields provided", e);
             }
             catch (Exception e) { throw new OrgInfoParseException(e.Message); }
-
-
         }
 
-
+        /// <summary>
+        /// To string
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return $"Телефон руководителя: {HeadPhoneNumber}\n" +
@@ -59,6 +99,9 @@ namespace LibraryLib
         }
     }
 
+    /// <summary>
+    /// Thrown if smth with parsing
+    /// </summary>
     [Serializable]
     public class OrgInfoParseException : Exception
     {
