@@ -10,7 +10,7 @@ namespace LibraryLib
 {
     public class Address
     {
-        public string Area { get => _area; set => _area = value; }
+        public string Area { get; set; }
         public string PostIndex { get; set; }
         public string City { get; set; }
         public string Street { get; set; }
@@ -18,7 +18,20 @@ namespace LibraryLib
         public string Housing { get; set; }
         public string District { get; set; }
         public string FullAddress { get; set; }
+        
+        #region String
+        string testString = @"Административный округ: Южный административный округ
+                            Район: район Бирюлёво Восточное
+                            Почтовый индекс: 115598
+                            Адрес: Липецкая улица, дом 54 / 21, строение 2
+                               Доступность объекта(инвалиды-колясочники): частично
+                              Доступность объекта(инвалиды - опорники): частично
+                               Доступность объекта(инвалиды по зрению): частично";
+        #endregion
 
+        /// <summary>
+        /// Dict to make conformity between parse string and property
+        /// </summary>
         Dictionary<string, string> rusToEng = new Dictionary<string, string>()
         {
             ["Район: "] = "Area",
@@ -27,41 +40,23 @@ namespace LibraryLib
             ["Административный округ: "] = "District"
         };
 
-        private string _area;
 
         /// <summary>
         /// Standart ctor to create object from table
         /// </summary>
-        /// <param name="FullAdress"></param>
-        public Address(string FullAdress)
+        /// <param name="addressStr"></param>
+        public Address(string addressStr)
         {
-            #region String
-            string testString = @"Административный округ: Южный административный округ
-                            Район: район Бирюлёво Восточное
-                            Почтовый индекс: 115598
-                            Адрес: Липецкая улица, дом 54 / 21, строение 2
-                               Доступность объекта(инвалиды-колясочники): частично
-                              Доступность объекта(инвалиды - опорники): частично
-                               Доступность объекта(инвалиды по зрению): частично";
-            #endregion
             StringeHelper helper = new StringeHelper();
-            Dictionary<string, string> dict = helper.GetValues(FullAdress.Split('\n').ToList(), rusToEng.Keys.ToList(), rusToEng);
-            List<string> needToFind = new List<string>() { "Район: ", "Почтовый индекс: ", "Адрес: ", "Административный округ: " };
-            //TODO: think why set method is not found
-            foreach (var item in dict.Keys)
-            {
-                this[item] = dict[item];
-            }
-            if (FullAdress.Contains("размер ячейки") || FullAdress.Contains("Зеленоград"))
-                FullAdress = testString;
-            List<string> stringList = FullAdress.Split('\n').ToList();
+            
+            if (addressStr.Contains("размер ячейки") || addressStr.Contains("Зеленоград"))
+                addressStr = testString;
             try
             {
-                this.Area = Regex.Split(stringList.Where(str => str.Contains(needToFind[0])).First(), @": ").Last();
-                this.PostIndex = Regex.Split(stringList.Where(str => str.Contains(needToFind[1])).First(), @": ").Last();
-                this.District = Regex.Split(stringList.Where(str => str.Contains(needToFind[3])).First(), @": ").Last();
-                var address = Regex.Split(stringList.Where(str => str.Contains(needToFind[2])).First(), @": ").Last();
-                var all = Regex.Split(address, @", ");
+                Dictionary<string, string> dict = helper.GetValues(addressStr.Split('\n').ToList(), rusToEng);
+                foreach (var item in dict.Keys)
+                    this[item] = dict[item];
+                var all = Regex.Split(FullAddress, @", ");
                 if (all[0].Contains("город"))
                 {
                     this.City = all[0].Remove(0, 6);
@@ -79,24 +74,10 @@ namespace LibraryLib
                 }
 
             }
-            catch (IndexOutOfRangeException e)
-            {
-                throw new AdressParseException("Data Parse error, not all fields provided", e);
-            }
-            catch (ArgumentOutOfRangeException e)
-            {
-                throw new AdressParseException("Data Parse error, not all fields provided\n", e);
-            }
-            catch (InvalidOperationException e)
-            {
-                throw new AdressParseException("Data Parse error, not all fields provided\n", e);
-            }
+            catch (Exception e) when (e is IndexOutOfRangeException || e is ArgumentOutOfRangeException || e is InvalidOperationException)
+            { throw new AdressParseException("Something happened while address parsing", e); }
             catch (Exception e)
-            {
-                throw new AdressParseException("Something strange", e);
-            }
-
-
+            { throw new AdressParseException("Something strange", e); }
         }
 
         /// <summary>
@@ -128,23 +109,31 @@ namespace LibraryLib
         public override string ToString() => $"Административный округ: {this.District}\nРайон: {this.Area}" +
                 $"\nПочтовый индекс: {this.PostIndex}\nАдрес: {this.Street}, дом {this.Building}, {this.Housing}";
 
+        /// <summary>
+        /// Gets or sets property using it's string name
+        /// </summary>
+        /// <param name="propertyName"></param>
+        /// <returns></returns>
         public object this[string propertyName]
         {
             get
             {
-                Type myType = typeof(Library);
+                Type myType = typeof(Address);
                 PropertyInfo myPropInfo = myType.GetProperty(propertyName);
                 return myPropInfo.GetValue(this, null);
             }
             set
             {
-                Type myType = typeof(Library);
+                Type myType = typeof(Address);
                 PropertyInfo myPropInfo = myType.GetProperty(propertyName);
                 myPropInfo.SetValue(this, value, null);
             }
         }
     }
 
+    /// <summary>
+    /// Thrown if something happened while parsing
+    /// </summary>
     [Serializable]
     public class AdressParseException : Exception
     {

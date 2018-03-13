@@ -9,9 +9,9 @@ namespace LibraryLib
 {
     public class StringeHelper
     {
-        public Dictionary<string, string> GetValues(List<string> allString, 
-            List<string> needToFind, Dictionary<string,string> rusToProp)
+        public Dictionary<string, string> GetValues(List<string> allString, Dictionary<string,string> rusToProp)
         {
+            List<string> needToFind = rusToProp.Keys.ToList();
             Dictionary<string, string> dict = new Dictionary<string, string>();
             for (int i = 0; i < needToFind.Count; i++)
             {
