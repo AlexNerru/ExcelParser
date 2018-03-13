@@ -19,7 +19,7 @@ namespace LibraryLib
         /// <param name="allString"></param>
         /// <param name="rusToProp"></param>
         /// <returns></returns>
-        public Dictionary<string, string> GetValues(List<string> allString, Dictionary<string, string> rusToProp)
+        public Dictionary<string, string> ParseStringsToValueProperty(List<string> allString, Dictionary<string, string> rusToProp)
         {
             List<string> needToFind = rusToProp.Keys.ToList();
             Dictionary<string, string> dict = new Dictionary<string, string>();

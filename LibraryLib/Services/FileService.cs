@@ -13,7 +13,7 @@ namespace LibraryLib
     /// <summary>
     /// Incapsulates file logic
     /// </summary>
-    public class FileService
+    public class FileService:IExcelFileService
     {
         /// <summary>
         /// Stores file path ща opened file

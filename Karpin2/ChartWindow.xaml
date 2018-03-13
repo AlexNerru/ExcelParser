@@ -10,7 +10,8 @@
             <dvc:Chart x:Name="chart" />
         </WindowsFormsHost>
         <ComboBox x:Name="ColumnNamesComboBox" HorizontalAlignment="Left" Margin="25,41,0,0" VerticalAlignment="Top" Width="245"/>
-        <Button x:Name="ShowChartButton" Content="Show" HorizontalAlignment="Left" Margin="715,55,0,0" VerticalAlignment="Top" Width="85" Height="20" Click="ShowChartButton_Click"/>
+        <Button x:Name="ShowChartButton" Content="Построить" HorizontalAlignment="Left" Margin="715,55,0,0" VerticalAlignment="Top" Width="85" Height="20" Click="ShowChartButton_Click"/>
         <ComboBox x:Name="ChartTypeComboBox" HorizontalAlignment="Left" Margin="350,40,0,0" VerticalAlignment="Top" Width="230"/>
+        <Label Content="Выберите тип диаграммы:" HorizontalAlignment="Left" Margin="350,10,0,0" VerticalAlignment="Top" Width="275"/>
     </Grid>
 </Window>

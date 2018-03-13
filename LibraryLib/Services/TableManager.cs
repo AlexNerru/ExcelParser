@@ -43,7 +43,7 @@ namespace LibraryLib
             if (ValidateTable(dataTable))
             {
                 LoadedTable = dataTable;
-                Libraries = GetLibraries(dataTable);
+                Libraries = GetLibrariesFromTable(dataTable);
             }
             else throw new TableValidationException("Table is not legal");
         }
@@ -113,7 +113,7 @@ namespace LibraryLib
         /// </summary>
         /// <param name="LoadedTable"></param>
         /// <returns></returns>
-        public List<Library> GetLibraries(DataTable LoadedTable)
+        public List<Library> GetLibrariesFromTable(DataTable LoadedTable)
         {
             if (LoadedTable != null)
             {

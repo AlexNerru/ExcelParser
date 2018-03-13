@@ -27,22 +27,65 @@ namespace Karpin2
     /// </summary>
     public partial class MainWindow : Window
     {
+        /// <summary>
+        /// current row number
+        /// </summary>
         private int rowNumber;
+        /// <summary>
+        /// edit index
+        /// </summary>
         private int editIndex;
+        /// <summary>
+        /// List of all text boxes
+        /// </summary>
         List<TextBox> textBoxList;
+        /// <summary>
+        /// integer text boxes
+        /// </summary>
         List<TextBox> numericTextBoxes;
+        /// <summary>
+        /// double text boxes
+        /// </summary>
         List<TextBox> doubleTextBoxes;
 
+        /// <summary>
+        /// Dialog service
+        /// </summary>
+        IDialogService dialogService;
 
-        DialogService dialogService;
-        FileService fileService;
-        TableManager tableManager;
+        /// <summary>
+        /// File sevice
+        /// </summary>
+        IExcelFileService fileService;
+
+        /// <summary>
+        /// <token manager
+        /// </summary>
+        ITableManager tableManager;
+
+        /// <summary>
+        /// validator
+        /// </summary>
         Validator validator;
 
+        /// <summary>
+        /// window to enter row number
+        /// </summary>
         RowsNumberWindow numberWindow;
+
+        /// <summary>
+        /// filter window
+        /// </summary>
         FilterWindow filterWindow;
+
+        /// <summary>
+        /// chart window
+        /// </summary>
         ChartWindow chartWindow;
 
+        /// <summary>
+        /// Ctor
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
@@ -58,7 +101,11 @@ namespace Karpin2
         }
 
         #region Handlers
-        
+        /// <summary>
+        /// Open file button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OpenFileMenuItem_Click(object sender, RoutedEventArgs e)
         {
             dialogService = new DialogService();
@@ -67,6 +114,11 @@ namespace Karpin2
             dialogService.OpenFileDialog();
         }
 
+        /// <summary>
+        /// Open file
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void openFileDialog_FileOk(object sender, CancelEventArgs e)
         {
             fileService = new FileService();
@@ -88,6 +140,11 @@ namespace Karpin2
             catch (Exception) { MessageBox.Show("Everything gone wrong"); }
         }
 
+        /// <summary>
+        /// Change rows number
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SelectRowsButton_Click(object sender, RoutedEventArgs e)
         {
             if (int.TryParse(numberWindow.RowsTextBox.Text, out rowNumber))
@@ -106,8 +163,18 @@ namespace Karpin2
                 MessageBox.Show("Enter number");
         }
 
+        /// <summary>
+        /// Close
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ExitMenuItem_Click(object sender, RoutedEventArgs e) => this.Close();
 
+        /// <summary>
+        /// Add library button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddLibraryMenuItem_Click(object sender, RoutedEventArgs e)
         {
             AddLibraryGrid.Visibility = Visibility.Visible;
@@ -115,6 +182,11 @@ namespace Karpin2
             HideDataGrid();
         }
 
+        /// <summary>
+        /// Add library
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
             if (validator.AreBoxesNotEmpty(textBoxList)
@@ -128,8 +200,18 @@ namespace Karpin2
             else MessageBox.Show("Проверьте поля");
         }
 
+        /// <summary>
+        /// Back to table
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BackToTableButton_Click(object sender, RoutedEventArgs e) => this.ShowDataGrid();
 
+        /// <summary>
+        /// Save
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SaveMenuItem_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -140,12 +222,22 @@ namespace Karpin2
             catch (NullReferenceException) { MessageBox.Show("Нельзя сохранить то, что не открыто"); }
         }
 
+        /// <summary>
+        /// Delete library
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DeleteLibraryMenuItem_Click(object sender, RoutedEventArgs e)
         {
             tableManager.DeleteLibrary(DataView.SelectedIndex);
             UpdateDataGridContext();
         }
 
+        /// <summary>
+        /// Save as
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SaveAsMenuItem_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -156,6 +248,11 @@ namespace Karpin2
             catch (NullReferenceException) { MessageBox.Show("Нельзя сохранить то, что не открыто"); }
         }
 
+        /// <summary>
+        /// Filter button click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FilterLibraryMenuItem_Click(object sender, RoutedEventArgs e)
         {
             DataTable table = tableManager.CreateCustomTable(tableManager.Libraries.Take(rowNumber).ToList());
@@ -167,6 +264,11 @@ namespace Karpin2
             filterWindow.BringIntoView();
         }
 
+        /// <summary>
+        /// Use filter
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GoFilter(object sender, RoutedEventArgs e)
         {
             try
@@ -191,6 +293,11 @@ namespace Karpin2
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
+        /// <summary>
+        /// Get text box values
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void EditLibraryMenuItem_Click_1(object sender, RoutedEventArgs e)
         {
             //Think how to do it right
@@ -229,6 +336,12 @@ namespace Karpin2
                 editIndex = index;
             }
         }
+
+        /// <summary>
+        /// Add library
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
             tableManager.Libraries.Insert(editIndex, CreateLibFromTextBoxes());
@@ -256,6 +369,16 @@ namespace Karpin2
         /// <param name="e"></param>
         private void ResetFilterItemMenu_Click(object sender, RoutedEventArgs e) => UpdateDataGridContext();
 
+        /// <summary>
+        /// Open Diagram Window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void DiagramsMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            chartWindow = new ChartWindow(tableManager.Libraries);
+            chartWindow.Show();
+        }
         #endregion
 
         #region HelpFunctions
@@ -315,10 +438,6 @@ namespace Karpin2
 
         #endregion
 
-        private void DiagramsMenuItem_Click(object sender, RoutedEventArgs e)
-        {
-            chartWindow = new ChartWindow(tableManager.Libraries);
-            chartWindow.Show();
-        }
+        
     }
 }

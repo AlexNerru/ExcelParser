@@ -2,10 +2,12 @@
 
 namespace LibraryLib
 {
-    public interface IFileService
+    /// <summary>
+    /// Express service to work with ExcelFile
+    /// </summary>
+    public interface IExcelFileService
     {
         DataTable OpenExcelAsDataTable(string filePath, bool hasHeader= true);
-        void Save(DataTable table);
-        void SaveAs(DataTable table, string filePath);
+        void SaveDataTableToExcel(DataTable table, string filePath);
     }
 }

@@ -3,6 +3,9 @@ using System.Data;
 
 namespace LibraryLib
 {
+    /// <summary>
+    /// Express object to manage library table
+    /// </summary>
     public interface ITableManager
     {
         List<Library> Libraries { get; set; }
@@ -12,6 +15,6 @@ namespace LibraryLib
         DataTable CreateCustomTable(List<Library> libs);
         DataTable CreateLoadedTableFromLibs();
         void DeleteLibrary(int index);
-        List<Library> GetLibraries(DataTable LoadedTable);
+        List<Library> GetLibrariesFromTable(DataTable LoadedTable);
     }
 }

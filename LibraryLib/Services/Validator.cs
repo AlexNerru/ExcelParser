@@ -11,7 +11,7 @@ namespace LibraryLib
     /// <summary>
     /// Help class to validate diffent features
     /// </summary>
-    public class Validator
+    public class Validator : IValidator
     {
         /// <summary>
         /// Checks if all textboxes are not empty

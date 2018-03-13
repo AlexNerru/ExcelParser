@@ -83,7 +83,7 @@ namespace LibraryLib
                 addressStr = testString;
             try
             {
-                Dictionary<string, string> dict = helper.GetValues(addressStr.Split('\n').ToList(), rusToEng);
+                Dictionary<string, string> dict = helper.ParseStringsToValueProperty(addressStr.Split('\n').ToList(), rusToEng);
                 foreach (var item in dict.Keys)
                     this[item] = dict[item];
                 var all = Regex.Split(FullAddress, @", ");
