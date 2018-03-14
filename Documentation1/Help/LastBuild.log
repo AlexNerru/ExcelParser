@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shfbBuild product="Sandcastle Help File Builder and Tools" version="2017.12.30.2" projectFile="C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation1\Documentation1.shfbproj" started="3/14/2018 14:07:03">
+<buildStep step="Initializing">
+Finding tools...
+The Sandcastle tools are located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\&#39;
+Locating components in the following folder(s):
+    C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation1
+    C:\ProgramData\EWSoftware\Sandcastle Help File Builder\Components and Plug-Ins\
+    C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\
+Using framework reflection data for &#39;.NET Framework 4.7&#39; located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\Data\.NETFramework&#39;
+Using presentation style &#39;OpenXML&#39; located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\OpenXML&#39;
+    Last step completed in 00:00:01.5075
+</buildStep>
+<buildStep step="Failed">
+
+SHFB: Error BE0025: Unable to remove prior build output: Процесс не может получить доступ к файлу &quot;C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation1\Help\Documentation1.docx&quot;, так как этот файл используется другим процессом.
+   в SandcastleBuilder.Utils.BuildEngine.BuildProcess.Build()
+
+</buildStep>
+</shfbBuild>

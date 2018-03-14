@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LibraryLib.Address">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEARAAAAAAAQAMCAAAAAgAAAAAAAAAAAIAAQAAAAg=</HashCode>
+      <FileName>Models\Address.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryLib.AdressParseException" Collapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Address.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryLib.Contact">
+    <Position X="12.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgCAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Models\Contact.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryLib.GeoData">
+    <Position X="2.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAIABAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Models\GeoData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryLib.GeoParseException" Collapsed="true">
+    <Position X="9.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\GeoData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryLib.CoordsException" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\GeoData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryLib.Library">
+    <Position X="9.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AICIAZAAkCAQgqAICAAAAAgAAAAAAAACQAIBIUAAAAk=</HashCode>
+      <FileName>Models\Library.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryLib.OrgInfo">
+    <Position X="5.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAIAAAAAAAIAEAAAAAAAAAAAAAAAAAAABAAAAAAk=</HashCode>
+      <FileName>Models\OrgInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryLib.OrgInfoParseException" Collapsed="true">
+    <Position X="11.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\OrgInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryLib.PersonParseException" Collapsed="true">
+    <Position X="13.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryLib.WorkingHours">
+    <Position X="4" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAQEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\WorkingHours.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryLib.WorkingHoursParseException" Collapsed="true">
+    <Position X="13.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\WorkingHours.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="LibraryLib.Person">
+    <Position X="7.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAEAAAAAAQABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Person.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="LibraryLib.TimePeriod">
+    <Position X="11" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQQAAAECAAAAAAAAAAAAAAAAACAAAAAIAA=</HashCode>
+      <FileName>Models\TimePeriod.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="LibraryLib.IDialogService">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAIAAAAAAAEAAAAAAAABAAAQAAAA=</HashCode>
+      <FileName>Interfaces\IDialogService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LibraryLib.IExcelFileService">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IFileService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LibraryLib.ITableManager">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAwAAAAAAAAAAAAAAAAICAAAAAAAAAAAQAAQ=</HashCode>
+      <FileName>Interfaces\ITableManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LibraryLib.IValidator">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAEAAACAAAAAA=</HashCode>
+      <FileName>Interfaces\IValidator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="LibraryLib.Day" Collapsed="true">
+    <Position X="9.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAIAACAAAAAAAAEAAAAAIACAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\WorkingHours.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

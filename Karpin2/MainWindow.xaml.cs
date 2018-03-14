@@ -56,12 +56,12 @@ namespace Karpin2
         /// <summary>
         /// File sevice
         /// </summary>
-        IExcelFileService fileService;
+        FileService fileService;
 
         /// <summary>
         /// <token manager
         /// </summary>
-        ITableManager tableManager;
+        TableManager tableManager;
 
         /// <summary>
         /// validator

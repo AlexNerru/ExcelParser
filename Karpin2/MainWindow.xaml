@@ -29,7 +29,7 @@
                 <Separator />
                 <MenuItem x:Name="SelectRowsNumber" Header="_Select Rows Number..." Height="22.6" Click="OpenRowNumberWindow" Margin="-0.255,0,2.745,0"/>
                 <Separator/>
-                <MenuItem x:Name="DiagramsMenuItem" Header="Diagrams" Height="100" Width="100" Click="DiagramsMenuItem_Click"/>
+                <MenuItem x:Name="DiagramsMenuItem" Header="Diagrams" Height="28" Click="DiagramsMenuItem_Click" Margin="2,0,-2.6,0"/>
 
             </MenuItem>
 

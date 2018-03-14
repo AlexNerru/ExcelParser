@@ -8,7 +8,7 @@ using System.Text.RegularExpressions;
 namespace LibraryLib
 {
     /// <summary>
-    /// Class represents org info
+    /// OrgInfo
     /// </summary>
     public class OrgInfo
     {

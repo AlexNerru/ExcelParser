@@ -1,0 +1,301 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Karpin2</name>
+    </assembly>
+    <members>
+        <member name="T:Karpin2.ChartWindow">
+            <summary>
+            Логика взаимодействия для ChartWindow.xaml
+            </summary>
+            <summary>
+            ChartWindow
+            </summary>
+        </member>
+        <member name="M:Karpin2.ChartWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Karpin2.FilterWindow">
+            <summary>
+            Логика взаимодействия для FilterWindow.xaml
+            </summary>
+            <summary>
+            FilterWindow
+            </summary>
+        </member>
+        <member name="M:Karpin2.FilterWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Karpin2.RowsNumberWindow">
+            <summary>
+            Логика взаимодействия для RowsNumberWindow.xaml
+            </summary>
+            <summary>
+            RowsNumberWindow
+            </summary>
+        </member>
+        <member name="M:Karpin2.RowsNumberWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Karpin2.App">
+            <summary>
+            Логика взаимодействия для App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:Karpin2.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:Karpin2.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:Karpin2.MainWindow">
+            <summary>
+            Логика взаимодействия для MainWindow.xaml
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="F:Karpin2.MainWindow.rowNumber">
+            <summary>
+            current row number
+            </summary>
+        </member>
+        <member name="F:Karpin2.MainWindow.editIndex">
+            <summary>
+            edit index
+            </summary>
+        </member>
+        <member name="F:Karpin2.MainWindow.textBoxList">
+            <summary>
+            List of all text boxes
+            </summary>
+        </member>
+        <member name="F:Karpin2.MainWindow.numericTextBoxes">
+            <summary>
+            integer text boxes
+            </summary>
+        </member>
+        <member name="F:Karpin2.MainWindow.doubleTextBoxes">
+            <summary>
+            double text boxes
+            </summary>
+        </member>
+        <member name="F:Karpin2.MainWindow.dialogService">
+            <summary>
+            Dialog service
+            </summary>
+        </member>
+        <member name="F:Karpin2.MainWindow.fileService">
+            <summary>
+            File sevice
+            </summary>
+        </member>
+        <!-- Проигнорирован некорректный комментарий XML для члена "F:Karpin2.MainWindow.tableManager" -->
+        <member name="F:Karpin2.MainWindow.validator">
+            <summary>
+            validator
+            </summary>
+        </member>
+        <member name="F:Karpin2.MainWindow.numberWindow">
+            <summary>
+            window to enter row number
+            </summary>
+        </member>
+        <member name="F:Karpin2.MainWindow.filterWindow">
+            <summary>
+            filter window
+            </summary>
+        </member>
+        <member name="F:Karpin2.MainWindow.chartWindow">
+            <summary>
+            chart window
+            </summary>
+        </member>
+        <member name="M:Karpin2.MainWindow.#ctor">
+            <summary>
+            Ctor
+            </summary>
+        </member>
+        <member name="M:Karpin2.MainWindow.OpenFileMenuItem_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Open file button
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Karpin2.MainWindow.openFileDialog_FileOk(System.Object,System.ComponentModel.CancelEventArgs)">
+            <summary>
+            Open file
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Karpin2.MainWindow.SelectRowsButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Change rows number
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Karpin2.MainWindow.ExitMenuItem_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Close
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Karpin2.MainWindow.AddLibraryMenuItem_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Add library button
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Karpin2.MainWindow.NextButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Add library
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Karpin2.MainWindow.BackToTableButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Back to table
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Karpin2.MainWindow.SaveMenuItem_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Save
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Karpin2.MainWindow.DeleteLibraryMenuItem_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Delete library
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Karpin2.MainWindow.SaveAsMenuItem_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Save as
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Karpin2.MainWindow.FilterLibraryMenuItem_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Filter button click
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Karpin2.MainWindow.GoFilter(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Use filter
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Karpin2.MainWindow.EditLibraryMenuItem_Click_1(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Get text box values
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Karpin2.MainWindow.UpdateButton_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Add library
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Karpin2.MainWindow.OpenRowNumberWindow(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Opens window to enter number of rows
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Karpin2.MainWindow.ResetFilterItemMenu_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Reset DataView regenerating it
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Karpin2.MainWindow.DiagramsMenuItem_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Open Diagram Window
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Karpin2.MainWindow.UpdateDataGridContext">
+            <summary>
+            Updating datagrid from tableManager libraries
+            </summary>
+        </member>
+        <member name="M:Karpin2.MainWindow.UpdateDataGridContext(System.Collections.Generic.List{LibraryLib.Library})">
+            <summary>
+            Updating datagrid from libraries
+            </summary>
+            <param name="libs">Libraries to form datagrid</param>
+        </member>
+        <member name="M:Karpin2.MainWindow.CreateLibFromTextBoxes">
+            <summary>
+            Gets all textboxes values and creating library
+            </summary>
+            <returns>Created library</returns>
+        </member>
+        <member name="M:Karpin2.MainWindow.ShowDataGrid">
+            <summary>
+            Showing DataView and hiding contentGrid
+            </summary>
+        </member>
+        <member name="M:Karpin2.MainWindow.HideDataGrid">
+            <summary>
+            Showing ContentGrid and hidding DataView
+            </summary>
+        </member>
+        <member name="M:Karpin2.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Karpin2.Properties.Resources">
+            <summary>
+              Класс ресурсов со строгим типом для поиска локализованных строк и пр.
+            </summary>
+        </member>
+        <member name="P:Karpin2.Properties.Resources.ResourceManager">
+            <summary>
+              Возврат кэшированного экземпляра ResourceManager, используемого этим классом.
+            </summary>
+        </member>
+        <member name="P:Karpin2.Properties.Resources.Culture">
+            <summary>
+              Переопределяет свойство CurrentUICulture текущего потока для всех
+              подстановки ресурсов с помощью этого класса ресурсов со строгим типом.
+            </summary>
+        </member>
+    </members>
+</doc>

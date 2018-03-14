@@ -24,3 +24,5 @@ C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\obj\Debug\Inter
 C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\obj\Debug\Karpin2.exe
 C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\obj\Debug\Karpin2.pdb
 C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\obj\Debug\ChartWindow.g.cs
+C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\bin\Debug\LibraryLib.xml
+C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\bin\Debug\Karpin2.xml

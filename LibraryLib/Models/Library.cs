@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Reflection;
 
+/// <summary>
+/// Main namespace
+/// </summary>
 namespace LibraryLib
 {
     /// <summary>
@@ -17,10 +20,12 @@ namespace LibraryLib
         /// OrgInfo field
         /// </summary>
         OrgInfo _orgInfo;
+
         /// <summary>
         /// Address
         /// </summary>
         Address _address;
+
         /// <summary>
         /// GeoData
         /// </summary>

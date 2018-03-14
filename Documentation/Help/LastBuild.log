@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder and Tools" version="2017.5.15.0" projectFile="C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\Documentation.shfbproj" started="3/13/2018 00:56:39">
+<shfbBuild product="Sandcastle Help File Builder and Tools" version="2017.5.15.0" projectFile="C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\Documentation.shfbproj" started="3/13/2018 23:16:05">
 <buildStep step="Initializing">
 Finding tools...
 The Sandcastle tools are located in &#39;C:\Apps\Sandcastle\&#39;
@@ -7,7 +7,7 @@ Locating components in the following folder(s):
     C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation
     C:\ProgramData\EWSoftware\Sandcastle Help File Builder\Components and Plug-Ins\
     C:\Apps\Sandcastle\
-Using framework reflection data for &#39;.NET Framework 4.7&#39; located in &#39;C:\Apps\Sandcastle\Data\.NETFramework&#39;
+Using framework reflection data for &#39;.NET Framework 4.5&#39; located in &#39;C:\Apps\Sandcastle\Data\.NETFramework&#39;
 Using presentation style &#39;OpenXML&#39; located in &#39;C:\Apps\Sandcastle\PresentationStyles\OpenXML&#39;
 </buildStep>
 <buildStep step="ClearWorkFolder">
@@ -15,34 +15,31 @@ Clearing working folder...
 </buildStep>
 <buildStep step="ValidatingDocumentationSources">
 Validating and copying documentation source information
-Source: C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\Interface.csproj
-    Found project &#39;C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\Interface.csproj&#39;
 Source: C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\LibraryLib\LibraryLib.csproj
     Found project &#39;C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\LibraryLib\LibraryLib.csproj&#39;
 
 Parsing project files
-    Found assembly &#39;C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Karpin2\bin\Debug\Karpin2.exe&#39;
     Found assembly &#39;C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\LibraryLib\bin\Debug\LibraryLib.dll&#39;
+SHFB: Warning BE0007: A project with a different or higher framework version was found.  Changing project FrameworkVersion property from &#39;.NET Framework 4.5&#39; to &#39;.NET Framework 4.7&#39; for the build.
 
 References to include (excluding framework assemblies):
     EPPlus, Version=4.1.1.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL
     Microsoft.Office.Core
-    Microsoft.Office.Interop.Excel
     VBIDE
 SHFB: Warning BE0062: No documentation source XML comments files found.  The help file will not contain any member comments.
 </buildStep>
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, Английский (США))...
-    Last step completed in 00:00:00.0105
+    Last step completed in 00:00:00.0060
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
-    Last step completed in 00:00:00.0020
+    Last step completed in 00:00:00.0009
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
 [C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe - GenerateRefInfo.proj]
-Build started 3/13/2018 00:56:40.
+Build started 3/13/2018 23:16:06.
 Project &quot;C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\Help\Working\GenerateRefInfo.proj&quot; on node 1 (default targets).
 PrepareForBuild:
   Creating directory &quot;obj\Debug\&quot;.
@@ -51,20 +48,20 @@ GenerateRefInfo:
   Copyright c 2006-2017, Microsoft Corporation, All Rights Reserved.
   Portions Copyright c 2006-2016, Eric Woodruff, All Rights Reserved.
   No source code context base path specified.  Source context information is unavailable.
-  Loaded 2 assemblies for reflection and 5 dependency assemblies.
-  Wrote information on 2 namespaces, 29 types, and 160 members
+  Loaded 1 assemblies for reflection and 4 dependency assemblies.
+  Wrote information on 1 namespaces, 28 types, and 163 members
   Copying file from &quot;reflection.org&quot; to &quot;reflection.all&quot;.
   XslTransform (v2017.5.15.0)
   Copyright c 2006-2017, Microsoft Corporation, All Rights Reserved.
   Portions Copyright c 2006-2016, Eric Woodruff, All Rights Reserved.
   Applying XSL transformation &#39;C:\Apps\Sandcastle\ProductionTransforms\MergeDuplicates.xsl&#39;.
 Done Building Project &quot;C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\Help\Working\GenerateRefInfo.proj&quot; (default targets).
-    Last step completed in 00:00:01.4325
+    Last step completed in 00:00:01.7843
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
 [C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe - TransformManifest.proj]
-Build started 3/13/2018 00:56:41.
+Build started 3/13/2018 23:16:08.
 Project &quot;C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\Help\Working\TransformManifest.proj&quot; on node 1 (default targets).
 TransformManifest:
   XslTransform (v2017.5.15.0)
@@ -81,11 +78,11 @@ TransformManifest:
   Portions Copyright c 2006-2016, Eric Woodruff, All Rights Reserved.
   Applying XSL transformation &#39;C:\Apps\Sandcastle\ProductionTransforms\ReflectionToManifest.xsl&#39;.
 Done Building Project &quot;C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\Help\Working\TransformManifest.proj&quot; (default targets).
-    Last step completed in 00:00:01.7453
+    Last step completed in 00:00:01.6424
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00.1133
+    Last step completed in 00:00:00.0772
 </buildStep>
 <buildStep step="CopyConceptualContent">
 Copying conceptual content...
@@ -95,33 +92,33 @@ Checking for code snippets files...
 Copying images and creating the media map file...
 Generating conceptual topic files
     Parsing topic file &#39;C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\Content\Welcome.aml&#39;
-    C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\Content\Welcome.aml -&gt; C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\Help\Working\ddueXml\c2843899-84ce-4bad-94fb-c7c959df4956.xml
+    C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\Content\Welcome.aml -&gt; C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\Help\Working\ddueXml\d63ae692-cd18-42db-a631-3c47a443dce7.xml
     Parsing topic file &#39;C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\Content\VersionHistory\VersionHistory.aml&#39;
-    C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\Content\VersionHistory\VersionHistory.aml -&gt; C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\Help\Working\ddueXml\6a70358c-53eb-45cf-95d0-6fab44053e05.xml
+    C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\Content\VersionHistory\VersionHistory.aml -&gt; C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\Help\Working\ddueXml\01b48c0e-7b1f-4945-8e61-29690ef96545.xml
     Parsing topic file &#39;C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\Content\VersionHistory\v1.0.0.0.aml&#39;
-    C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\Content\VersionHistory\v1.0.0.0.aml -&gt; C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\Help\Working\ddueXml\b5c818c1-7d42-46a2-9b60-f05592710b91.xml
-    Last step completed in 00:00:00.0682
+    C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\Content\VersionHistory\v1.0.0.0.aml -&gt; C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\Help\Working\ddueXml\6dc36e3e-a677-44ef-9292-c133b2754135.xml
+    Last step completed in 00:00:00.0722
 </buildStep>
 <buildStep step="CreateConceptualTopicConfigs">
 Creating conceptual topic configuration files...
     Companion files
     _ContentMetadata_.xml
     Merging topic IDs into manifest.xml
-    Last step completed in 00:00:00.0170
+    Last step completed in 00:00:00.0132
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
 C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\icons\Help.png -&gt; C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\Help\Working\Output\OpenXml\icons\Help.png
-    Last step completed in 00:00:00.0100
+    Last step completed in 00:00:00.0099
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
-    Last step completed in 00:00:00.0060
+    Last step completed in 00:00:00.0000
 </buildStep>
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file...
 [C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe - GenerateIntermediateTOC.proj]
-Build started 3/13/2018 00:56:43.
+Build started 3/13/2018 23:16:10.
 Project &quot;C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\Help\Working\GenerateIntermediateTOC.proj&quot; on node 1 (default targets).
 GenerateIntermediateTOC:
   XslTransform (v2017.5.15.0)
@@ -130,12 +127,12 @@ GenerateIntermediateTOC:
   Applying XSL transformation &#39;C:\Apps\Sandcastle\\ProductionTransforms\CreateVSToc.xsl&#39;.
 Done Building Project &quot;C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\Help\Working\GenerateIntermediateTOC.proj&quot; (default targets).
 Generating conceptual content intermediate TOC file...
-    Last step completed in 00:00:00.5590
+    Last step completed in 00:00:00.6177
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
-    Last step completed in 00:00:00.4592
+    Last step completed in 00:00:00.3229
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
@@ -143,12 +140,12 @@ C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\Help\Work
   Updating reference topic configurations.
   Updating conceptual topic configurations.
     Removing unused ExampleComponent.
-    Last step completed in 00:00:00.0185
+    Last step completed in 00:00:00.0088
 </buildStep>
 <buildStep step="BuildTopics">
 Building help topics...
 [C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe - BuildTopics.proj]
-Build started 3/13/2018 00:56:44.
+Build started 3/13/2018 23:16:11.
 Project &quot;C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\Help\Working\BuildTopics.proj&quot; on node 1 (default targets).
 BuildTopics:
   BuildAssembler (v2017.5.15.0)
@@ -156,18 +153,17 @@ BuildTopics:
   Portions Copyright c 2006-2016, Eric Woodruff, All Rights Reserved.
   Loading configuration...
   Processing topics...
-  Processed 270 topic(s)
+  Processed 263 topic(s)
   CopyFromIndexComponent: &quot;metadata&quot; in-memory cache entries used: 1 of 15.
   ResolveArtLinksComponent: Copying media files...
-  ResolveReferenceLinksComponent: 658 entries added to the MSDN content ID cache.  New cache size: 1224 entries
-  CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 9 of 15.
-  CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 5 of 30.
+  CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 6 of 15.
+  CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 2 of 30.
 Done Building Project &quot;C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\Help\Working\BuildTopics.proj&quot; (default targets).
-    Last step completed in 00:07:06.6398
+    Last step completed in 00:00:18.4816
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
-    Last step completed in 00:00:00.0045
+    Last step completed in 00:00:00.0060
 </buildStep>
 <buildStep step="CopyStandardHelpContent">
 Copying standard help content...
@@ -226,35 +222,35 @@ C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\word\webSettings.xml
 C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\word\theme\theme1.xml -&gt; C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\Help\Working\Output\OpenXml\word\theme\theme1.xml
 C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\word\_rels\document.xml.rels -&gt; C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\Help\Working\Output\OpenXml\word\_rels\document.xml.rels
 C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\_rels\rels.xml.rels -&gt; C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\Help\Working\Output\OpenXml\_rels\rels.xml.rels
-    Last step completed in 00:00:00.3016
+    Last step completed in 00:00:00.8258
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Executing informational Generate Table of Contents build step for plug-ins (not used for Open XML)
-    Last step completed in 00:00:00.0005
+    Last step completed in 00:00:00.0030
 </buildStep>
 <buildStep step="GenerateHelpProject">
 Executing informational Generate Help Project build step for plug-ins (not used for Open XML)
-    Last step completed in 00:00:00.0005
+    Last step completed in 00:00:00.0030
 </buildStep>
 <buildStep step="CompilingHelpFile">
 Generating Open XML document file...
 [C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe - BuildOpenXmlFile.proj]
-  Finished merging 270 topics
-  671 external hyperlink relationship(s) defined
-  12 image relationship(s) defined
+  Finished merging 263 topics
+  40 external hyperlink relationship(s) defined
+  9 image relationship(s) defined
   0 list numbering style override(s) defined
   Saving C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\Help\Documentation.docx...
   Finished saving C:\Users\AlexNerru\source\repos\HSE\Module_Works\Karpin2\Documentation\Help\Documentation.docx
-  Compressed 27 files.  Reduced size by 7,258,832 bytes (95%).
-    Last step completed in 00:00:01.6541
+  Compressed 24 files.  Reduced size by 1,893,392 bytes (94%).
+    Last step completed in 00:00:02.0107
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00.1392
+    Last step completed in 00:00:00.1805
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 3/13/2018 01:03:53.  Total time: 00:07:13.8370
+Build completed successfully at 3/13/2018 23:16:32.  Total time: 00:00:27.1731
 
 </buildStep>
 </shfbBuild>

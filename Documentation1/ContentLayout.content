@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Topics>
-  <Topic id="d63ae692-cd18-42db-a631-3c47a443dce7" visible="True" isDefault="true" isSelected="true" title="Welcome to the [TODO: Add project name]">
+  <Topic id="3f57e0a5-6ac2-47e2-998f-74956fb46286" visible="True" isDefault="true" isSelected="true" title="Welcome to the [TODO: Add project name]">
     <HelpKeywords>
       <HelpKeyword index="K" term="Welcome" />
     </HelpKeywords>
   </Topic>
-  <Topic id="01b48c0e-7b1f-4945-8e61-29690ef96545" visible="True" isExpanded="true" title="Version History">
+  <Topic id="458061e7-d734-4f96-b59f-e7d26963741f" visible="True" isExpanded="true" title="Version History">
     <HelpKeywords>
       <HelpKeyword index="K" term="version, history" />
     </HelpKeywords>
-    <Topic id="6dc36e3e-a677-44ef-9292-c133b2754135" visible="True" title="Version 1.0.0.0">
+    <Topic id="71d710c0-7f51-4d66-ae99-1439da35f3da" visible="True" title="Version 1.0.0.0">
       <HelpKeywords>
         <HelpKeyword index="K" term="version, 1.0.0.0" />
       </HelpKeywords>

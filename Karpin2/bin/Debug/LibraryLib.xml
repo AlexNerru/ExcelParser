@@ -1,0 +1,784 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LibraryLib</name>
+    </assembly>
+    <members>
+        <member name="T:LibraryLib.Address">
+            <summary>
+            Class for address information
+            </summary>
+        </member>
+        <member name="F:LibraryLib.Address.rusToEng">
+            <summary>
+            Dict to make conformity between parse string and property
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Address.Area">
+            <summary>
+            Area
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Address.PostIndex">
+            <summary>
+            PostIndex
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Address.City">
+            <summary>
+            City
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Address.Street">
+            <summary>
+            Street
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Address.Building">
+            <summary>
+            Building
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Address.Housing">
+            <summary>
+            Housing
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Address.District">
+            <summary>
+            District
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Address.FullAddress">
+            <summary>
+            FullAdress
+            </summary>
+        </member>
+        <member name="M:LibraryLib.Address.#ctor(System.String)">
+            <summary>
+            Standart ctor to create object from table
+            </summary>
+            <param name="addressStr"></param>
+        </member>
+        <member name="M:LibraryLib.Address.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructor to create object from interface
+            </summary>
+            <param name="district"></param>
+            <param name="area"></param>
+            <param name="street"></param>
+            <param name="postIndex"></param>
+            <param name="building"></param>
+            <param name="housing"></param>
+            <param name="city"></param>
+        </member>
+        <member name="M:LibraryLib.Address.ToString">
+            <summary>
+            Creates string as in excel file
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:LibraryLib.Address.Item(System.String)">
+            <summary>
+            Gets or sets property using it's string name
+            </summary>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LibraryLib.AdressParseException">
+            <summary>
+            Thrown if something happened while parsing
+            </summary>
+        </member>
+        <member name="T:LibraryLib.Contact">
+            <summary>
+            Class for contact info
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Contact.PublicPhone">
+            <summary>
+            Public phone
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Contact.Fax">
+            <summary>
+            Fax number
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Contact.Email">
+            <summary>
+            Email address
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Contact.Website">
+            <summary>
+            Website link
+            </summary>
+        </member>
+        <member name="M:LibraryLib.Contact.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="phone"></param>
+            <param name="fax"></param>
+            <param name="email"></param>
+            <param name="site"></param>
+        </member>
+        <member name="T:LibraryLib.TimePeriod">
+            <summary>
+            Represent period of time
+            </summary>
+        </member>
+        <member name="F:LibraryLib.TimePeriod.hourStart">
+            <summary>
+            start
+            </summary>
+        </member>
+        <member name="F:LibraryLib.TimePeriod.hourEnd">
+            <summary>
+            end
+            </summary>
+        </member>
+        <member name="F:LibraryLib.TimePeriod.holiday">
+            <summary>
+            if holiday
+            </summary>
+        </member>
+        <member name="P:LibraryLib.TimePeriod.OpenHour">
+            <summary>
+            Open hour
+            </summary>
+        </member>
+        <member name="P:LibraryLib.TimePeriod.CloseHour">
+            <summary>
+            closehour
+            </summary>
+        </member>
+        <member name="M:LibraryLib.TimePeriod.#ctor(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="hourStart"></param>
+            <param name="hourEnd"></param>
+            <param name="holiday"></param>
+        </member>
+        <member name="M:LibraryLib.TimePeriod.ToString">
+            <summary>
+            ToString
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:LibraryLib.DialogService">
+            <summary>
+            Works with dialogs windows
+            </summary>
+        </member>
+        <member name="P:LibraryLib.DialogService.FilePath">
+            <summary>
+            Loaded file patb
+            </summary>
+        </member>
+        <member name="P:LibraryLib.DialogService.OpenDialog">
+            <summary>
+            Openfiledialog
+            </summary>
+        </member>
+        <member name="P:LibraryLib.DialogService.SaveDialog">
+            <summary>
+            Savefiledialog
+            </summary>
+        </member>
+        <member name="M:LibraryLib.DialogService.OpenFileDialog">
+            <summary>
+            Opening open file dialog
+            </summary>
+        </member>
+        <member name="M:LibraryLib.DialogService.SaveFileDialog">
+            <summary>
+            Openeing save file dialog
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:LibraryLib.GeoData">
+            <summary>
+            Class for geo information
+            </summary>
+        </member>
+        <member name="F:LibraryLib.GeoData.toRemove">
+            <summary>
+            String that need to be removed
+            </summary>
+        </member>
+        <member name="F:LibraryLib.GeoData.coords">
+            <summary>
+            All coordinates of library
+            </summary>
+        </member>
+        <member name="P:LibraryLib.GeoData.Coordinates">
+            <summary>
+            Returns coors
+            </summary>
+        </member>
+        <member name="M:LibraryLib.GeoData.#ctor(System.String)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="geoData"></param>
+        </member>
+        <member name="M:LibraryLib.GeoData.#ctor(System.Double,System.Double)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="latitude"></param>
+            <param name="longitude"></param>
+        </member>
+        <member name="M:LibraryLib.GeoData.ToString">
+            <summary>
+            To string
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:LibraryLib.GeoParseException">
+            <summary>
+            Thrown when string is not in right format
+            </summary>
+        </member>
+        <member name="T:LibraryLib.CoordsException">
+            <summary>
+            Thrown when coordinates values are incorrect
+            </summary>
+        </member>
+        <member name="T:LibraryLib.Library">
+            <summary>
+            Class represents library
+            </summary>
+        </member>
+        <member name="F:LibraryLib.Library._orgInfo">
+            <summary>
+            OrgInfo field
+            </summary>
+        </member>
+        <member name="F:LibraryLib.Library._address">
+            <summary>
+            Address
+            </summary>
+        </member>
+        <member name="F:LibraryLib.Library._geoData">
+            <summary>
+            GeoData
+            </summary>
+        </member>
+        <member name="F:LibraryLib.Library._workingHours">
+            <summary>
+            Working Hours
+            </summary>
+        </member>
+        <member name="F:LibraryLib.Library._contact">
+            <summary>
+            ContactInfo
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Library.FullName">
+            <summary>
+            Full name of library
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Library.HeadFullName">
+            <summary>
+            Full name of chief of library
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Library.TaxPayerId">
+            <summary>
+            Tax Payer Id of library
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Library.HeadPhoneNumber">
+            <summary>
+            Phone of chief of library
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Library.TaxId">
+            <summary>
+            Tax Id of library
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Library.GovermentId">
+            <summary>
+            Goverment Id of library
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Library.Area">
+            <summary>
+            Area of library
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Library.Street">
+            <summary>
+            Street of library
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Library.Building">
+            <summary>
+            Building of library
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Library.Housing">
+            <summary>
+            Housing of library
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Library.City">
+            <summary>
+            City of library
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Library.PostIndex">
+            <summary>
+            PostIndex of library
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Library.District">
+            <summary>
+            District of library
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Library.Phone">
+            <summary>
+            Public phone of library
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Library.Site">
+            <summary>
+            Website of library
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Library.Fax">
+            <summary>
+            Fax of library
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Library.Email">
+            <summary>
+            Email of library
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Library.Coords">
+            <summary>
+            String represent of geoData
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Library.Hours">
+            <summary>
+            String represent of working hours
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Library.Contact">
+            <summary>
+            Contact member
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Library.OrgInfo">
+            <summary>
+            OrgInfo member
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Library.Address">
+            <summary>
+            Address member
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Library.GeoData">
+            <summary>
+            GeoData member
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Library.WorkingHours">
+            <summary>
+            Working Hours member
+            </summary>
+        </member>
+        <member name="M:LibraryLib.Library.#ctor(System.Data.DataRow)">
+            <summary>
+            Initializes a new instance of the Library class to the value indicated by datarow
+            </summary>
+            <param name="row">DataRow</param>
+        </member>
+        <member name="M:LibraryLib.Library.#ctor(LibraryLib.OrgInfo)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="org"></param>
+        </member>
+        <member name="M:LibraryLib.Library.#ctor(LibraryLib.OrgInfo,LibraryLib.Address)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="org"></param>
+            <param name="address"></param>
+        </member>
+        <member name="M:LibraryLib.Library.#ctor(LibraryLib.OrgInfo,LibraryLib.Address,LibraryLib.GeoData)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="org"></param>
+            <param name="address"></param>
+            <param name="geo"></param>
+        </member>
+        <member name="M:LibraryLib.Library.#ctor(LibraryLib.OrgInfo,LibraryLib.Address,LibraryLib.GeoData,LibraryLib.WorkingHours)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="org"></param>
+            <param name="address"></param>
+            <param name="geo"></param>
+            <param name="hours"></param>
+        </member>
+        <member name="M:LibraryLib.Library.#ctor(LibraryLib.OrgInfo,LibraryLib.Address,LibraryLib.GeoData,LibraryLib.WorkingHours,LibraryLib.Contact)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="org"></param>
+            <param name="address"></param>
+            <param name="geo"></param>
+            <param name="hours"></param>
+            <param name="contact"></param>
+        </member>
+        <member name="P:LibraryLib.Library.Item(System.String)">
+            <summary>
+            Indexator to acces property by it's string name
+            </summary>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LibraryLib.OrgInfo">
+            <summary>
+            OrgInfo
+            </summary>
+        </member>
+        <member name="P:LibraryLib.OrgInfo.TaxPayerId">
+            <summary>
+            TaxPayerId
+            </summary>
+        </member>
+        <member name="P:LibraryLib.OrgInfo.FullName">
+            <summary>
+            Full name
+            </summary>
+        </member>
+        <member name="P:LibraryLib.OrgInfo.HeadPhoneNumber">
+            <summary>
+            Chief phone number
+            </summary>
+        </member>
+        <member name="P:LibraryLib.OrgInfo.HeadFullName">
+            <summary>
+            Chief full name
+            </summary>
+        </member>
+        <member name="P:LibraryLib.OrgInfo.TaxId">
+            <summary>
+            Tax Id
+            </summary>
+        </member>
+        <member name="P:LibraryLib.OrgInfo.GovermentId">
+            <summary>
+            Govermant Id
+            </summary>
+        </member>
+        <member name="M:LibraryLib.OrgInfo.#ctor(System.String,System.String,System.String,LibraryLib.Person,System.String,System.String)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="taxPayerId"></param>
+            <param name="fullName"></param>
+            <param name="headPhoneNumber"></param>
+            <param name="headFullName"></param>
+            <param name="taxId"></param>
+            <param name="govermentId"></param>
+        </member>
+        <member name="M:LibraryLib.OrgInfo.#ctor(System.String)">
+            <summary>
+            Ctor for parsing
+            </summary>
+            <param name="FullOrgInfo"></param>
+        </member>
+        <member name="M:LibraryLib.OrgInfo.ToString">
+            <summary>
+            To string
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:LibraryLib.OrgInfoParseException">
+            <summary>
+            Thrown if smth with parsing
+            </summary>
+        </member>
+        <member name="T:LibraryLib.Person">
+            <summary>
+            Struct representing someone full name
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Person.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Person.SecondName">
+            <summary>
+            Second name
+            </summary>
+        </member>
+        <member name="P:LibraryLib.Person.Surname">
+            <summary>
+            Surname
+            </summary>
+        </member>
+        <member name="M:LibraryLib.Person.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of Person struct by string from excel file 
+            </summary>
+            <param name="FullName"></param>
+        </member>
+        <member name="M:LibraryLib.Person.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the Person struct to the value indicated by three string values
+            </summary>
+            <param name="name"></param>
+            <param name="secondName"></param>
+            <param name="surname"></param>
+        </member>
+        <member name="M:LibraryLib.Person.ToString">
+            <summary>
+            To string
+            </summary>
+            <returns>"Name SecondName Surname" string</returns>
+        </member>
+        <member name="T:LibraryLib.PersonParseException">
+            <summary>
+            Thrown when something happened while full name parsing
+            </summary>
+        </member>
+        <member name="T:LibraryLib.FileService">
+            <summary>
+            Incapsulates file logic
+            </summary>
+        </member>
+        <member name="F:LibraryLib.FileService._openedFilePath">
+            <summary>
+            Stores file path ща opened file
+            </summary>
+        </member>
+        <member name="M:LibraryLib.FileService.OpenExcelAsDataTable(System.String,System.Boolean)">
+            <summary>
+            Opens xlsx file
+            </summary>
+            <param name="filePath"></param>
+            <exception cref="T:LibraryLib.FileServiceException">Throwing if wrong file selected</exception>
+            <returns></returns>
+        </member>
+        <member name="M:LibraryLib.FileService.SaveDataTableToExcel(System.Data.DataTable,System.String)">
+            <summary>
+            Saves provided DataTable to it's opened path or to new path
+            </summary>
+            <param name="table">DataTable</param>
+            <param name="filePath">Custom file path</param>
+        </member>
+        <member name="T:LibraryLib.FileServiceException">
+            <summary>
+            Thrown if smth happened while working with files
+            </summary>
+        </member>
+        <member name="T:LibraryLib.IExcelFileService">
+            <summary>
+            Express service to work with ExcelFile
+            </summary>
+        </member>
+        <member name="T:LibraryLib.ITableManager">
+            <summary>
+            Express object to manage library table
+            </summary>
+        </member>
+        <member name="T:LibraryLib.IValidator">
+            <summary>
+            Express validator to check interface objects
+            </summary>
+        </member>
+        <member name="T:LibraryLib.StringHelper">
+            <summary>
+            Class provides help functions for parsing
+            </summary>
+        </member>
+        <member name="M:LibraryLib.StringHelper.ParseStringsToValueProperty(System.Collections.Generic.List{System.String},System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Returns prop name and value
+            </summary>
+            <param name="allString"></param>
+            <param name="rusToProp"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LibraryLib.TableManager">
+            <summary>
+            Class using to operate with Libraries and table
+            </summary>
+        </member>
+        <member name="P:LibraryLib.TableManager.LoadedTable">
+            <summary>
+            Loaded table
+            </summary>
+        </member>
+        <member name="P:LibraryLib.TableManager.Libraries">
+            <summary>
+            Add libs
+            </summary>
+        </member>
+        <member name="F:LibraryLib.TableManager.columnNames">
+            <summary>
+            Columns than we need to create in table
+            </summary>
+        </member>
+        <member name="P:LibraryLib.TableManager.ColumnNames">
+            <summary>
+            Get all column names
+            </summary>
+        </member>
+        <member name="M:LibraryLib.TableManager.#ctor(System.Data.DataTable)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="dataTable"></param>
+        </member>
+        <member name="M:LibraryLib.TableManager.DeleteLibrary(System.Int32)">
+            <summary>
+            Delete lib
+            </summary>
+            <param name="index"></param>
+        </member>
+        <member name="M:LibraryLib.TableManager.AddLibrary(LibraryLib.Library)">
+            <summary>
+            Add lib
+            </summary>
+            <param name="lib"></param>
+        </member>
+        <member name="M:LibraryLib.TableManager.CreateLoadedTableFromLibs">
+            <summary>
+            Create table in loaded format
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LibraryLib.TableManager.CreateCustomTable(System.Collections.Generic.List{LibraryLib.Library})">
+            <summary>
+            Creates DataTable в Libraries object
+            </summary>
+            <param name="libs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibraryLib.TableManager.GetLibrariesFromTable(System.Data.DataTable)">
+            <summary>
+            Get all libs from loaded table
+            </summary>
+            <param name="LoadedTable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibraryLib.TableManager.CreateDataRow(System.Data.DataRow,LibraryLib.Library)">
+            <summary>
+            Create data row
+            </summary>
+            <param name="dr"></param>
+            <param name="lib"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibraryLib.TableManager.ValidateTable(System.Data.DataTable)">
+            <summary>
+            If table is valid
+            </summary>
+            <param name="table"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LibraryLib.TableNotProvidedException">
+            <summary>
+            Thrown if there is no table
+            </summary>
+        </member>
+        <member name="T:LibraryLib.TableParseException">
+            <summary>
+            Thrown if smth happened while parsing
+            </summary>
+        </member>
+        <member name="T:LibraryLib.TableValidationException">
+            <summary>
+            If table is not valid
+            </summary>
+        </member>
+        <member name="T:LibraryLib.Day">
+            <summary>
+            Days of week
+            </summary>
+        </member>
+        <member name="T:LibraryLib.WorkingHours">
+            <summary>
+            Represents working hours
+            </summary>
+        </member>
+        <member name="F:LibraryLib.WorkingHours.hours">
+            <summary>
+            Day to Timeperiod
+            </summary>
+        </member>
+        <member name="F:LibraryLib.WorkingHours.dayToDay">
+            <summary>
+            Russian day to enum
+            </summary>
+        </member>
+        <member name="M:LibraryLib.WorkingHours.#ctor(System.String)">
+            <summary>
+            Parse ctor
+            </summary>
+            <param name="workingHours"></param>
+        </member>
+        <member name="M:LibraryLib.WorkingHours.#ctor(System.Int32,System.Int32)">
+            <summary>
+            ctor
+            </summary>
+            <param name="hourOpen"></param>
+            <param name="hourClose"></param>
+        </member>
+        <member name="M:LibraryLib.WorkingHours.ToString">
+            <summary>
+            to string
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:LibraryLib.WorkingHoursParseException">
+            <summary>
+            Thrown if problem with whours parsing
+            </summary>
+        </member>
+        <member name="T:LibraryLib.Validator">
+            <summary>
+            Help class to validate diffent features
+            </summary>
+        </member>
+        <member name="M:LibraryLib.Validator.AreBoxesNotEmpty(System.Collections.Generic.List{System.Windows.Controls.TextBox})">
+            <summary>
+            Checks if all textboxes are not empty
+            </summary>
+            <param name="boxes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibraryLib.Validator.AreBoxesTextIsInt(System.Collections.Generic.List{System.Windows.Controls.TextBox})">
+            <summary>
+            Cheks if all textboxes contains int values
+            </summary>
+            <param name="boxes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibraryLib.Validator.AreBoxesTextIsDouble(System.Collections.Generic.List{System.Windows.Controls.TextBox})">
+            <summary>
+            Cheks if all textboxes contains double values
+            </summary>
+            <param name="boxes"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
